@@ -1,2 +1,2 @@
 # StudentPortal
-ipapalit sa portal ng cvsu main
+ipapalit sa portal ng cvsu main wahahahah
