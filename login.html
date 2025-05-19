@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+</head>
+<body>
+    <header>
+
+        <img src="loginDocs/logo - Edited - Edited (1).png">
+
+        
+        <h1 id="title">CvSU STUDENT PORTAL</h1>
+        <h4 id="subTitle">Indang - Campus</h4>
+        
+
+        <div class="themeBtn" id="darkmode">
+            <img src="loginDocs/material-symbols_dark-mode-outline-rounded.png">
+        </div>
+        <div class="themeBtn" id="lightmode">
+            <img src="loginDocs/meteor-icons_sun.png">
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="loginContainer" id="loginDiv">
+                <h1 id="loginTitle">Welcome, Kabsuhenyo!</h1>
+
+                <form>
+                    <input id="numInput" class="inputDetail" type="number" placeholder="Student Number" required>
+                    <br>
+                    <input id="passInput" class="inputDetail" type="password" placeholder="Password" required>
+                    <br>
+
+                    <button class="submitBtn" id="loginBtn">Login</button>
+                </form>
+
+                <button id="resetBtn" class="passReset">Help | Forgot password?</button>
+            </div>
+
+            <div class="resetContainer" id="resetDiv">
+                <h1 id="resetTitle" class="resetHeader">Password Reset Request Sent</h1>
+                <p id="resetText">Please check your registered email and click the link sent for confirmation</p>
+            </div>
+
+            <h2 id="tennets">TRUTH    •    EXCELLENCE    •    SERVICE</h2>
+            
+        </div>
+    </main>
+    <footer>
+        <div class="footerContainer">
+            <p id="copyright">© Copyright 2023 Cavite State University </p>
+        </div>
+    </footer>
+
+    <script src="login.js"></script>
+</body>
+</html>
