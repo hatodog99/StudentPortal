@@ -1,206 +1,285 @@
+/* fonts */
+@font-face {
+  font-family: "Poppins";
+  src: url(fonts/Poppins/Poppins-Regular.ttf) format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url(fonts/Poppins/Poppins-Bold.ttf) format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url(fonts/Nunito/static/Nunito-Regular.ttf) format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url(fonts/Nunito/static/Nunito-Bold.ttf) format("truetype");
+  font-weight: bold;
+}
+
+/* base/light mode variables*/
+:root {
+  --base-color: #195905;
+  --base-variant: #0c3200;
+  --text-color: rgba(12, 50, 0, 1);
+  --secondary-text: #195905;
+  --primary-color: #fffaf8;
+  --accent-color: #fffaf8;
+  --fiter-color: none;
+  --glassContainer-color: rgba(217, 217, 217, 0.43);
+  --input-placeholder: rgba(12, 50, 0, 1);
+  --submitBtn-bg: rgb(25, 89, 5);
+  --bg-url: url("images/light-mode-bg.svg");
+  --theme-icon-url: url("images/light-mode-icon.svg");
+}
+
+/* darkmode variables */
+.darkmode {
+  --base-color: #e5c300;
+  --base-variant: #aaaaaa;
+  --text-color: rgb(255, 255, 255);
+  --secondary-text: #195905;
+  --primary-color: #fffaf8;
+  --accent-color: #fffaf8;
+  --fiter-color: none;
+  --glassContainer-color: rgba(61, 61, 61, 0.43);
+  --input-placeholder: white;
+  --submitBtn-bg: rgb(0, 0, 0);
+  --bg-url: url("images/dark-mode-bg.svg");
+  --theme-icon-url: url("images/dark-mode-icon.svg");
+}
+
 body {
-    margin: 0;
-    background: 
-    linear-gradient(rgba(109, 109, 109, 0.22), rgba(109, 109, 109, 0.22)),
-    url('loginDocs/image\ 10.jpg');;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 0% 30%;
-    height: 100%;
-    font-family: "Roboto";
-    min-height: 100vh;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  background-image: var(--bg-url);
+  background-size: cover;
+  background-position: center;
+  font-family: "Nunito", sans-serif;
 }
 
+.bg-filter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(25, 89, 5, 0.4);
+  opacity: 0.6;
+  z-index: 0;
+}
+
+header,
+main,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* cvsu logo header */
 header {
-    text-align:  center;
-    justify-content: center;
+  text-align: center;
+  justify-content: center;
 }
 
-header img {
-    height: 100%;
-    width: 8%;
-    margin-top: 1.5%;
+.cvsu-logo img {
+  margin-top: 2vh;
+  height: 17vh;
+  width: 17vh;
 }
 
-header h1 {
-    margin-top: 0%;
-    color: rgb(25, 89, 5);
-    font-size: 1.5rem;
-    font-family: "Poppins";
+.cvsu-logo #title {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  margin-top: 0%;
+  color: var(--base-color);
+  font-size: 1.5rem;
 }
 
-header h4 {
-    margin-top: -1.2%;
-    font-weight: normal;
-    color:  rgb(12, 50, 0);
+.cvsu-logo #sub-title {
+  font-family: "Nunito", sans-serif;
+  margin-top: -1.2%;
+  color: var(--base-variant);
 }
 
-.themeBtn {
-    float: right;
-    margin-top: -11%;
-    margin-right: 3%;
-    border-radius: 20px;
-    height: 100%;
-    width: 4%;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
-    background-color: rgb(255, 255, 255);
-    background: rgba(255, 255, 255, 0.45);
-    backdrop-filter: blur(10px); 
-    border: 1px white solid;
-    transition: 0.5s ease;
+/* theme switch */
+.theme-btn {
+  position: fixed;
+  top: 3vh;
+  right: 2vw;
+  height: 8vh;
+  width: 8vh;
+  max-width: 71px;
+  max-height: 71px;
+  min-width: 45px;
+  min-height: 45px;
+
+  border-radius: 20%;
+  border: 1px solid #fffaf8;
+  background: var(--glassContainer-color);
+  backdrop-filter: blur(21.5px);
 }
 
-.themeBtn:hover {
-    transform: scale(1.04);
+.theme-btn:hover {
+  transform: scale(1.04);
 }
 
-#lightmode {
-    display: none;
-    background: rgba(68, 68, 68, 0.45);
+.theme-btn .themeIcon:first-child{
+  display: none;
 }
 
-.themeBtn img {
-    height: 100%;
-    width: 60%;
+.darkmode .theme-btn .themeIcon:last-child{
+  display: none;
 }
 
+.darkmode .theme-btn .themeIcon:first-child{
+  display: block;
+}
+
+.theme-btn img {
+  height: 100%;
+  width: 100%;
+}
+
+/* login container */
 .container {
-    justify-content: center;
-    text-align: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.loginContainer {
-    justify-content: center;
-    margin: auto;
-    margin-top: 1%;
-    width: 35%;
-    background-color: rgb(255, 255, 255);
-    background: rgba(255, 255, 255, 0.45);
-    backdrop-filter: blur(10px); 
-    border: 1px white solid;
-    border-radius: 25px;
-    padding-top: 3%;
-    padding-bottom: 5%;
+.login-container {
+  justify-content: center;
+  margin: auto;
+  margin-top: 1%;
+  width: 35vw;
+
+  border-radius: 10%;
+  border: 1px solid #fffaf8;
+  background: var(--glassContainer-color);
+  backdrop-filter: blur(21.5px);
+  padding: 3% 0.5% 5% 0.5%;
 }
 
-.loginContainer h1 {
-    font-weight: bolder;
-    font-size: 2.2rem;
-    color:  rgb(12, 50, 0);
-    margin-bottom: 5%;
+.login-container h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: var(--text-color);
+  margin-top: 3%;
+  margin-bottom: 7%;
 }
 
-.loginContainer input {
-    width: 65%;
-    border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.71);
-    background: rgba(128, 128, 128, 0.3);
-    backdrop-filter: blur(10px); 
-    padding: 2%;
-    margin-bottom: 3%;
+.login-container input {
+  width: 65%;
+  border-radius: 40px;
+  border: 1px solid #fffaf8;
+  background: rgba(217, 217, 217, 0.43);
+  backdrop-filter: blur(21.5px);
+  padding: 2%;
+  margin-bottom: 3%;
+  color: var(--text-color);
 }
 
-.loginContainer input::placeholder {
-    color: rgb(12, 50, 0); 
+.login-container input::placeholder {
+  color: var(--input-placeholder);
 }
 
-.loginContainer input.dark-placeholder::placeholder {
-    color: rgb(255, 255, 255);
-}
-
-#passInput.dark-placeholder::placeholder {
-    color: rgb(255, 255, 255);
-}
 
 .submitBtn {
-    width: 70%;
-    border-radius: 30px;
-    padding: 1.8%;
-    font-size: 1.1rem;
-    border:  none;
-    background-color: rgb(25, 89, 5);
-    color: white;
-    font-weight: bold;
-    margin-top:5%;
-    transition: 0.5s ease;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  width: 70%;
+  border-radius: 30px;
+  padding: 1.8%;
+  font-size: 1.1rem;
+  border: none;
+  background-color: var(--submitBtn-bg);
+  color: white;
+  margin-top: 5%;
+  transition: 0.5s ease;
+  border: 1px solid white;
 }
 
 .submitBtn:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .passReset {
-    font-size: 0.85rem;
-    border: none;
-    background: none;
-    float: right;
-    margin-top: 3%;
-    margin-right: 15%;
-    word-spacing: 2.5px;
-    color: rgb(12, 50, 0);
-    transition: 0.5s ease;
+  font-size: 0.85rem;
+  border: none;
+  background: none;
+  float: right;
+  margin-top: 3%;
+  margin-right: 15%;
+  word-spacing: 2.5px;
+  color: var(--text-color);
+  transition: 0.5s ease;
 }
 
 .passReset:hover {
-    transform: scale(1.05);
-}
-
-.passReset::placeholder {
-    color: rgb(12, 50, 0);
-}
-
-.container h2 {
-    font-size: 1rem;
-    color: rgb(12, 50, 0);
-    word-spacing: 10px;
-    margin-top: 2%;
+  transform: scale(1.05);
 }
 
 
+.container #tennets {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--base-color);
+  word-spacing: 10px;
+  margin-top: 2%;
+}
+
+/* Reset Container */
 .resetContainer {
-    justify-content: center;
-    margin: auto;
-    margin-top: 1%;
-    width: 35%;
-    background-color: rgb(255, 255, 255);
-    background: rgba(255, 255, 255, 0.45);
-    backdrop-filter: blur(10px); 
-    border: 1px white solid;
-    border-radius: 25px;
-    padding-top: 3%;
-    padding-bottom: 3.5%;
-    margin-bottom: 10.9%;
+  justify-content: center;
+  margin: auto;
+  margin-top: 1%;
+  width: 35%;
+  background-color: rgb(255, 255, 255);
+  background: var(--glassContainer-color);
+  backdrop-filter: blur(10px);
+  border: 1px white solid;
+  border-radius: 25px;
+  padding-top: 3%;
+  padding-bottom: 3.5%;
+  margin-bottom: 10.9%;
 }
 
 #resetDiv {
-    display: none;
+  display: none;
 }
 
 .resetContainer h1 {
-    font-size: 1.7rem;
-    color: rgb(12, 50, 0);
-    font-family: "Poppins";
+  font-size: 1.7rem;
+  color: var(--text-color);
+  font-family: "Poppins";
 }
 
 .resetContainer p {
-    justify-content: left;
-    text-align: left;
-    margin-left: 13%;
-    margin-right: 12%;
-    margin-top: 8%;
-    color: rgb(12, 50, 0);
+  justify-content: left;
+  text-align: left;
+  margin-left: 13%;
+  margin-right: 12%;
+  margin-top: 8%;
+  color: var(--text-color);
 }
-
 
 footer {
-    padding-top: 0.7%;
-    position: absolute;
-    width: 100%;
+  padding-top: 0.7%;
+  position: absolute;
+  width: 100%;
 }
 
-.footerContainer p{
-    text-align: center;
-    font-size: 0.8rem;
-    color:  rgb(12, 50, 0);
+.footerContainer p {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-color);
 }
