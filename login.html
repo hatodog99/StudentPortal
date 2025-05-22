@@ -4,22 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CvSU Student Portal</title>
-    <link rel="icon" type="image/cvsu-logo" href="images/cvsu-logo 1.svg" />
+
+    <link rel="icon" href="images/cvsu-logo 1.svg" />
     <link rel="stylesheet" href="login.css" />
   </head>
 
   <body>
-    <div class="bg-filter"></div>
+    <div class="bgFilter"></div>
 
     <header>
-      <div class="cvsu-logo">
+      <div class="cvsuLogo">
         <img src="images/cvsu-logo 1.svg" />
 
-        <h1 id="title">CvSU Student Portal</h1>
-        <h4 id="sub-title">Indang - Campus</h4>
+        <div class="logoText">
+          <h1 id="title">CvSU Student Portal</h1>
+          <h4 id="subTitle">Indang - Campus</h4>
+        </div>
       </div>
 
-      <button class="theme-btn" id="theme-switch">
+      <button class="themeBtn" id="theme-switch">
         <img class="themeIcon" src="images/icons/light-mode-icon.svg" />
         <img class="themeIcon" src="images/icons/dark-mode-icon.svg" />
       </button>
@@ -27,32 +30,43 @@
 
     <main>
       <div class="container">
-        <div class="login-container" id="loginDiv">
+        <div class="loginContainer" id="loginDiv">
           <h1 id="login-title">Welcome, Kabsuhenyo!</h1>
 
           <form>
             <input
-              id="numInput"
-              class="inputDetail"
-              type="number"
+              type="text"
+              id="studentLogin"
+              class="studentLogin"
               placeholder="Student Number or CvSU Email"
+              autocomplete="off"
+              data-1p-ignore
+              data-lpignore="true"
+              data-protonpass-ignore="true"
               multiple
               required
             />
             <br />
-            <input
-              id="passInput"
-              class="inputDetail"
-              type="password"
-              placeholder="Password"
-              required
-            />
+            <div class="passField">
+              <input
+                class="passInput"
+                id="passInput"
+                type="password"
+                placeholder="Password"
+                required
+              />
+
+              <img class="passToggle" src="images/icons/eye-icon-on.svg" />
+            </div>
             <br />
 
             <button class="submitBtn" id="loginBtn">Login</button>
           </form>
 
-          <button class="passReset" id="resetBtn">Reset Password?</button>
+          <div class="helpAndReset">
+            <button class="help" id="helpBtn">Help</button>
+            <button class="passReset" id="resetBtn">Reset Password?</button>
+          </div>
         </div>
 
         <div class="resetContainer" id="resetDiv">
@@ -61,16 +75,15 @@
           </h1>
           <p id="resetText">
             Please check your registered email and click the link sent for
-            confirmation
+            confirmation.
           </p>
         </div>
-
-        <h2 id="tennets">TRUTH • EXCELLENCE • SERVICE</h2>
       </div>
     </main>
 
     <footer>
       <div class="footerContainer">
+        <h2 id="tennets">TRUTH • EXCELLENCE • SERVICE</h2>
         <p id="copyright">© Copyright 2023 Cavite State University</p>
       </div>
     </footer>
