@@ -1,28 +1,3 @@
-/* fonts */
-@font-face {
-  font-family: "Poppins";
-  src: url(fonts/Poppins/Poppins-Regular.ttf) format("truetype");
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url(fonts/Poppins/Poppins-Bold.ttf) format("truetype");
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "Nunito";
-  src: url(fonts/Nunito/static/=Nunito-Regular.ttf) format("truetype");
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Nunito";
-  src: url(fonts/Nunito/static/Nunito-Bold.ttf) format("truetype");
-  font-weight: bold;
-}
-
 :root {
   --title-font-size: 1.5rem;
   --primary-font-size: 0.7rem;
@@ -48,12 +23,13 @@
   --submit-btn-hover: rgba(25, 89, 5, 0.8);
 
   --fiter-color: rgba(25, 89, 5, 0.1);
-  --bg-url: url("images/light-mode-bg.svg");
+  --bg-url: url("../images/light-mode-bg.svg");
 
-  --theme-icon-url: url("images/light-mode-icon.svg");
+  --theme-icon-url: url("../images/light-mode-icon.svg");
   --theme-btn-hover: brightness(90%);
 
-  --text-shadow-color: 0 0 40px #d9d9d9, 0 0 40px #d9d9d9, 0 0 40px #d9d9d9;
+  --text-shadow-color: 0 0 40px #d9d9d9, 0 0 40px #d9d9d9, 0 0 40px #d9d9d9,
+    0 0 40px #d9d9d9, 0 0 40px #d9d9d9, 0 0 40px #d9d9d9;
 
   /* #0c3200 */
   --icon-filter: invert(15%) sepia(55%) saturate(1614%) hue-rotate(67deg)
@@ -78,10 +54,10 @@
   --submit-btn-bg: #d1a82766;
   --submit-btn-hover: #d1a827;
 
-  --fiter-color: #060d10;
-  --bg-url: url("images/dark-mode-bg.svg");
+  --fiter-color: rgba(6, 13, 16, 0.3);
+  --bg-url: url("../images/dark-mode-bg.svg");
 
-  --theme-icon-url: url("images/dark-mode-icon.svg");
+  --theme-icon-url: url("../images/dark-mode-icon.svg");
   --theme-btn-hover: brightness(120%);
 
   --text-shadow-color: #060d10;

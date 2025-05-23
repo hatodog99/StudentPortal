@@ -26,8 +26,8 @@ toggleIcon.addEventListener("click", () => {
   const isPassword = passInput.type === "password";
   passInput.type = isPassword ? "text" : "password";
   toggleIcon.src = isPassword
-    ? "images/icons/eye-icon-off.svg"
-    : "images/icons/eye-icon-on.svg";
+    ? "../images/icons/eye-icon-off.svg"
+    : "../images/icons/eye-icon-on.svg";
 });
 
 // help
@@ -39,7 +39,6 @@ document.getElementById("helpBtn").addEventListener("click", function () {
 });
 
 // Reset Confirmation Page
-
 const resetBtn = document.getElementById("resetBtn");
 
 resetBtn.addEventListener("click", function () {
