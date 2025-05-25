@@ -70,6 +70,7 @@ header > *:not(:first-child) {
   background-color: var(--theme-btn-hover);
 }
 
+/* notif */
 .notif-btn {
   padding: 0.3rem;
 }
@@ -80,6 +81,7 @@ header > *:not(:first-child) {
   filter: var(--header-icon-filter);
 }
 
+/* theme */
 .theme-btn {
   padding: 0.5rem;
 }

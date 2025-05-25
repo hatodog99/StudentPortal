@@ -1,38 +1,11 @@
 /* base/light mode variables*/
 :root {
-  --bg-color: #cecece;
-  --sidebar-bg-color: rgba(25, 89, 5, 0.6);
-
-  --text-color: rgba(12, 50, 0, 1);
-  --secondary-text: #195905;
-
-  --title-color: rgba(25, 89, 5, 1);
-  --sidebar-text-color: rgba(211, 252, 202, 1);
-
-  --glassContainer-color: rgba(217, 217, 217, 0.43);
-  --input-placeholder: rgba(12, 50, 0, 1);
-
-  --submitBtn-bg: rgb(25, 89, 5);
-
   --bg-url: url("../images/light-mode-bg.svg");
   --filter-color: rgba(206, 206, 206, 0.5);
 }
 
 /* darkmode variables */
 .darkmode {
-  --bg-color: rgba(15, 28, 34, 1);
-  --sidebar-bg-color: rgba(9, 31, 2, 0.4);
-
-  --text-color: rgb(255, 255, 255);
-  --secondary-text: #195905;
-
-  --title-color: rgb(255, 255, 255);
-  --sidebar-text-color: rgba(255, 250, 248, 1);
-
-  --glassContainer-color: rgba(61, 61, 61, 0.43);
-  --input-placeholder: white;
-
-  --submitBtn-bg: rgb(0, 0, 0);
   --bg-url: url("../images/dark-mode-bg.svg");
   --filter-color: rgba(15, 28, 34, 0.4);
 }
@@ -41,10 +14,6 @@
   margin: 0;
   padding: 0;
   transition: 80ms ease;
-}
-
-*:focus {
-  outline: none;
 }
 
 body {
@@ -82,4 +51,8 @@ main,
 footer {
   position: relative;
   z-index: 2;
+}
+
+.main {
+  display: grid;
 }

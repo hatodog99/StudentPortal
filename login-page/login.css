@@ -146,12 +146,8 @@ header {
   top: 3vh;
   right: 2vw;
 
-  height: 8vh;
-  width: 8vh;
-  max-height: 71px;
-  max-width: 71px;
-  min-height: 34px;
-  min-width: 34px;
+  width: 3rem;
+  height: 3rem;
 
   border-radius: 20%;
   border: 1px solid #fffaf8;
@@ -191,16 +187,13 @@ header {
   align-items: center;
   justify-content: center;
   height: 53vh;
-  max-height: 73vh;
-
-  margin: 0;
+  margin: 6.3vh 0;
 }
 
 .loginContainer {
   text-align: center;
-  margin: auto;
+  height: 16rem;
   width: 25rem;
-  max-width: 30rem;
 
   border-radius: 30px;
   border: 1px solid #fffaf8;
