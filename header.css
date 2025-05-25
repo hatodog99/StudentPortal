@@ -54,7 +54,7 @@ header > *:not(:first-child) {
   top: 1.5vh;
   right: 2vw;
 
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 }
 
 .notif-btn,
@@ -75,8 +75,8 @@ header > *:not(:first-child) {
 }
 
 .notif-btn img {
-  width: 6vh;
-  height: 6vh;
+  width: 2rem;
+  height: 2rem;
   filter: var(--header-icon-filter);
 }
 
@@ -85,8 +85,8 @@ header > *:not(:first-child) {
 }
 
 .theme-btn img {
-  width: 5vh;
-  height: 5vh;
+  width: 1.8rem;
+  height: 1.8rem;
 }
 
 .theme-btn .theme-icon:first-child {
