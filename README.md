@@ -1,2 +1,2 @@
 # StudentPortal
-ipapalit sa portal ng cvsu main wahahahah
+frontend ng ipapalit sa portal ng cvsu main wahahahah
