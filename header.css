@@ -1,0 +1,102 @@
+:root {
+  --header-color: #195905;
+
+  --theme-btn-hover: rgba(25, 89, 5, 0.3);
+
+  /* #195905 */
+  --header-icon-filter: invert(24%) sepia(20%) saturate(3197%) hue-rotate(70deg)
+    brightness(99%) contrast(96%);
+}
+
+.darkmode {
+  --header-color: #d1a827;
+
+  --theme-btn-hover: rgba(25, 89, 5, 0.3);
+
+  /* #D1A827 */
+  --header-icon-filter: invert(84%) sepia(51%) saturate(1486%)
+    hue-rotate(343deg) brightness(89%) contrast(82%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  transition: 80ms ease;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 2rem 0.5rem 2rem;
+  height: 10%;
+  width: 90vw;
+}
+
+header > *:not(:first-child) {
+  margin-left: 1vw;
+}
+
+.page-name {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+
+  color: var(--header-color);
+}
+
+/* notif icon & theme btn */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.2vw;
+
+  position: fixed; /* or absolute, depending on your layout */
+  top: 1.5vh;
+  right: 2vw;
+
+  padding: 1rem 0;
+}
+
+.notif-btn,
+.theme-btn {
+  display: flex;
+  border-radius: 20%;
+
+  cursor: pointer;
+}
+
+.notif-btn:hover,
+.theme-btn:hover {
+  background-color: var(--theme-btn-hover);
+}
+
+.notif-btn {
+  padding: 0.3rem;
+}
+
+.notif-btn img {
+  width: 6vh;
+  height: 6vh;
+  filter: var(--header-icon-filter);
+}
+
+.theme-btn {
+  padding: 0.5rem;
+}
+
+.theme-btn img {
+  width: 5vh;
+  height: 5vh;
+}
+
+.theme-btn .theme-icon:first-child {
+  display: none;
+}
+
+.darkmode .theme-btn .theme-icon:last-child {
+  display: none;
+}
+
+.darkmode .theme-btn .theme-icon:first-child {
+  display: block;
+}
