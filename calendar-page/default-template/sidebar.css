@@ -1,0 +1,194 @@
+/* base/light mode variables*/
+:root {
+  --sidebar-color: rgba(25, 89, 5, 0.6);
+  --sidebar-secondary-color: #195905;
+
+  --sidebar-text-color: #d3fcca;
+  --sidebar-hover-color: rgba(25, 89, 5, 0.6);
+
+  --sidebar-selected-color: #d9d9d9;
+  --sidebar-selected-text: #0c3200;
+
+  --sidebar-logout-color: rgba(25, 89, 5, 0.3);
+
+  /* #D3FCCA */
+  --sidebar-icon-filter: invert(82%) sepia(4%) saturate(1573%) hue-rotate(63deg)
+    brightness(111%) contrast(104%);
+
+  /* #0C3200 */
+  --sidebar-selected-filter: invert(14%) sepia(65%) saturate(1014%)
+    hue-rotate(65deg) brightness(95%) contrast(104%);
+
+  --sidebar-selected-icon: invert(14%) sepia(65%) saturate(1014%)
+    hue-rotate(65deg) brightness(95%) contrast(104%);
+}
+
+/* darkmode variables */
+.darkmode {
+  --sidebar-color: rgba(9, 31, 2, 0.4);
+  --sidebar-secondary-color: #195905;
+
+  --sidebar-text-color: #fffaf8;
+  --sidebar-hover-color: rgba(25, 89, 5, 0.6);
+
+  --sidebar-selected-color: #195905;
+  --sidebar-selected-text: #fffaf8;
+
+  --sidebar-logout-color: rgba(9, 31, 2, 0.7);
+
+  /* #fffaf8 */
+  --sidebar-icon-filter: invert(99%) sepia(1%) saturate(3424%) hue-rotate(50deg)
+    brightness(102%) contrast(112%);
+
+  /* #195905 */
+  --sidebar-selected-filter: invert(24%) sepia(20%) saturate(3197%)
+    hue-rotate(70deg) brightness(99%) contrast(96%);
+
+  /* #fffaf8 */
+  --sidebar-selected-icon: invert(99%) sepia(1%) saturate(3424%)
+    hue-rotate(50deg) brightness(102%) contrast(112%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  transition: 80ms ease;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: sticky;
+  padding: 0.5rem 1.2rem;
+  height: 100vh;
+  width: 15rem;
+
+  background-color: var(--sidebar-color);
+  border-right: 1px solid var(--sidebar-secondary-color);
+
+  font-family: "Poppins", sans-serif;
+
+  z-index: 2;
+}
+
+.sidebar-divider {
+  height: 1px;
+  background-color: var(--sidebar-secondary-color);
+  margin: 1rem 0;
+  opacity: 0.6;
+}
+
+/* logo */
+.cvsu-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 0.5rem 0;
+}
+
+.cvsu-logo img {
+  height: auto;
+  width: 70%;
+  max-width: 90px;
+  min-width: 67px;
+  margin-bottom: 0.6rem;
+}
+
+.cvsu-logo p {
+  text-align: center;
+  font-weight: bold;
+
+  font-size: 0.8rem;
+
+  color: var(--sidebar-text-color);
+}
+
+/* page options */
+.pages {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  transition: background 0.3s ease;
+}
+
+.page-option,
+.page-option-selected {
+  display: flex;
+  align-items: center;
+
+  padding: 0.5rem 0.8rem;
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--sidebar-text-color);
+  border-radius: 15px;
+}
+
+.page-option:hover {
+  background-image: linear-gradient(
+    to right,
+    var(--sidebar-hover-color) 50%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.page-option img {
+  margin-right: 0.4rem;
+  width: 1.3rem;
+  height: auto;
+  filter: var(--sidebar-icon-filter);
+}
+
+.page-option-selected {
+  background-image: linear-gradient(
+    to right,
+    var(--sidebar-selected-color) 50%,
+    rgba(0, 0, 0, 0)
+  );
+  font-weight: bold;
+  color: var(--sidebar-selected-text);
+}
+
+.page-option-selected img {
+  margin-right: 0.4rem;
+  width: 1.3rem;
+  height: auto;
+
+  filter: var(--sidebar-selected-icon);
+}
+
+/* logout button */
+.logout {
+  display: flex;
+  align-items: center;
+
+  position: absolute;
+  bottom: 0;
+
+  width: auto;
+
+  padding: 0.5rem 2.5rem 0.5rem 1.5rem;
+  margin: 1rem 1rem 1rem 0.75rem;
+
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+
+  color: var(--sidebar-text-color);
+  background-color: rgba(25, 89, 5, 0.3);
+
+  border: 1px solid var(--sidebar-logout-color);
+  border-radius: 15px;
+
+  transition: background 0.3s ease;
+}
+
+.logout img {
+  width: 1.5rem;
+  height: auto;
+  filter: var(--sidebar-icon-filter);
+}
+
+.logout:hover {
+  background-color: var(--sidebar-hover-color);
+}
