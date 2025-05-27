@@ -1,0 +1,135 @@
+<!-- eto proposed template ko for every single page na gagawin -->
+<!-- hirap basahin pag iba-iba syntax natin e ;-; -->
+
+<!-- FOR BETTER PRACTICE, KEEP IN MIND: -->
+<!-- 1. add comments for every part of the page para mas madaling basahin -->
+<!-- 2. file names must be straightforward: 
+      ex. light-mode-bg, login-dark-mode-bg, eye-icon, dashboard-profile-pic, etc. -->
+<!-- 3. put files in designated folders: kung icon, sa ../images/icons ilagay -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- change page name as intended -->
+    <title>CvSU Student Portal - U I I A I</title>
+
+    <link rel="icon" href="../images/cvsu-logo 1.svg" />
+    <link rel="stylesheet" href="../header.css" />
+    <link rel="stylesheet" href="../sidebar.css" />
+
+    <!-- here aswell :)) -->
+    <link rel="stylesheet" href="../uiiai-page/uiiai.css" />
+    <link rel="stylesheet" href="../fonts.css" />
+  </head>
+
+  <body>
+    <div class="bg-filter"></div>
+
+    <!-- sidebar -->
+    <div class="sidebar">
+      <div class="cvsu-logo">
+        <img src="../images/cvsu-logo 1.svg" />
+        <p>My CvSU Student Portal</p>
+      </div>
+
+      <div class="sidebar-divider"></div>
+
+      <!-- page options -->
+      <div class="pages">
+        <!-- current page -->
+        <!-- use 'class="page-option-selected' para makita sa sidebar yung current page -->
+        <a
+          href="../dashboard-page/home.html"
+          class="page-option-selected"
+          id="dashboard-option"
+        >
+          <img src="../images/icons/dashboard-icon.svg" />
+          <p>Dashboard</p>
+        </a>
+
+        <a
+          href="../profile-page/profile.html"
+          class="page-option"
+          id="profile-option"
+        >
+          <img src="../images/icons/profile-icon.svg" />
+          <p>Profile</p>
+        </a>
+
+        <a
+          href="../calendar-page/calendar.html"
+          class="page-option"
+          id="calendar-option"
+        >
+          <img src="../images/icons/calendar-icon.svg" />
+          <p>Calendar</p>
+        </a>
+
+        <a
+          href="../grades-page/grades.html"
+          class="page-option"
+          id="grades-option"
+        >
+          <img src="../images/icons/grades-icon.svg" />
+          <p>Grades</p>
+        </a>
+
+        <a
+          href="../enrollment-page/enrollment.html"
+          class="page-option"
+          id="enrollment-option"
+        >
+          <img src="../images/icons/enrollment-icon.svg" />
+          <p>Enrollment</p>
+        </a>
+
+        <div class="sidebar-divider"></div>
+
+        <a
+          href="https://myportal.cvsu.edu.ph/elearning_guide.php"
+          class="page-option"
+          id="eLearning-option"
+        >
+          <img src="../images/icons/elearning-icon.svg" />
+          <p>E-Learning</p>
+        </a>
+      </div>
+
+      <!-- logout button -->
+      <a href="../login-page/login.html" class="logout" id="logout-option">
+        <img src="../images/icons/logout-icon.svg" />
+        <p>Logout</p>
+      </a>
+    </div>
+
+    <div class="page-content">
+      <!-- header -->
+      <header>
+        <div class="page-name">U I I A I</div>
+
+        <div class="header-icons">
+          <div class="notif-btn">
+            <img src="../images/icons/notif-icon.svg" />
+          </div>
+
+          <div class="theme-btn" id="theme-switch">
+            <img class="theme-icon" src="../images/icons/light-mode-icon.svg" />
+            <img class="theme-icon" src="../images/icons/dark-mode-icon.svg" />
+          </div>
+        </div>
+      </header>
+
+      <!-- main contents -->
+      <main>
+        <div class="container">
+          <!-- blah blah blah... main content shis here -->
+        </div>
+      </main>
+    </div>
+
+    <script src="../darkmode.js"></script>
+  </body>
+</html>
