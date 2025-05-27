@@ -4,6 +4,24 @@
   --filter-color: rgba(206, 206, 206, 0.5);
   --container-color: rgba(255, 250, 248, 0.4);
   --border-color: #fffaf8;
+
+  /* #195905 */
+  --icon-filter-1: invert(23%) sepia(25%) saturate(4108%) hue-rotate(75deg)
+    brightness(95%) contrast(96%);
+  /* #78611B  */
+  --icon-filter-2: invert(33%) sepia(69%) saturate(434%) hue-rotate(8deg)
+    brightness(97%) contrast(95%);
+
+  --btn-border-color-1: #195905;
+  --btn-border-color-2: #78611b;
+  --btn-color-1: rgba(25, 89, 5, 0.4);
+  --btn-color-2: rgba(209, 168, 39, 0.6);
+
+  --text-color-1: #195905;
+  --text-color-2: #0c3200;
+
+  --cal-today: rgba(25, 89, 5, 0.6);
+  --cal-today-text: #d3fcca;
 }
 
 /* darkmode variables */
@@ -79,7 +97,6 @@ footer {
 
 /* temporary... */
 .main-cal,
-.extended-header,
 .mini-cal,
 .up-events {
   display: flex;
@@ -91,28 +108,159 @@ footer {
   width: 100%;
 }
 
+/* mini cal & upcoming events */
 .extended-container {
   display: flex;
   flex-direction: column;
 
   height: auto;
-  width: 20rem;
+  width: 300px;
 
   gap: 20px;
 }
 
-.mini-cal {
-  background-color: var(--container-color);
+.extended-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.2vw;
+}
 
-  height: 200px;
+/* search btn & extend btn */
+.search-btn,
+.extend-btn {
+  display: flex;
+  border-radius: 100%;
+
+  padding: 0.4rem;
+  cursor: pointer;
+}
+
+.search-btn {
+  background-color: var(--btn-color-1);
+  border: 1px solid var(--btn-border-color-1);
+}
+
+.extend-btn {
+  background-color: var(--btn-color-2);
+  border: 1px solid var(--btn-border-color-2);
+}
+
+.search-btn img,
+.extend-btn img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.search-btn img {
+  filter: var(--icon-filter-1);
+}
+
+.extend-btn img {
+  filter: var(--icon-filter-2);
+}
+
+/* mini calendar */
+.mini-cal {
+  height: 240px;
   width: auto;
 
   border: 1px solid var(--border-color);
   border-radius: 20px;
 
+  background-color: var(--container-color);
+
   flex-shrink: 0;
 }
 
+.mini-cal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+  gap: 20px;
+}
+
+.buttons {
+  display: flex;
+
+  background-color: var(--btn-color-1);
+  border: 1px solid var(--btn-border-color-1);
+  border-radius: 20px;
+
+  padding: 0.2rem;
+
+  gap: 10px;
+}
+
+.btn {
+  cursor: pointer;
+}
+
+.buttons img {
+  width: 1rem;
+  height: 1rem;
+
+  filter: var(--icon-filter-1);
+}
+
+#month-year {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color-1);
+
+  border-bottom: 1px solid var(--btn-border-color-1);
+
+  width: 100%;
+}
+
+.weekdays,
+.days {
+  display: flex;
+  flex-wrap: wrap;
+
+  font-size: 0.7rem;
+}
+
+.weekdays {
+  font-weight: bold;
+
+  color: var(--text-color-2);
+}
+
+.days {
+  height: 240px;
+}
+
+.weekdays div,
+.days div {
+  width: 10%;
+  margin: 0 2.14%;
+  padding: 5px;
+
+  text-align: center;
+  border-radius: 100%;
+}
+
+.days div {
+  cursor: pointer;
+  color: var(--text-color-1);
+
+  transition: background 0.3s;
+}
+
+.days div:hover {
+  background-color: var(--cal-today-text);
+  color: var(--cal-today);
+}
+
+.days .today {
+  background-color: var(--cal-today);
+  color: var(--cal-today-text);
+}
+
+/* upcoming evets */
 .up-events {
   height: 100%;
 }

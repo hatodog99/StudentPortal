@@ -111,8 +111,9 @@
       <!-- main contents -->
       <main>
         <div class="container">
+          <!-- main cal -->
           <div class="main-cal">
-            <div class="main-cal-header">
+            <div class="mini-cal-header">
               <p>header</p>
             </div>
 
@@ -121,13 +122,47 @@
             </div>
           </div>
 
+          <!-- mini cal & up events -->
           <div class="extended-container">
+            <!-- search btn and extend btn -->
             <div class="extended-header">
-              <p>header</p>
+              <button class="search-btn">
+                <img src="../images/icons/search-icon.svg" />
+              </button>
+
+              <button class="extend-btn">
+                <img src="../images/icons/right-arrow-icon.svg" />
+              </button>
             </div>
 
+            <!-- mini calendar -->
             <div class="mini-cal">
-              <p>mini cal</p>
+              <!-- header -->
+              <div class="mini-cal-header">
+                <div id="month-year"></div>
+
+                <div class="buttons">
+                  <div id="prev" class="btn">
+                    <img src="../images/icons/left-arrow-icon.svg" />
+                  </div>
+
+                  <div id="next" class="btn">
+                    <img src="../images/icons/right-arrow-icon.svg" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="weekdays">
+                <div>M</div>
+                <div>T</div>
+                <div>W</div>
+                <div>TH</div>
+                <div>F</div>
+                <div>S</div>
+                <div>S</div>
+              </div>
+
+              <div class="days" id="days"></div>
             </div>
 
             <div class="up-events">
@@ -139,5 +174,6 @@
     </div>
 
     <script src="../darkmode.js"></script>
+    <script src="../calendar-page/calendar.js"></script>
   </body>
 </html>
