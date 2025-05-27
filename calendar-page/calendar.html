@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CvSU Student Portal - Calendar</title>
+
+    <link rel="icon" href="../images/cvsu-logo 1.svg" />
+    <link rel="stylesheet" href="../header.css" />
+    <link rel="stylesheet" href="../sidebar.css" />
+    <link rel="stylesheet" href="../calendar-page/calendar.css" />
+    <link rel="stylesheet" href="../fonts.css" />
+  </head>
+
+  <body>
+    <div class="bg-filter"></div>
+
+    <!-- sidebar -->
+    <div class="sidebar">
+      <div class="cvsu-logo">
+        <img src="../images/cvsu-logo 1.svg" />
+        <p>My CvSU Student Portal</p>
+      </div>
+
+      <div class="sidebar-divider"></div>
+
+      <!-- page options -->
+      <div class="pages">
+        <a
+          href="../dashboard-page/dashboard.html"
+          class="page-option"
+          id="dashboard-option"
+        >
+          <img src="../images/icons/dashboard-icon.svg" />
+          <p>Dashboard</p>
+        </a>
+
+        <a
+          href="../profile-page/profile.html"
+          class="page-option"
+          id="profile-option"
+        >
+          <img src="../images/icons/profile-icon.svg" />
+          <p>Profile</p>
+        </a>
+
+        <!-- current page -->
+        <a
+          href="../calendar-page/calendar.html"
+          class="page-option-selected"
+          id="calendar-option"
+        >
+          <img src="../images/icons/calendar-icon.svg" />
+          <p>Calendar</p>
+        </a>
+
+        <a
+          href="../grades-page/grades.html"
+          class="page-option"
+          id="grades-option"
+        >
+          <img src="../images/icons/grades-icon.svg" />
+          <p>Grades</p>
+        </a>
+
+        <a
+          href="../enrollment-page/enrollment.html"
+          class="page-option"
+          id="enrollment-option"
+        >
+          <img src="../images/icons/enrollment-icon.svg" />
+          <p>Enrollment</p>
+        </a>
+
+        <div class="sidebar-divider"></div>
+
+        <a
+          href="https://myportal.cvsu.edu.ph/elearning_guide.php"
+          class="page-option"
+          id="eLearning-option"
+        >
+          <img src="../images/icons/elearning-icon.svg" />
+          <p>E-Learning</p>
+        </a>
+      </div>
+
+      <!-- logout button -->
+      <a href="../login-page/login.html" class="logout" id="logout-option">
+        <img src="../images/icons/logout-icon.svg" />
+        <p>Logout</p>
+      </a>
+    </div>
+
+    <div class="page-content">
+      <!-- header -->
+      <header>
+        <div class="page-name">Calendar</div>
+
+        <div class="header-icons">
+          <div class="notif-btn">
+            <img src="../images/icons/notif-icon.svg" />
+          </div>
+
+          <div class="theme-btn" id="theme-switch">
+            <img class="theme-icon" src="../images/icons/light-mode-icon.svg" />
+            <img class="theme-icon" src="../images/icons/dark-mode-icon.svg" />
+          </div>
+        </div>
+      </header>
+
+      <!-- main contents -->
+      <main>
+        <div class="container">
+          <div class="main-cal">
+            <div class="main-cal-header">
+              <p>header</p>
+            </div>
+
+            <div class="main-content">
+              <p>main content</p>
+            </div>
+          </div>
+
+          <div class="extended-container">
+            <div class="extended-header">
+              <p>header</p>
+            </div>
+
+            <div class="mini-cal">
+              <p>mini cal</p>
+            </div>
+
+            <div class="up-events">
+              <p>Upcoming Events</p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="../darkmode.js"></script>
+  </body>
+</html>
