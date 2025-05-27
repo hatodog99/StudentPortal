@@ -1,6 +1,2 @@
-# StudentPortal
-![uiiai](https://github.com/user-attachments/assets/55a33c8a-cc09-4c48-ab43-d8f97c43b818)
-![uiiai](https://github.com/user-attachments/assets/55a33c8a-cc09-4c48-ab43-d8f97c43b818)
-![uiiai](https://github.com/user-attachments/assets/55a33c8a-cc09-4c48-ab43-d8f97c43b818)
-
-default template lang to, wag ipush pls
+# default template lang to, wag ipush pls
+![aww-hell](https://github.com/user-attachments/assets/f90d9a1c-ff36-4102-b46d-fe0c255402f2)
