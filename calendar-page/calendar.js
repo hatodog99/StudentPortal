@@ -3,17 +3,18 @@ document.addEventListener("DOMContentLoaded", function () {
   const daysContainer = document.getElementById("days");
 
   const months = [
-    "January",
-    "February",
-    "March",
-    "April",
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
     "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "December",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sept",
+    "Oct",
+    "Nov",
+    "Dec",
   ];
 
   let currentDate = new Date();
@@ -29,6 +30,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     daysContainer.innerHTML = "";
 
+    // Previous month's dates
+    const prevMonthLastDay = new Date(year, month, 0).getDate();
+    for (let i = firstDay - 1; i >= 0; i--) {
+      const dayDiv = document.createElement("div");
+      dayDiv.textContent = prevMonthLastDay - i;
+      dayDiv.classList.add("prev-month");
+      daysContainer.appendChild(dayDiv);
+    }
+
     // Current month's dates
     for (let i = 1; i <= lastDay; i++) {
       const dayDiv = document.createElement("div");
@@ -43,7 +53,29 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       daysContainer.appendChild(dayDiv);
     }
+
+    // Next month's dates
+    const nextMonthStartDay = 7 - new Date(year, month + 1, 0).getDay() - 1;
+    for (let i = 1; i <= nextMonthStartDay; i++) {
+      const dayDiv = document.createElement("div");
+      dayDiv.textContent = i;
+      dayDiv.classList.add("next-month");
+      daysContainer.appendChild(dayDiv);
+    }
   }
+
+  const prevButton = document.getElementById("mini-prev");
+  const nextButton = document.getElementById("mini-next");
+
+  prevButton.addEventListener("click", function () {
+    currentDate.setMonth(currentDate.getMonth() - 1);
+    renderCalendar(currentDate);
+  });
+
+  nextButton.addEventListener("click", function () {
+    currentDate.setMonth(currentDate.getMonth() + 1);
+    renderCalendar(currentDate);
+  });
 
   renderCalendar(currentDate);
 });

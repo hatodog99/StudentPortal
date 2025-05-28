@@ -20,8 +20,12 @@
   --text-color-1: #195905;
   --text-color-2: #0c3200;
 
-  --cal-today: rgba(25, 89, 5, 0.6);
-  --cal-today-text: #d3fcca;
+  --cal-today: rgba(209, 168, 39, 0.6);
+  --cal-today-text: #78611b;
+  --cal-prev-month: #9dbf7b;
+  --text-hover: #d9d9d9;
+
+  --main-cal-sched: rgba(217, 217, 217, 0.4);
 }
 
 /* darkmode variables */
@@ -84,6 +88,7 @@ footer {
   flex-direction: column;
   height: 100vh;
   overflow: hidden;
+  width: 90vw;
 }
 
 .container {
@@ -95,17 +100,195 @@ footer {
   width: auto;
 }
 
-/* temporary... */
-.main-cal,
-.mini-cal,
-.up-events {
+.main-cal-container,
+.mini-cal-container,
+.up-events-container {
   display: flex;
   flex-direction: column;
 
+  height: 100%;
+  width: 100vw;
+}
+
+/* main calendar container */
+.main-cal-container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+/* header */
+.main-cal-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  width: 100%;
+  height: 40px;
+}
+
+.btns-month-year {
+  display: flex;
+  align-items: center;
+
+  filter: var(--icon-filter-1);
+
+  height: 100%;
+  gap: 23px;
+}
+
+.main-cal-buttons {
+  display: flex;
+  align-items: center;
+
+  padding: 0.2rem 0.2rem 0 0.2rem;
+
+  height: 100%;
+  gap: 12px;
+}
+
+.main-cal-buttons img {
+  width: 2rem;
+  height: 2rem;
+
+  cursor: pointer;
+}
+
+.main-cal-buttons img:hover {
+  filter: var(--icon-filter-2);
+}
+
+.main-month-year {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.today-wms-container {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 12px;
+}
+
+.main-today {
+  height: 40px;
+  width: 40px;
+
+  border: 0.3rem solid var(--btn-border-color-1);
+  border-radius: 10px;
+
+  color: var(--text-color-1);
+
+  text-align: center;
+  line-height: 35px;
+
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.wms-btn {
+  display: flex;
+
+  height: 100%;
+  width: auto;
+
+  background-color: var(--btn-color-1);
+  border: 1px solid var(--btn-border-color-1);
+  border-radius: 20px;
+
+  padding: 0.5rem 0.8rem 0 0.8rem;
+  gap: 10px;
+
+  cursor: pointer;
+}
+
+.wms-btn .wms-week {
+  font-size: 0.8rem;
+  color: var(--text-color-1);
+}
+
+.wms-btn img {
+  width: 1.5rem;
+  height: 1.5rem;
+
+  filter: var(--icon-filter-1);
+}
+
+/* main caledar content */
+.main-cal-content {
+  background-color: var(--container-color);
   border: 1px solid var(--border-color);
   border-radius: 20px;
 
+  height: 100%;
+}
+
+/* header */
+.main-cal-content .main-cal-content-header {
+  display: flex;
+  flex-direction: row;
+
+  gap: 5px;
+
+  padding: 10px 22px;
+  height: 20%;
+}
+
+.main-cal-content .main-cal-days {
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+
+  color: var(--text-color-2);
+
+  gap: 80px;
+
   width: 100%;
+  height: 100%;
+}
+
+.main-cal-content .main-cal-weekday {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+
+  height: 40%;
+}
+
+.main-cal-content .main-cal-day {
+  font-size: 1.2rem;
+  padding: 0.4rem;
+
+  color: var(--text-color-1);
+}
+
+.main-cal-content .main-cal-today {
+  font-size: 1.2rem;
+  padding: 0.4rem;
+
+  background-color: var(--btn-color-2);
+  color: var(--cal-today-text);
+
+  border-radius: 100%;
+}
+
+/* content */
+.main-cal-content .main-cal-content-schedule {
+  background-color: var(--main-cal-sched);
+  border-radius: 20px;
+
+  height: 80%;
 }
 
 /* mini cal & upcoming events */
@@ -114,7 +297,7 @@ footer {
   flex-direction: column;
 
   height: auto;
-  width: 300px;
+  width: 320px;
 
   gap: 20px;
 }
@@ -124,6 +307,9 @@ footer {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+
+  height: 50px;
+
   gap: 1.2vw;
 }
 
@@ -162,8 +348,8 @@ footer {
 }
 
 /* mini calendar */
-.mini-cal {
-  height: 240px;
+.mini-cal-container {
+  height: 225px;
   width: auto;
 
   border: 1px solid var(--border-color);
@@ -183,23 +369,23 @@ footer {
   gap: 20px;
 }
 
-.buttons {
+.mini-cal-buttons {
   display: flex;
 
   background-color: var(--btn-color-1);
   border: 1px solid var(--btn-border-color-1);
   border-radius: 20px;
 
-  padding: 0.2rem;
+  padding: 0.2rem 0.2rem 0 0.2rem;
 
-  gap: 10px;
+  gap: 7px;
 }
 
-.btn {
+.mini-btn {
   cursor: pointer;
 }
 
-.buttons img {
+.mini-cal-buttons img {
   width: 1rem;
   height: 1rem;
 
@@ -220,7 +406,9 @@ footer {
   display: flex;
   flex-wrap: wrap;
 
-  font-size: 0.7rem;
+  margin: 2px;
+
+  font-size: 0.65rem;
 }
 
 .weekdays {
@@ -230,29 +418,37 @@ footer {
 }
 
 .days {
-  height: 240px;
+  height: 200px;
 }
 
 .weekdays div,
 .days div {
-  width: 10%;
-  margin: 0 2.14%;
-  padding: 5px;
+  width: 14.2%;
 
+  justify-content: center;
   text-align: center;
-  border-radius: 100%;
 }
 
 .days div {
-  cursor: pointer;
-  color: var(--text-color-1);
+  width: 22px;
+  height: 22px;
 
-  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 1.45%;
+  border-radius: 50%;
+
+  color: var(--text-color-1);
+  cursor: pointer;
+
+  transition: background 0.3s, color 0.3s;
 }
 
 .days div:hover {
-  background-color: var(--cal-today-text);
-  color: var(--cal-today);
+  background-color: var(--btn-color-1);
+  color: var(--text-hover);
 }
 
 .days .today {
@@ -260,7 +456,25 @@ footer {
   color: var(--cal-today-text);
 }
 
+.days .prev-month,
+.days .next-month {
+  color: var(--cal-prev-month);
+}
+
 /* upcoming evets */
-.up-events {
+.up-events-container {
   height: 100%;
+  width: auto;
+  padding: 10px;
+
+  background-color: var(--container-color);
+  color: var(--text-color-1);
+
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+}
+
+.up-events-header {
+  border-bottom: 1px solid var(--btn-border-color-1);
+  padding-bottom: 5px;
 }
