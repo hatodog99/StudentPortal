@@ -1,3 +1,4 @@
+/* Poppins */
 @font-face {
   font-family: "Poppins";
   src: url(fonts/Poppins/Poppins-Regular.ttf) format("truetype");
@@ -6,13 +7,26 @@
 
 @font-face {
   font-family: "Poppins";
+  src: url(fonts/Poppins/Poppins-Medium.ttf) format("truetype");
+  font-weight: medium;
+}
+
+@font-face {
+  font-family: "Poppins";
   src: url(fonts/Poppins/Poppins-Bold.ttf) format("truetype");
   font-weight: bold;
 }
 
+/* Nunito */
 @font-face {
   font-family: "Nunito";
-  src: url(fonts/Nunito/static/=Nunito-Regular.ttf) format("truetype");
+  src: url(fonts/Nunito/static/Nunito-Light.ttf) format("truetype");
+  font-weight: light;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url(fonts/Nunito/static/Nunito-Regular.ttf) format("truetype");
   font-weight: normal;
 }
 

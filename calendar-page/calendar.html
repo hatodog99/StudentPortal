@@ -113,79 +113,77 @@
         <div class="container">
           <!-- main cal container -->
           <div class="main-cal-container">
-            <!-- main cal header -->
+            <!-- header -->
             <div class="main-cal-header">
-              <!-- month-year and prev-next btns -->
-              <div class="btns-month-year">
+              <!--  prev-next btn and month-year -->
+              <div class="btns-month-year-container">
                 <div class="main-cal-buttons">
-                  <div id="prev" class="btn">
+                  <div id="main-prev" class="main-btn">
                     <img src="../images/icons/left-arrow-icon.svg" />
                   </div>
 
-                  <div id="next" class="btn">
+                  <div id="main-next" class="main-btn">
                     <img src="../images/icons/right-arrow-icon.svg" />
                   </div>
                 </div>
 
-                <div class="main-month-year">
-                  <p>May 2025</p>
-                </div>
+                <div id="main-month-year"></div>
               </div>
 
-              <!-- today and week-month-schedule btn -->
-              <div class="today-wms-container">
-                <div class="main-today">
-                  <p>12</p>
-                </div>
+              <!-- today's date and view-type btn -->
+              <div class="today-view-type-container">
+                <div class="main-today" id="main-today"><p>12</p></div>
 
-                <div class="wms-btn">
-                  <div class="wms-week">Week</div>
+                <div class="view-type-btn">
+                  <div class="view-type">Week</div>
                   <img src="../images/icons/down-arrow-icon.svg" />
                 </div>
               </div>
             </div>
 
+            <!-- main calendar content -->
             <div class="main-cal-content">
+              <!-- header -->
               <div class="main-cal-content-header">
-                <div class="main-cal-days">
-                  <div class="main-cal-day-container">
-                    <div class="main-cal-weekday">SUN</div>
-                    <div class="main-cal-day">11</div>
+                <div class="time-zone">GMT +8</div>
+                <div class="main-weekdays-days-container">
+                  <div class="main-weekdays">
+                    <div>SUN</div>
+                    <div>MON</div>
+                    <div>TUE</div>
+                    <div>WED</div>
+                    <div>THU</div>
+                    <div>FRI</div>
+                    <div>SAT</div>
                   </div>
 
-                  <div class="main-cal-day-container">
-                    <div class="main-cal-weekday">MON</div>
-                    <div class="main-cal-today">12</div>
-                  </div>
-
-                  <div class="main-cal-day-container">
-                    <div class="main-cal-weekday">TUE</div>
-                    <div class="main-cal-day">13</div>
-                  </div>
-
-                  <div class="main-cal-day-container">
-                    <div class="main-cal-weekday">WED</div>
-                    <div class="main-cal-day">14</div>
-                  </div>
-
-                  <div class="main-cal-day-container">
-                    <div class="main-cal-weekday">THU</div>
-                    <div class="main-cal-day">15</div>
-                  </div>
-
-                  <div class="main-cal-day-container">
-                    <div class="main-cal-weekday">FRI</div>
-                    <div class="main-cal-day">16</div>
-                  </div>
-
-                  <div class="main-cal-day-container">
-                    <div class="main-cal-weekday">SAT</div>
-                    <div class="main-cal-day">17</div>
-                  </div>
+                  <div class="main-days" id="main-days"></div>
                 </div>
               </div>
 
-              <div class="main-cal-content-schedule">schedule</div>
+              <!-- body -->
+              <div class="main-cal-body-border">
+                <div class="main-cal-body">
+                  <!-- time -->
+                  <div class="main-cal-time">
+                    <div>7 AM</div>
+                    <div>8 AM</div>
+                    <div>9 AM</div>
+                    <div>10 AM</div>
+                    <div>11 AM</div>
+                    <div>12 NN</div>
+                    <div>1 PM</div>
+                    <div>2 PM</div>
+                    <div>3 PM</div>
+                    <div>4 PM</div>
+                    <div>5 PM</div>
+                    <div>6 PM</div>
+                    <div>7 PM</div>
+                  </div>
+
+                  <div class="main-cal-grid-line"></div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -206,7 +204,7 @@
             <div class="mini-cal-container">
               <!-- header -->
               <div class="mini-cal-header">
-                <div id="month-year"></div>
+                <div id="mini-month-year"></div>
 
                 <div class="mini-cal-buttons">
                   <div id="mini-prev" class="mini-btn">
@@ -219,7 +217,8 @@
                 </div>
               </div>
 
-              <div class="weekdays">
+              <!-- mini calendar content -->
+              <div class="mini-weekdays">
                 <div>S</div>
                 <div>M</div>
                 <div>T</div>
@@ -229,13 +228,63 @@
                 <div>S</div>
               </div>
 
-              <div class="days" id="days"></div>
+              <div class="mini-days" id="mini-days"></div>
             </div>
 
             <div class="up-events-container">
-              <div class="up-events-header">Upcoming Events</div>
+              <div class="up-events-container-header">Upcoming Events</div>
 
-              <div class="up-events-content"></div>
+              <div class="up-events-body">
+                <div class="up-events-holiday-container">
+                  <div class="up-events-header">
+                    <img src="../images/icons/clock-icon.svg" />
+                    <p>MAY 12</p>
+                  </div>
+                  <div class="event-name">
+                    National and Local Election Holiday
+                  </div>
+                </div>
+
+                <div class="up-events-college-container">
+                  <div class="up-events-header">
+                    <img src="../images/icons/clock-icon.svg" />
+                    <p>MAY 14 | 7:00AM - 3:00PM</p>
+                  </div>
+                  <div class="event-name">CEIT Revolution 2025</div>
+                </div>
+
+                <div class="up-events-org-container">
+                  <div class="up-events-header">
+                    <img src="../images/icons/clock-icon.svg" />
+                    <p>MAY 15 | 1:00PM - 5:00PM</p>
+                  </div>
+                  <div class="event-name">LIKHAIN: ArtJam 2025</div>
+                </div>
+
+                <div class="up-events-college-container">
+                  <div class="up-events-header">
+                    <img src="../images/icons/clock-icon.svg" />
+                    <p>MAY 19</p>
+                  </div>
+                  <div class="event-name">University Games 2025</div>
+                </div>
+
+                <div class="up-events-important-container">
+                  <div class="up-events-header">
+                    <img src="../images/icons/clock-icon.svg" />
+                    <p>JUNE 16 - 21</p>
+                  </div>
+                  <div class="event-name">Final Examination</div>
+                </div>
+
+                <div class="up-events-important-container">
+                  <div class="up-events-header">
+                    <img src="../images/icons/clock-icon.svg" />
+                    <p>JUNE 23</p>
+                  </div>
+                  <div class="event-name">Start of Vacation</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -243,6 +292,7 @@
     </div>
 
     <script src="../darkmode.js"></script>
-    <script src="../calendar-page/calendar.js"></script>
+    <script src="../calendar-page/mini-calendar.js"></script>
+    <script src="../calendar-page/main-calendar.js"></script>
   </body>
 </html>
