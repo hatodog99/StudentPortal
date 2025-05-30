@@ -1,0 +1,147 @@
+
+/*base/light mode variables*/
+:root {
+  --bg-color: rgba(206, 206, 206, 1);
+  --sidebar-bg-color: rgba(25, 89, 5, 0.6);
+  --text-color: rgba(12, 50, 0, 1);
+  --secondary-text: rgba(25, 89, 5, 0.5);
+  --title-color: rgba(25, 89, 5, 1);
+  --sidebar-text-color: rgba(211, 252, 202, 1);
+  --glassContainer-color: rgba(217, 217, 217, 0.43);
+  --input-placeholder: rgba(12, 50, 0, 1);
+  --submitBtn-bg: rgb(25, 89, 5);
+  --theme-icon-url: url("images/light-mode-icon.svg");
+  --lightmode-icon-display: none;
+  --darkmode-icon-display: block;
+  --bg-img: url("../images/bg-lightmode.svg");
+}
+
+/* darkmode variables */
+.darkmode {
+  --bg-color: rgba(15, 28, 34, 1);
+  --sidebar-bg-color: rgba(9, 31, 2, 0.4);
+  --text-color: rgb(255, 255, 255);
+  --secondary-text: rgba(209, 168, 39, 0.6);
+  --title-color: rgba(209, 168, 39, 1);
+  --sidebar-text-color: rgba(255, 250, 248, 1);
+  --glassContainer-color: rgba(61, 61, 61, 0.43);
+  --input-placeholder: white;
+  --submitBtn-bg: rgb(0, 0, 0);
+  --theme-icon-url: url("images/dark-mode-icon.svg");
+  --lightmode-icon-display: block;
+  --darkmode-icon-display: none;
+  --bg-img: url("../images/bg-darkmode.svg");
+}
+
+* {
+  transition: 0.3s ease;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--bg-color);
+    background-size: cover;
+    background-position: center;
+    font-family: "Nunito", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* SIDEBAR */ 
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 12%;
+  height: 100%;
+  background-color: var(--sidebar-bg-color);
+  color: var(--sidebar-text-color);
+  padding: 20px;
+  border-right: 1px solid var(--border);
+}
+
+.sidebar img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-bottom: 15%;
+}
+
+.features {
+    font-size: 0.95rem;
+    font-family: "Poppins";
+}
+
+.features-option {
+  display: flex;
+  margin-bottom: -5%;
+  margin-left: 5%;
+  transition: 0.2s ease;
+  cursor: pointer;
+  color: var(--sidebar-text-color);
+}
+
+.features-option:hover{
+  transform: scale(1.06);
+}
+
+.features-option img{
+  width: 10%;
+  margin: 0;
+  margin-right: 5%;
+}
+
+#selected-page{
+  background: linear-gradient(to right, rgba(217, 217, 217, 1), rgba(217, 217, 217, 0));
+  color: rgba(12, 50, 0, 1);
+  font-weight: 600;
+  padding: none;
+  padding-left: 7%;
+  padding-right: 1%;
+  border: none;
+  border-radius: 25px;
+  margin-left: 0;
+}
+
+#dadhboardIcon {
+  width: 10%;
+  margin-left: -0.4%;
+  margin-right: 4.5%;
+  color: var(--sidebar-text-color);
+}
+
+.features hr{
+  border: none;
+  height: 1px;
+  background-color: rgba(25, 89, 5, 1);
+}
+
+#eLearningIcon {
+  width: 18%;
+  margin-left: -3%;
+}
+
+#eLearning-option {
+  margin-bottom: 150%;
+}
+
+#logout-option {
+  position: fixed;
+  bottom: 12%;
+  width: 20%;
+  margin-left: 2.3%;
+  text-decoration: none;
+  color: var(--sidebar-text-color);
+}
+
+#logout-option img {
+  width: 6%;
+  margin-right: 5%;
+}
+

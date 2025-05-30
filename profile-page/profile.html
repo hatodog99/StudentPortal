@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="../navbar.css" />
+    <link rel="stylesheet" href="../fonts.css" />
+    <link rel="stylesheet" href="profile.css" />
+    <link rel="stylesheet" href="../header.css" />
+</head>
+<body>
+    <main>
+        <div class="sidebar">
+            <div class="cvsu-logo">
+                <img src="../images/cvsu-logo 1.svg">
+            </div>
+            
+
+            <div class="features">
+                <a href="../dashboard-page/home.html">
+                    <div class="features-option" id="dashboard-div">
+                        <img src="../images/icons/dashboard-icon(1).svg">
+                        <p>Dashboard</p>
+                    </div>
+                </a>
+
+                <a href="../profile-page/profile.html">
+                    <div class="features-option" id="selected-page">
+                        <img src="../images/icons/profile-icon.svg">
+                        <p>Profile</p>
+                    </div>
+                </a>
+
+                <a href="../calendar-page/calendar.html">
+                    <div class="features-option">
+                        <img src="../images/icons/calendar-icon.svg">
+                        <p>Calendar</p>
+                    </div>
+                </a>
+
+                <a href="../grades-page/grades.html">
+                    <div class="features-option">   
+                        <img src="../images/icons/grades-icon.svg">
+                        <p>Grades</p>
+                    </div>
+                </a>
+                
+                <div class="features-option">
+                    <img src="../images/icons/enrollment-icon.svg">
+                    <p>Enrollment</p>
+                </div>
+
+                <hr class="sidebar-divider">
+
+                <div class="features-option" id="eLearning-option">
+                    <img src="../images/icons/e-learning-icon.svg" id="eLearningIcon">
+                    <p>E-Learning</p>
+                </div>
+
+                <hr class="sidebar-divider">
+
+                <a href="../../StudentPortal-main/login.html">
+                <div class="features-option" id="logout-option">
+                    <img src="../images/icons/logout-icon.svg" id="logoutIcon">
+                    <p>Log-out</p>
+                </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="main-container">
+
+
+            <div class="header">
+                <h1>Profile</h1>
+                <div class="theme-btn-container">
+                    <div>
+                        <img src="../images/icons/notif-icon.svg" class="notif-icon" id="lm-notif">
+                        <img src="../images/icons/notif-icon-dm.svg" class="notif-icon" id="dm-notif">
+                    </div>
+                    <div class="themeBtn" id="theme-switch">
+                        <img src="../images/icons/dark-mode-icon.svg" class="theme-icon" id="darkmode-icon">
+                        <img src="../images/icons/light-mode-icon.svg" class="theme-icon" id="lightmode-icon">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="profile-container" id="main-profile-container">
+                <div class="profile-1">
+                    <div class="profile-img-container">
+                        <img src="../images/profile-pic.svg">
+                    </div>
+                    <div class="profile-info-container">
+                        <p>Kazel Arwen Jane L. Tuazon</p>
+                        <p>202474993</p>
+                        <p>Bachelor of Science in Computer Science</p>
+                    </div>
+                    <div class="profile-controls-container">
+                        <div class="profile-controls">
+                            <div class="profile-control-option" id="edit-profile">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M304 128a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM49.3 464l349.5 0c-8.9-63.3-63.3-112-129-112l-91.4 0c-65.7 0-120.1 48.7-129 112zM0 482.3C0 383.8 79.8 304 178.3 304l91.4 0C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7L29.7 512C13.3 512 0 498.7 0 482.3z"/></svg>
+                                <p>Edit Profile Picture</p>
+                            </div>
+                            <hr>
+                            <div class="profile-control-option" id="student-assistance">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M478-240q21 0 35.5-14.5T528-290q0-21-14.5-35.5T478-340q-21 0-35.5 14.5T428-290q0 21 14.5 35.5T478-240Zm-36-154h74q0-33 7.5-52t42.5-52q26-26 41-49.5t15-56.5q0-56-41-86t-97-30q-57 0-92.5 30T342-618l66 26q5-18 22.5-39t53.5-21q32 0 48 17.5t16 38.5q0 20-12 37.5T506-526q-44 39-54 59t-10 73Zm38 314q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+                                <p>Student Assistance</p>
+                            </div>
+                            <hr>
+                            <div class="profile-control-option" id="change-password">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="m482-200 114-113-114-113-42 42 43 43q-28 1-54.5-9T381-381q-20-20-30.5-46T340-479q0-17 4.5-34t12.5-33l-44-44q-17 25-25 53t-8 57q0 38 15 75t44 66q29 29 65 43.5t74 15.5l-38 38 42 42Zm165-170q17-25 25-53t8-57q0-38-14.5-75.5T622-622q-29-29-65.5-43T482-679l38-39-42-42-114 113 114 113 42-42-44-44q27 0 55 10.5t48 30.5q20 20 30.5 46t10.5 52q0 17-4.5 34T603-414l44 44ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/></svg>
+                                <p>Student Assistance</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-2">
+                    <div class="profile-2-header">
+                        <h1>Personal Information</h1>
+                    </div>
+                    <hr>
+                    <div class="flex-container">
+                        <div class="profile-info-container-1">
+                            <p class="info-label-1">Date of Birth</p>
+                            <p class="info-specific-1">November 4, 2001</p>
+
+                            <p class="info-label-1">Sex</p>
+                            <p class="info-specific-1">Female</p>
+
+                            <p class="info-label-1">Status</p>
+                            <p class="info-specific-1">Single</p>
+                        </div>
+
+                        <div class="profile-info-container-2">
+                            <p class="info-label-2">Religion</p>
+                            <p class="info-specific-2">Catholic</p>
+
+                            <p class="info-label-2">Citizenship</p>
+                            <p class="info-specific-2">Filipino</p>
+
+                            <p class="info-label-2">Home Address</p>
+                            <p class="info-specific-2">SaTabi, Tabi Lang Barangay, Kabilang Bundok City, Puerto Princeso, Philippines </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-3">
+                    <div class="profile-3-header">
+                        <h1>Contact Information</h1>
+                    </div>
+                    <hr>
+                    <div class="flex-container">
+                        <div class="profile-info-container-1">
+                            <p class="contact-label-1">CvSU E-Mail</p>
+                            <p class="contact-specific-1">kexularwin.tuason@cvsu.edu.com</p>
+
+                            <p class="contact-label-1">Initial Password</p>
+                            <p class="contact-specific-1">ayAyayAymALitolButterfly0506</p>
+
+                            <p class="password-reminder">For new users, please change your password.</p>
+                        </div>
+
+                        <div class="profile-info-container-2">
+                            <p class="contact-label-2">E-Mail Address</p>
+                            <p class="contact-specific-2">banana8080@gmail.com</p>
+
+                            <p class="contact-label-2">Contact Number</p>
+                            <p class="contact-specific-2">09546654287</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-4">
+                    <div class="profile-4-header">
+                        <h1>Family Information</h1>
+                    </div>
+                    <hr>
+                    <div class="flex-container">
+                        <div class="profile-info-container-1">
+                            <p class="family-label-1">Guardian</p>
+                            <p class="family-specific-1">Sung Jinwoo</p>
+
+                            <p class="family-label-1">Number</p>
+                            <p class="family-specific-1">09364859609</p>
+                        </div>
+
+                        <div class="profile-info-container-2">
+                            <p class="family-label-2">Parent</p>
+                            <p class="family-specific-2">Gojo Satoru</p>
+
+                            <p class="family-label-2">Number</p>
+                            <p class="family-specific-2">09625347890</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="edit-profile-container" id="edit-profile-page">
+                <div class="edit-profile">
+                    <div class="edit-profile-img">
+                        <img src="../images/profile-pic.svg">
+                    </div>
+
+                    <div class="edit-profile-controls-container">
+                        <p>Edit Profile Picture</p>
+
+                        <div class="edit-profile-controls">
+                            <div class="profile-upload-option" id="upload-profile">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960"><path d="M440-320v-326L336-542l-56-58 200-200 200 200-56 58-104-104v326h-80ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>
+                                <p>Upload Picture</p>
+                            </div>
+                            <hr>
+                            <div class="profile-upload-option" id="import-profile">
+                                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.96721 0.65784C4.9689 1.35107 3.24556 2.66685 2.05032 4.41191C0.855082 6.15696 0.250946 8.23932 0.326651 10.3531C0.402355 12.4669 1.15391 14.5007 2.47092 16.1558C3.78794 17.8108 5.60099 19 7.64377 19.5485C9.2999 19.9758 11.035 19.9946 12.7 19.6032C14.2083 19.2644 15.6028 18.5397 16.7469 17.5C17.9376 16.3849 18.802 14.9664 19.2469 13.3969C19.7305 11.6901 19.8166 9.89524 19.4985 8.15003H10.1985V12.0078H15.5844C15.4768 12.6231 15.2461 13.2104 14.9062 13.7345C14.5663 14.2585 14.1242 14.7086 13.6063 15.0578C12.9486 15.4929 12.2072 15.7856 11.4297 15.9172C10.6499 16.0622 9.85011 16.0622 9.07033 15.9172C8.28 15.7538 7.53236 15.4276 6.87502 14.9594C5.819 14.2119 5.02608 13.1499 4.6094 11.925C4.18567 10.6772 4.18567 9.32441 4.6094 8.07659C4.906 7.20193 5.39632 6.40555 6.04377 5.7469C6.7847 4.97932 7.72273 4.43065 8.75495 4.16108C9.78718 3.89152 10.8737 3.91148 11.8953 4.21878C12.6934 4.46376 13.4232 4.8918 14.0266 5.46878C14.6339 4.86461 15.2401 4.25888 15.8453 3.65159C16.1578 3.32503 16.4985 3.01409 16.8063 2.67971C15.8853 1.82265 14.8042 1.15574 13.625 0.717215C11.4777 -0.0624883 9.12811 -0.0834421 6.96721 0.65784Z" fill="white"/>
+                                    <path d="M6.96758 0.657806C9.1283 -0.08398 11.4779 -0.0635778 13.6254 0.715618C14.8048 1.15712 15.8854 1.82724 16.8051 2.68749C16.4926 3.02187 16.1629 3.33437 15.8441 3.65937C15.2379 4.26458 14.6322 4.8677 14.027 5.46874C13.4236 4.89177 12.6938 4.46373 11.8957 4.21874C10.8744 3.91037 9.78792 3.88926 8.75542 4.15772C7.72292 4.42618 6.78432 4.97384 6.04258 5.74062C5.39513 6.39927 4.90481 7.19564 4.6082 8.07031L1.36914 5.56249C2.52853 3.26337 4.53594 1.50472 6.96758 0.657806Z" fill="#E33629"/>
+                                    <path d="M0.510152 8.04688C0.684247 7.18405 0.973283 6.34848 1.36953 5.5625L4.60859 8.07656C4.18486 9.32438 4.18486 10.6772 4.60859 11.925C3.52942 12.7583 2.44974 13.5958 1.36953 14.4375C0.377575 12.463 0.0750466 10.2133 0.510152 8.04688Z" fill="#F8BD00"/>
+                                    <path d="M10.198 8.14844H19.498C19.8161 9.89365 19.73 11.6885 19.2464 13.3953C18.8015 14.9648 17.9371 16.3834 16.7464 17.4984C15.7011 16.6828 14.6511 15.8734 13.6058 15.0578C14.124 14.7082 14.5663 14.2576 14.9063 13.733C15.2462 13.2084 15.4766 12.6205 15.5839 12.0047H10.198C10.1964 10.7203 10.198 9.43437 10.198 8.14844Z" fill="#587DBD"/>
+                                    <path d="M1.36719 14.4375C2.4474 13.6042 3.52708 12.7667 4.60625 11.925C5.02376 13.1503 5.81782 14.2123 6.875 14.9594C7.53439 15.4254 8.28364 15.7489 9.075 15.9094C9.85478 16.0544 10.6546 16.0544 11.4344 15.9094C12.2119 15.7778 12.9533 15.485 13.6109 15.05C14.6562 15.8656 15.7063 16.675 16.7516 17.4906C15.6076 18.5308 14.2132 19.2561 12.7047 19.5953C11.0397 19.9867 9.30457 19.9679 7.64844 19.5406C6.3386 19.1909 5.11512 18.5744 4.05469 17.7297C2.93228 16.8386 2.01556 15.7156 1.36719 14.4375Z" fill="#319F43"/>
+                                </svg>
+                                <p>Import from Google</p>
+                            </div>
+                            <hr>
+                            <div class="profile-upload-option" id="remove-profile">
+                                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.66732 9.16663C6.4463 9.16663 6.23434 9.25442 6.07806 9.4107C5.92178 9.56698 5.83398 9.77895 5.83398 9.99996C5.83398 10.221 5.92178 10.4329 6.07806 10.5892C6.23434 10.7455 6.4463 10.8333 6.66732 10.8333H13.334C13.555 10.8333 13.767 10.7455 13.9232 10.5892C14.0795 10.4329 14.1673 10.221 14.1673 9.99996C14.1673 9.77895 14.0795 9.56698 13.9232 9.4107C13.767 9.25442 13.555 9.16663 13.334 9.16663H6.66732Z"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.833984 4.16665C0.833984 3.28259 1.18517 2.43474 1.8103 1.80962C2.43542 1.1845 3.28326 0.833313 4.16732 0.833313H15.834C16.718 0.833313 17.5659 1.1845 18.191 1.80962C18.8161 2.43474 19.1673 3.28259 19.1673 4.16665V15.8333C19.1673 16.7174 18.8161 17.5652 18.191 18.1903C17.5659 18.8155 16.718 19.1666 15.834 19.1666H4.16732C3.28326 19.1666 2.43542 18.8155 1.8103 18.1903C1.18517 17.5652 0.833984 16.7174 0.833984 15.8333V4.16665ZM4.16732 2.49998H15.834C16.276 2.49998 16.6999 2.67557 17.0125 2.98813C17.3251 3.3007 17.5006 3.72462 17.5006 4.16665V15.8333C17.5006 16.2753 17.3251 16.6993 17.0125 17.0118C16.6999 17.3244 16.276 17.5 15.834 17.5H4.16732C3.72529 17.5 3.30137 17.3244 2.98881 17.0118C2.67625 16.6993 2.50065 16.2753 2.50065 15.8333V4.16665C2.50065 3.72462 2.67625 3.3007 2.98881 2.98813C3.30137 2.67557 3.72529 2.49998 4.16732 2.49998Z"/>
+                                </svg>
+                                <p>Remove Picture</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="update-btn-container">
+                        <button>Update Picture</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../darkmode.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>

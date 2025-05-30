@@ -1,0 +1,435 @@
+
+
+/* base/light mode variables*/
+:root {
+  --bg-color: rgba(206, 206, 206, 1);
+  --sidebar-bg-color: rgba(25, 89, 5, 0.6);
+  --text-color: rgba(12, 50, 0, 1);
+  --secondary-text: rgba(25, 89, 5, 0.5);
+  --title-color: rgba(25, 89, 5, 1);
+  --sidebar-text-color: rgba(211, 252, 202, 1);
+  --glassContainer-color: rgba(217, 217, 217, 0.43);
+  --input-placeholder: rgba(12, 50, 0, 1);
+  --submitBtn-bg: rgb(25, 89, 5);
+
+
+  --theme-icon-url: url("../images/light-mode-icon.svg");
+  --lightmode-icon-display: none;
+  --darkmode-icon-display: block;
+
+  --bg-img: url("../images/bg-lightmode.svg");
+}
+
+/* darkmode variables */
+.darkmode {
+  --bg-color: rgba(15, 28, 34, 1);
+  --sidebar-bg-color: rgba(9, 31, 2, 0.4);
+  --text-color: rgb(255, 255, 255);
+  --secondary-text: rgba(209, 168, 39, 0.6);
+  --title-color: rgba(209, 168, 39, 1);
+  --sidebar-text-color: rgba(255, 250, 248, 1);
+  --glassContainer-color: rgba(61, 61, 61, 0.43);
+  --input-placeholder: white;
+  --submitBtn-bg: rgb(0, 0, 0);
+
+
+  --theme-icon-url: url("../images/dark-mode-icon.svg");
+  --lightmode-icon-display: none;
+  --darkmode-icon-display: none;
+  --bg-img: url("../images/bg-darkmode.svg");
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--bg-color);
+    background-size: cover;
+    background-position: center;
+    font-family: "Nunito", sans-serif;
+    background-image: var(--bg-img);
+}
+
+a {
+  text-decoration: none;
+}
+
+.flex-container {
+  display: flex;
+}
+
+svg {
+  width: 2.3%;
+  margin-left: 3%;
+  fill: var(--text-color);
+}
+
+.calendar-header svg {
+  width: 4%;
+  margin-left: 40%;
+}
+
+.regform-body svg {
+  width: 3.5%;
+  margin-left: 4%;
+}
+
+/* PROFILE CONTAINER */
+.main-container {
+  margin-left: 19%;
+  font-family: "Poppins";
+}
+
+.profile-container {
+  height: 90vh;
+  overflow-y: auto;
+}
+
+.profile-container::-webkit-scrollbar {
+  display: none;
+}
+
+.profile-1 {
+  border: 1px solid #fffaf8;
+  background: var(--glassContainer-color);
+  backdrop-filter: blur(21.5px);
+  padding: 2% 2% 1.8%;
+  width: 90%;
+  border-radius: 20px;
+  margin-top: 0%;
+  display: flex;
+}
+
+
+.profile-img-container img{
+  margin: 0;
+  width: 90%;
+}
+
+.profile-info-container {
+  margin-left: 3%;
+  width: 50%;
+}
+
+.profile-info-container p{
+  margin: 0;
+  margin-top: 5%;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.profile-info-container p:nth-child(1){
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-top: 2%;
+}
+
+.profile-controls-container {
+  width: 20%;
+  margin-left: 9.5%;
+}
+
+.profile-controls-container hr{
+  width: 80%;
+  background-color: var(--text-color);
+  border: none;
+  height: 1px;
+}
+
+.profile-controls {
+  background-color: rgba(25, 89, 5, 0.4);
+  border: 1px solid var(--text-color);
+  border-radius: 15px;
+}
+
+.profile-control-option {
+  display: flex;
+  color: var(--text-color);
+  font-size: 0.8rem;
+  margin-left: 8%;
+  cursor: pointer;
+}
+
+.profile-control-option:hover {
+  transform: scale(1.02);
+}
+
+.profile-control-option svg {
+  fill: var(--text-color);
+  width: 6%;
+  margin-right: 10%;
+}
+
+#student-assistance,
+#change-password {
+  margin-left: 6.5%;
+}
+
+#student-assistance svg,
+#change-password svg{
+  width: 9%;
+  margin-right: 8%;
+}
+
+
+
+
+.profile-2 {
+  border: 1px solid #fffaf8;
+  background: var(--glassContainer-color);
+  backdrop-filter: blur(21.5px);
+  padding: 2% 2% 1.8%;
+  width: 90%;
+  border-radius: 20px;
+  margin-top: 2%;
+}
+
+.profile-2-header h1,
+.profile-3-header h1,
+.profile-4-header h1{
+  margin: 0;
+  font-size: 1.3rem;
+  color: rgba(12, 50, 0, 1);
+}
+
+.darkmode .profile-2-header h1,
+.darkmode .profile-3-header h1,
+.darkmode .profile-4-header h1{
+  color: var(--title-color);
+}
+
+.profile-2 hr,
+.profile-3 hr,
+.profile-4 hr{
+  width: 100%;
+  background-color: var(--text-color);
+  border: none;
+  height: 1px;
+  font-weight: bold;
+}
+
+.profile-info-container-1,
+.profile-info-container-2 {
+  margin: 0;
+}
+
+.profile-info-container-1 {
+  width: 50%;
+}
+
+.profile-info-container-2 {
+  margin-left: 0%;
+}
+
+.info-label-1{
+  margin: 0;
+  color: var(--text-color);
+  font-weight: lighter;
+  margin-top: 4.7%;
+}
+
+.info-specific-1{
+  margin: 0;
+  color: var(--text-color);
+  font-weight: 550;
+  margin-bottom: 7%;
+}
+
+.info-label-2{
+  margin: 0;
+  color: var(--text-color);
+  font-weight: lighter;
+  margin-top: 4.34%;
+}
+
+.info-specific-2{
+  margin: 0;
+  color: var(--text-color);
+  font-weight: 550;
+  margin-bottom: 6.1%;
+}
+
+
+
+.profile-3 {
+  border: 1px solid #fffaf8;
+  background: var(--glassContainer-color);
+  backdrop-filter: blur(21.5px);
+  padding: 2% 2% 1.8%;
+  width: 90%;
+  border-radius: 20px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.contact-label-1{
+  margin: 0;
+  color: var(--text-color);
+  font-weight: lighter;
+  margin-top: 4.7%;
+}
+
+.contact-specific-1 {
+  margin: 0;
+  color: var(--text-color);
+  font-weight: 550;
+  margin-bottom: 7%;
+}
+
+.contact-label-2 {
+  margin: 0;
+  color: var(--text-color);
+  font-weight: lighter;
+  margin-top: 10.34%;
+}
+
+.contact-specific-2 {
+  margin: 0;
+  color: var(--text-color);
+  font-weight: 550;
+  margin-bottom: 18.1%;
+}
+
+.password-reminder {
+  margin: 0;
+  color: rgba(101, 101, 101, 1);
+  font-size: 0.9rem;
+  margin-top: -3.7%;
+}
+
+
+
+.profile-4 {
+  border: 1px solid #fffaf8;
+  background: var(--glassContainer-color);
+  backdrop-filter: blur(21.5px);
+  padding: 2% 2% 1.8%;
+  width: 90%;
+  border-radius: 20px;
+  margin-top: 2%;
+  margin-bottom: 10%;
+}
+
+
+.family-label-1{
+  margin: 0;
+  color: var(--text-color);
+  font-weight: lighter;
+  margin-top: 3.7%;
+}
+
+.family-specific-1 {
+  margin: 0;
+  color: var(--text-color);
+  font-weight: 550;
+  margin-bottom: 7%;
+}
+
+.family-label-2 {
+  margin: 0;
+  color: var(--text-color);
+  font-weight: lighter;
+  margin-top: 18.8%;
+}
+
+.family-specific-2 {
+  margin: 0;
+  color: var(--text-color);
+  font-weight: 550;
+  margin-bottom: 36.1%;
+}
+
+
+/* PROFILE PICTURE PAGE */
+
+.edit-profile-container {
+  display: none;
+}
+
+.edit-profile {
+  border: 1px solid #fffaf8;
+  background: var(--glassContainer-color);
+  backdrop-filter: blur(21.5px);
+  padding: 2% 2% 1.8%;
+  width: 90%;
+  border-radius: 20px;
+  margin-top: 3%;
+  display: flex;
+}
+
+.edit-profile-img {
+  width: 30%;
+}
+
+.edit-profile-img img{
+  width: 90%;
+}
+
+.edit-profile-controls-container {
+  width: 30%;
+  color: var(--text-color);
+  margin-left: 2%;
+}
+
+.edit-profile-controls-container p{
+  margin: 0;
+}
+
+.edit-profile-controls-container p:first-child {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.profile-upload-option {
+  display: flex;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.profile-upload-option:hover {
+  transform: scale(1.04);
+}
+
+
+.edit-profile-controls {
+  margin-top: 50%;
+}
+
+.edit-profile-controls svg {
+  width: 4.5%;
+  margin-right: 6%;
+  fill: var(--text-color);
+}
+
+.edit-profile-controls hr {
+  border: none;
+  background-color: var(--text-color);
+  height: 1px;
+  width: 60%;
+  text-align: left;
+  margin-left: 2%;
+}
+
+
+.update-btn-container button{
+  margin-top: 135%;
+  margin-left: 35%;
+  font-size: 1.7rem;
+  font-weight: 600;
+  padding: 3%;
+  width: 160%;
+  font-family: "Nunito";
+  background-color: rgba(25, 89, 5, 0.4);
+  border: 1px solid var(--text-color);
+  border-radius: 20px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.darkmode .update-btn-container button{
+  background-color: rgba(209, 168, 39, 0.4);
+}
+
+.update-btn-container button:hover{
+  transform: scale(1.04);
+}
