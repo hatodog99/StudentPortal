@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const monthYear = document.getElementById("main-month-year");
   const daysContainer = document.getElementById("main-days");
 
+  const prevButton = document.getElementById("main-prev");
+  const nextButton = document.getElementById("main-next");
+
   const months = [
     "January",
     "February",
@@ -19,12 +22,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const daysOfWeek = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 
-  let currentDate = new Date();
-  let today = new Date();
+  let currentDate = new Date(); // used for rendering current view
+  const today = new Date(); // fixed today reference
 
   function renderWeek(date) {
     const year = date.getFullYear();
     const month = date.getMonth();
+
     monthYear.textContent = `${months[month]} ${year}`;
     daysContainer.innerHTML = "";
 
@@ -38,8 +42,8 @@ document.addEventListener("DOMContentLoaded", function () {
       const current = new Date(weekStart);
       current.setDate(weekStart.getDate() + i);
 
-      const dayElement = document.createElement("div");
-      dayElement.classList.add("main-day");
+      const dayDiv = document.createElement("div");
+      dayDiv.classList.add("main-day");
 
       // Mark today
       if (
@@ -47,15 +51,40 @@ document.addEventListener("DOMContentLoaded", function () {
         current.getMonth() === today.getMonth() &&
         current.getFullYear() === today.getFullYear()
       ) {
-        dayElement.classList.add("main-body-today");
+        dayDiv.classList.add("main-body-today");
       }
 
-      // Only the date number
-      dayElement.textContent = current.getDate();
-
-      daysContainer.appendChild(dayElement);
+      // Set the day number
+      dayDiv.textContent = current.getDate();
+      daysContainer.appendChild(dayDiv);
     }
   }
 
+  // Button event listeners
+  prevButton.addEventListener("click", function () {
+    currentDate.setDate(currentDate.getDate() - 7); // go back 1 week
+    renderWeek(currentDate);
+  });
+
+  nextButton.addEventListener("click", function () {
+    currentDate.setDate(currentDate.getDate() + 7); // go forward 1 week
+    renderWeek(currentDate);
+  });
+
+  // Initial render
   renderWeek(currentDate);
+});
+
+// main cal grid
+document.addEventListener("DOMContentLoaded", function () {
+  const calendarGrid = document.getElementById("main-cal-grid");
+
+  const timeSlots = 23.8; // 7AM to 7PM
+  const days = 7; // Sunday to Saturday
+
+  for (let i = 0; i < timeSlots * days; i++) {
+    const cell = document.createElement("div");
+    cell.classList.add("grid-cell");
+    calendarGrid.appendChild(cell);
+  }
 });

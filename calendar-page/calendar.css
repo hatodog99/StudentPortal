@@ -31,7 +31,7 @@
   --text-hover: #d9d9d9;
 
   --main-cal-body: #d2d4c8;
-  --main-cal-border: #386e25;
+  --main-cal-border: #7e9c70;
 
   --holiday-color: #7db4c8;
   --college-color: #9dbf7b;
@@ -48,7 +48,7 @@
 * {
   margin: 0;
   padding: 0;
-  transition: 80ms ease;
+  transition: 0.4s ease;
 
   box-sizing: border-box;
 }
@@ -87,11 +87,23 @@ body {
   z-index: 1;
 }
 
+.sidebar {
+  transition: 80ms ease;
+}
+
+.page-option-selected img {
+  transition: none;
+}
+
 header,
 main,
 footer {
   position: relative;
   z-index: 2;
+}
+
+header .notif-btn img {
+  transition: none;
 }
 
 .page-content {
@@ -145,8 +157,6 @@ footer {
   display: flex;
   align-items: center;
 
-  filter: var(--icon-filter-3);
-
   height: 100%;
   gap: 23px;
 }
@@ -155,17 +165,29 @@ footer {
   display: flex;
   align-items: center;
 
-  padding: 0.2rem 0.2rem 0 0.2rem;
-
   height: 100%;
   gap: 12px;
+}
+
+.main-btn {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 100%;
+
+  padding: 0.2rem;
+  cursor: pointer;
+}
+
+.main-btn:hover {
+  background-color: rgba(25, 89, 5, 0.3);
 }
 
 .main-cal-buttons img {
   width: 2rem;
   height: 2rem;
 
-  cursor: pointer;
+  filter: var(--icon-filter-3);
 }
 
 #main-month-year {
@@ -175,6 +197,8 @@ footer {
 
   width: 100%;
   height: 100%;
+
+  color: var(--text-color-2);
 
   display: flex;
   align-items: center;
@@ -275,22 +299,12 @@ footer {
   font-size: 0.6rem;
 }
 
-.time-zone:after {
-  content: "";
-  height: 10%;
-  width: 1px;
-
-  position: absolute;
-  right: 0;
-  background-color: var(--border-color);
-}
-
 .main-weekdays-days-container {
   display: flex;
   flex-direction: column;
 
   gap: 5px;
-  margin: 0 3.5% 0 6%;
+  margin: 0 4% 0 3%;
 
   height: 100%;
   width: 100%;
@@ -330,17 +344,16 @@ footer {
   color: var(--text-color-1);
 
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.2rem;
 
   width: 100%;
 }
 
 .main-day {
+  height: 35px;
   width: 35px;
 
-  align-items: center;
-  padding: 5px;
+  padding: 4px 5px;
 }
 
 .main-body-today {
@@ -355,7 +368,7 @@ footer {
   background-image: linear-gradient(
     to bottom,
     var(--border-color),
-    var(--main-cal-border)
+    var(--main-cal-border) 20%
   );
 
   padding: 1px;
@@ -370,8 +383,7 @@ footer {
 
 .main-cal-body {
   display: flex;
-
-  background: var(--main-cal-body);
+  flex-direction: row;
 
   border-radius: 20px;
 
@@ -383,35 +395,44 @@ footer {
 .main-cal-time {
   display: flex;
   flex-direction: column;
+
+  justify-content: space-between;
   align-items: flex-end;
 
+  background: var(--main-cal-body);
   color: var(--text-color-2);
 
-  gap: 21px;
+  width: 40px;
 
-  width: 38px;
+  max-height: 761px;
 
   padding: 4px;
-  margin-right: 2px;
+  margin-right: 1px;
 
   font-size: 0.6rem;
 }
 
-.main-cal-grid-line {
-  background-image: linear-gradient(
-    to bottom,
-    var(--border-color),
-    var(--main-cal-border)
-  );
+.main-cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 days */
+  grid-template-rows: repeat(24, 1fr); /* 24 hours (or adjust) */
 
-  height: 120%;
+  gap: 1px;
+  height: 100%;
+  width: 100%;
 
-  width: 1px;
-  border-radius: 20px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  position: relative;
+}
 
-  overflow-y: auto;
+.grid-cell {
+  background-color: var(--main-cal-body);
+}
+
+.grid-cell:nth-child(7n) {
+  border-right: none; /* Remove right border from last column */
+}
+.calendar-grid > :nth-last-child(-n + 7) {
+  border-bottom: none; /* Remove bottom border from last row */
 }
 
 /* mini cal & upcoming events */

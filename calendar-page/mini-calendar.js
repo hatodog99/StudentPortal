@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const monthYear = document.getElementById("mini-month-year");
   const daysContainer = document.getElementById("mini-days");
 
+  const prevButton = document.getElementById("mini-prev");
+  const nextButton = document.getElementById("mini-next");
+
   const months = [
     "Jan",
     "Feb",
@@ -63,9 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
       daysContainer.appendChild(dayDiv);
     }
   }
-
-  const prevButton = document.getElementById("mini-prev");
-  const nextButton = document.getElementById("mini-next");
 
   prevButton.addEventListener("click", function () {
     currentDate.setMonth(currentDate.getMonth() - 1);
