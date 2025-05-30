@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const monthYear = document.getElementById("main-month-year");
   const daysContainer = document.getElementById("main-days");
+  const todayDiv = document.getElementById("main-today");
 
   const prevButton = document.getElementById("main-prev");
   const nextButton = document.getElementById("main-next");
@@ -30,6 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const month = date.getMonth();
 
     monthYear.textContent = `${months[month]} ${year}`;
+
+    todayDiv.textContent = today.getDate();
+
     daysContainer.innerHTML = "";
 
     // Get the Sunday of the current week
@@ -75,11 +79,17 @@ document.addEventListener("DOMContentLoaded", function () {
   renderWeek(currentDate);
 });
 
-// main cal grid
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("main-today").addEventListener("click", function () {
+    // reset both calendars
+  });
+});
+
+// MAIN CALENDAR GRID
 document.addEventListener("DOMContentLoaded", function () {
   const calendarGrid = document.getElementById("main-cal-grid");
 
-  const timeSlots = 23.8; // 7AM to 7PM
+  const timeSlots = 13.8; // 7AM to 7PM
   const days = 7; // Sunday to Saturday
 
   for (let i = 0; i < timeSlots * days; i++) {

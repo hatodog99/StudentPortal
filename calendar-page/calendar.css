@@ -368,7 +368,7 @@ header .notif-btn img {
   background-image: linear-gradient(
     to bottom,
     var(--border-color),
-    var(--main-cal-border) 20%
+    var(--main-cal-border) 5%
   );
 
   padding: 1px;
@@ -377,8 +377,6 @@ header .notif-btn img {
   height: 80%;
 
   border-radius: 20px;
-
-  overflow: auto;
 }
 
 .main-cal-body {
@@ -392,6 +390,7 @@ header .notif-btn img {
   overflow: auto;
 }
 
+/* time */
 .main-cal-time {
   display: flex;
   flex-direction: column;
@@ -404,24 +403,41 @@ header .notif-btn img {
 
   width: 40px;
 
-  max-height: 761px;
+  height: 100%;
 
-  padding: 4px;
+  padding: 7px 0 8px 0;
   margin-right: 1px;
 
   font-size: 0.6rem;
 }
 
+.main-cal-time > div {
+  position: relative;
+  padding-right: 5px; /* optional: to create space for the line */
+}
+
+.main-cal-time > div::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 3px; /* adjust as needed */
+  height: 1px;
+  background-color: var(--main-cal-border);
+}
+
+/* grid  */
 .main-cal-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr); /* 7 days */
-  grid-template-rows: repeat(24, 1fr); /* 24 hours (or adjust) */
+  grid-template-rows: 13px repeat(12, 1fr) 13px; /* 24 hours (or adjust) */
 
   gap: 1px;
+
+  justify-content: space-between;
+
   height: 100%;
   width: 100%;
-
-  position: relative;
 }
 
 .grid-cell {
@@ -429,10 +445,31 @@ header .notif-btn img {
 }
 
 .grid-cell:nth-child(7n) {
-  border-right: none; /* Remove right border from last column */
+  border-right: none;
 }
-.calendar-grid > :nth-last-child(-n + 7) {
-  border-bottom: none; /* Remove bottom border from last row */
+
+.main-cal-grid > :nth-last-child(-n + 7) {
+  border-bottom: none;
+}
+
+.main-cal-grid > div {
+  position: relative;
+  padding-right: 5px;
+}
+
+.main-cal-grid > div::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 100%; /* adjust as needed */
+  height: 1px;
+  border-top: 1px dashed var(--main-cal-border);
+}
+
+.main-cal-grid > :nth-child(-n + 7)::before,
+.main-cal-grid > :nth-last-child(-n + 7)::before {
+  content: none;
 }
 
 /* mini cal & upcoming events */
@@ -609,6 +646,8 @@ header .notif-btn img {
 
 /* upcoming evets */
 .up-events-container {
+  position: relative;
+
   height: 90%;
   width: auto;
   padding: 10px;
@@ -624,7 +663,7 @@ header .notif-btn img {
   overflow-y: auto;
 }
 
-.up-events-container-header {
+.up-events-header {
   font-family: "Poppins", sans-serif;
 
   border-bottom: 1px solid var(--btn-border-color-1);
@@ -657,13 +696,13 @@ header .notif-btn img {
   padding: 10px;
 }
 
-.up-events-header {
+.up-events-container-header {
   display: flex;
 
   gap: 5px;
 }
 
-.up-events-header p {
+.up-events-container-header p {
   font-weight: light;
   font-size: 0.65rem;
 }
