@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const monthYear = document.getElementById("mini-month-year");
   const daysContainer = document.getElementById("mini-days");
 
+  const todayButton = document.getElementById("main-today");
   const prevButton = document.getElementById("mini-prev");
   const nextButton = document.getElementById("mini-next");
 
@@ -74,6 +75,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   nextButton.addEventListener("click", function () {
     currentDate.setMonth(currentDate.getMonth() + 1);
+    renderCalendar(currentDate);
+  });
+
+  todayButton.addEventListener("click", function () {
+    currentDate = new Date();
     renderCalendar(currentDate);
   });
 

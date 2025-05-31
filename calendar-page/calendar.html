@@ -97,8 +97,20 @@
         <div class="page-name">Calendar</div>
 
         <div class="header-icons">
-          <div class="notif-btn">
+          <div class="notif-btn" id="notif-btn">
             <img src="../images/icons/notif-icon.svg" />
+          </div>
+
+          <div class="notif-dropdown" id="notif-dropdown">
+            <div class="notif-dropdown-header">Notifications</div>
+
+            <div class="notif-dropdown-container">
+              <div class="notif">ITEC50B grades are ready to be viewed.</div>
+              <div class="notif">GNED01 grades are ready to be viewed.</div>
+              <div class="notif">University Games are coming!</div>
+              <div class="notif">Finals are near. Goodluck!</div>
+              <div class="notif">It's almost the Start of Vacation!</div>
+            </div>
           </div>
 
           <div class="theme-btn" id="theme-switch">
@@ -158,6 +170,15 @@
                   </div>
 
                   <div class="main-days" id="main-days"></div>
+
+                  <div class="main-header-lines">
+                    <div class="main-line"></div>
+                    <div class="main-line"></div>
+                    <div class="main-line"></div>
+                    <div class="main-line"></div>
+                    <div class="main-line"></div>
+                    <div class="main-line"></div>
+                  </div>
                 </div>
               </div>
 
@@ -183,6 +204,11 @@
 
                   <div class="main-cal-grid" id="main-cal-grid">
                     <div class="grid-cell" id="grid-cell"></div>
+
+                    <!-- hardcoded smh... ala nang time e -->
+                    <div class="main-cal-lec-event-container">
+                      <div class="main-cal-lec-event"></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -298,5 +324,6 @@
     <script src="../darkmode.js"></script>
     <script src="../calendar-page/mini-calendar.js"></script>
     <script src="../calendar-page/main-calendar.js"></script>
+    <script src="../header.js "></script>
   </body>
 </html>

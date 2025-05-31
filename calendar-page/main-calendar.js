@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   const monthYear = document.getElementById("main-month-year");
   const daysContainer = document.getElementById("main-days");
-  const todayDiv = document.getElementById("main-today");
 
+  const todayButton = document.getElementById("main-today");
   const prevButton = document.getElementById("main-prev");
   const nextButton = document.getElementById("main-next");
 
@@ -31,8 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const month = date.getMonth();
 
     monthYear.textContent = `${months[month]} ${year}`;
-
-    todayDiv.textContent = today.getDate();
+    todayButton.textContent = today.getDate();
 
     daysContainer.innerHTML = "";
 
@@ -75,14 +74,13 @@ document.addEventListener("DOMContentLoaded", function () {
     renderWeek(currentDate);
   });
 
+  todayButton.addEventListener("click", function () {
+    currentDate = new Date(); // reset to today
+    renderWeek(currentDate);
+  });
+
   // Initial render
   renderWeek(currentDate);
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("main-today").addEventListener("click", function () {
-    // reset both calendars
-  });
 });
 
 // MAIN CALENDAR GRID

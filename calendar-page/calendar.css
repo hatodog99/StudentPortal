@@ -1,6 +1,7 @@
 /* base/light mode variables*/
 :root {
   --bg-url: url("../images/light-mode-bg.svg");
+
   --filter-color: rgba(206, 206, 206, 0.5);
   --container-color: rgba(255, 250, 248, 0.4);
   --border-color: #fffaf8;
@@ -98,12 +99,11 @@ body {
 header,
 main,
 footer {
-  position: relative;
   z-index: 2;
 }
 
-header .notif-btn img {
-  transition: none;
+header {
+  z-index: 3;
 }
 
 .page-content {
@@ -122,6 +122,8 @@ header .notif-btn img {
   height: 80vh;
   max-height: 761px;
   width: auto;
+
+  z-index: 2;
 }
 
 .main-cal-container,
@@ -176,11 +178,14 @@ header .notif-btn img {
   border-radius: 100%;
 
   padding: 0.2rem;
+
   cursor: pointer;
 }
 
 .main-btn:hover {
   background-color: rgba(25, 89, 5, 0.3);
+
+  transition: 80ms ease;
 }
 
 .main-cal-buttons img {
@@ -228,6 +233,7 @@ header .notif-btn img {
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
+
   cursor: pointer;
 }
 
@@ -280,7 +286,7 @@ header .notif-btn img {
   gap: 5px;
 
   padding-top: 15px;
-  height: 20%;
+  height: 88px;
 }
 
 .time-zone {
@@ -293,10 +299,20 @@ header .notif-btn img {
 
   color: var(--text-color-2);
 
-  width: 47px;
+  width: 45px;
   padding-right: 4px;
 
   font-size: 0.6rem;
+}
+
+.time-zone::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 1px;
+  height: 5px;
+  background-color: var(--border-color);
 }
 
 .main-weekdays-days-container {
@@ -317,6 +333,7 @@ header .notif-btn img {
 
   gap: 10%;
 
+  width: 100%;
   color: var(--text-color-2);
 
   font-family: "Poppins", sans-serif;
@@ -360,7 +377,30 @@ header .notif-btn img {
   background-color: var(--cal-today);
   color: var(--cal-today-text);
 
+  height: 35px;
+  width: 35px;
+
+  padding: 4px 5px;
+
   border-radius: 100%;
+}
+
+.main-header-lines {
+  display: flex;
+
+  justify-content: space-between;
+
+  margin-left: 11.2%;
+
+  width: 77.9%;
+  height: 20%;
+}
+
+.main-line {
+  border-left: 1px solid var(--border-color);
+
+  width: 1px;
+  height: 5px;
 }
 
 /* content */
@@ -413,7 +453,7 @@ header .notif-btn img {
 
 .main-cal-time > div {
   position: relative;
-  padding-right: 5px; /* optional: to create space for the line */
+  padding-right: 5px;
 }
 
 .main-cal-time > div::after {
@@ -421,7 +461,7 @@ header .notif-btn img {
   position: absolute;
   top: 50%;
   right: 0;
-  width: 3px; /* adjust as needed */
+  width: 3px;
   height: 1px;
   background-color: var(--main-cal-border);
 }
@@ -462,7 +502,7 @@ header .notif-btn img {
   position: absolute;
   top: 50%;
   right: 0;
-  width: 100%; /* adjust as needed */
+  width: 100%;
   height: 1px;
   border-top: 1px dashed var(--main-cal-border);
 }
@@ -470,6 +510,30 @@ header .notif-btn img {
 .main-cal-grid > :nth-child(-n + 7)::before,
 .main-cal-grid > :nth-last-child(-n + 7)::before {
   content: none;
+}
+
+.main-cal-lec-event-container {
+  position: relative;
+
+  grid-column: 2;
+  grid-row: 2 / span 2;
+}
+
+.main-cal-lec-event {
+  background-color: red;
+
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.main-cal-event-bg {
+  position: absolute;
+
+  background-color: purple;
+
+  height: 100%;
+  width: 100%;
 }
 
 /* mini cal & upcoming events */

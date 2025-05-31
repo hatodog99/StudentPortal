@@ -6,6 +6,8 @@
   /* #195905 */
   --header-icon-filter: invert(24%) sepia(20%) saturate(3197%) hue-rotate(70deg)
     brightness(99%) contrast(96%);
+
+  --container-color: rgba(255, 250, 248, 0.4);
 }
 
 .darkmode {
@@ -57,25 +59,85 @@ header > *:not(:first-child) {
 .notif-btn,
 .theme-btn {
   display: flex;
-  border-radius: 20%;
+  border-radius: 10px;
 
   cursor: pointer;
 }
 
 .notif-btn:hover,
+.notif-btn.active,
 .theme-btn:hover {
   background-color: var(--theme-btn-hover);
+
+  transition: 80ms ease;
 }
 
 /* notif */
 .notif-btn {
-  padding: 0.3rem;
+  position: relative;
+
+  padding: 0.4rem;
 }
 
 .notif-btn img {
   width: 2rem;
   height: 2rem;
   filter: var(--header-icon-filter);
+
+  transition: none;
+
+  z-index: 2;
+}
+
+.notif-dropdown {
+  position: absolute;
+
+  top: 0;
+  right: 3.8rem;
+
+  width: 16rem;
+  height: 13rem;
+
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background-color: var(--container-color);
+
+  backdrop-filter: blur(10px);
+
+  display: none;
+  flex-direction: column;
+
+  padding: 10px;
+
+  cursor: default;
+  overflow-y: hidden;
+}
+
+.notif-dropdown-container {
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: auto;
+
+  height: 80%;
+}
+
+.notif-dropdown-header {
+  font-family: "Poppins", sans-serif;
+  font-weight: medium;
+  font-size: 1rem;
+  color: var(--header-color);
+
+  padding-bottom: 10px;
+
+  flex-shrink: 0;
+}
+
+.notif {
+  font-size: 0.8rem;
+  padding: 10px 0;
+  border-top: 1px solid var(--border-color);
+  color: var(--header-color);
 }
 
 /* theme */
