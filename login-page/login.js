@@ -12,7 +12,7 @@ submitBtn.addEventListener("click", function (e) {
   const isStudentNumber = /^\d{9}$/.test(value);
 
   if (isEmail || isStudentNumber) {
-    window.location.href = "../dashboard-page/dashboard.html";
+    window.location.href = "../dashboard-page/home.html";
   } else {
     alert("Please enter a valid student email or ID number.");
   }
