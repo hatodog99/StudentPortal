@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const calendarGrid = document.getElementById("main-cal-grid");
 
-  const timeSlots = 13.8; // 7AM to 7PM
+  const timeSlots = 29.8; // 7AM to 7PM
   const days = 7; // Sunday to Saturday
 
   for (let i = 0; i < timeSlots * days; i++) {
