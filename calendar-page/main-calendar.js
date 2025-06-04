@@ -83,16 +83,16 @@ document.addEventListener("DOMContentLoaded", function () {
   renderWeek(currentDate);
 });
 
-// MAIN CALENDAR GRID
+// MAIN CALENDAR GRID BACKGROUND
 document.addEventListener("DOMContentLoaded", function () {
-  const calendarGrid = document.getElementById("main-cal-grid");
+  const calendarGrid = document.getElementById("main-cal-grid-container");
 
   const timeSlots = 13.8; // 7AM to 7PM
   const days = 7; // Sunday to Saturday
 
   for (let i = 0; i < timeSlots * days; i++) {
     const cell = document.createElement("div");
-    cell.classList.add("grid-cell");
+    cell.classList.add("bg-grid-cell");
     calendarGrid.appendChild(cell);
   }
 });

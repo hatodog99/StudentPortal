@@ -38,6 +38,24 @@
   --college-color: #9dbf7b;
   --org-color: #c2b6ef;
   --important-color: #f09090;
+
+  --async-color: rgba(226, 213, 169, 0.8);
+  --lec-color: rgba(222, 194, 104, 0.8);
+  --lab-color: rgba(222, 147, 104, 0.8);
+  --coll-color: rgba(128, 156, 100, 0.8);
+  --org-color: rgba(154, 132, 235, 0.8);
+
+  --async-border: #5e2c14;
+  --lec-border: #4a3a06;
+  --lab-border: #5c2505;
+  --coll-border: #0c3200;
+  --org-border: #1f0e5f;
+
+  --async-icon: #f8fada;
+  --lec-icon: #e2d5a9;
+  --lab-icon: #e1b195;
+  --coll-icon: #9dbf7b;
+  --org-icon: #c2b6ef;
 }
 
 /* darkmode variables */
@@ -210,7 +228,7 @@ header {
   justify-content: center;
 }
 
-.today-view-type-container {
+.today-view {
   display: flex;
 
   justify-content: flex-end;
@@ -237,37 +255,6 @@ header {
   cursor: pointer;
 }
 
-.view-type-btn {
-  display: flex;
-  justify-content: center;
-
-  height: 100%;
-  width: auto;
-
-  background-color: var(--btn-color-1);
-  border: 1px solid var(--btn-border-color-1);
-  border-radius: 20px;
-
-  padding: 0.5rem 0.8rem;
-  gap: 5px;
-
-  cursor: pointer;
-}
-
-.view-type {
-  font-size: 0.8rem;
-  color: var(--text-color-1);
-
-  padding: 2px 0;
-}
-
-.view-type-btn img {
-  width: 1.5rem;
-  height: 1.5rem;
-
-  filter: var(--icon-filter-1);
-}
-
 /* main caledar content */
 .main-cal-content {
   background-color: var(--container-color);
@@ -275,7 +262,7 @@ header {
   border: 1px solid var(--border-color);
   border-radius: 20px;
 
-  height: 90%;
+  height: 100%;
 }
 
 /* header */
@@ -286,7 +273,7 @@ header {
   gap: 5px;
 
   padding-top: 15px;
-  height: 88px;
+  height: 20%;
 }
 
 .time-zone {
@@ -343,6 +330,7 @@ header {
 
 .main-weekdays div {
   width: 35px;
+  height: 100%;
 
   display: flex;
   align-items: center;
@@ -364,10 +352,11 @@ header {
   font-size: 1.2rem;
 
   width: 100%;
+  height: 100%;
 }
 
 .main-day {
-  height: 35px;
+  height: 100%;
   width: 35px;
 
   padding: 4px 5px;
@@ -393,7 +382,7 @@ header {
   margin-left: 11.2%;
 
   width: 77.9%;
-  height: 20%;
+  height: 100%;
 }
 
 .main-line {
@@ -467,6 +456,234 @@ header {
 }
 
 /* grid  */
+.main-cal-grid-container {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  width: 100%;
+
+  overflow: auto;
+}
+
+.main-cal-events-grid-container {
+  position: absolute;
+
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 days */
+  grid-template-rows: 13px repeat(48, 1fr) 13px; /* 24 hours (or adjust) */
+
+  gap: 1px;
+
+  justify-content: space-between;
+
+  height: 100%;
+  width: 100%;
+
+  z-index: 1;
+}
+
+.main-cal-events-grid-container > div {
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+/* column 2 */
+.event-1,
+.event-2,
+.event-3,
+.event-4 {
+  grid-column: 2;
+}
+
+.event-1 {
+  grid-row: 10 / span 4;
+}
+
+.event-2 {
+  grid-row: 18 / span 8;
+}
+
+.event-3 {
+  grid-row: 26 / span 8;
+}
+
+.event-4 {
+  grid-row: 46 / span 4;
+}
+
+/* column 3 */
+.event-5,
+.event-6,
+.event-7,
+.event-8 {
+  grid-column: 3;
+}
+
+.event-5 {
+  grid-row: 2 / span 8;
+}
+
+.event-6 {
+  grid-row: 10 / span 8;
+}
+
+.event-7 {
+  grid-row: 26 / span 12;
+}
+
+.event-8 {
+  grid-row: 38 / span 12;
+}
+
+/* column 4 */
+.event-9,
+.event-10,
+.event-11,
+.event-12,
+.event-13,
+.event-14 {
+  grid-column: 4;
+}
+
+.event-9 {
+  width: 70%;
+
+  grid-row: 2 / span 32;
+}
+
+.event-10,
+.event-11,
+.event-12 {
+  width: 50%;
+
+  margin-left: 50%;
+}
+
+.event-10 {
+  grid-row: 2 / span 8;
+}
+
+.event-11 {
+  grid-row: 10 / span 8;
+}
+
+.event-12 {
+  grid-row: 26 / span 12;
+}
+
+.event-13 {
+  grid-row: 42 / span 4;
+}
+
+.event-14 {
+  grid-row: 46 / span 4;
+}
+
+/* column 5 */
+.event-15 {
+  grid-column: 5;
+  grid-row: 26 / span 16;
+}
+
+/* column 7 */
+.event-16 {
+  grid-column: 7;
+  grid-row: 2 / span 36;
+}
+
+/* event icons n shit */
+#event-icon {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  height: 18px;
+  width: 18px;
+
+  border-radius: 2.5px;
+}
+
+#event-icon img {
+  height: 15px;
+  width: 14px;
+}
+
+#event-desc {
+  font-size: 0.8rem;
+  bottom: 0;
+}
+
+/* event types */
+#async-event,
+#lec-event,
+#lab-event,
+#coll-event,
+#org-event {
+  display: flex;
+  flex-direction: column;
+
+  padding: 3px;
+}
+
+#event-time {
+  font-size: light;
+  font-size: 0.5rem;
+}
+
+#async-event {
+  flex-direction: row;
+
+  background-color: var(--async-color);
+  border: 1px solid var(--async-border);
+}
+.async-icon {
+  background-color: var(--async-icon);
+
+  border: 1px solid var(--async-border);
+}
+
+#lec-event {
+  background-color: var(--lec-color);
+  border: 1px solid var(--lec-border);
+}
+.lec-icon {
+  background-color: var(--lec-icon);
+  border: 1px solid var(--lec-border);
+}
+
+#lab-event {
+  background-color: var(--lab-color);
+  border: 1px solid var(--lab-border);
+}
+.lab-icon {
+  background-color: var(--lab-icon);
+  border: 1px solid var(--lab-border);
+}
+
+#coll-event {
+  background-color: var(--coll-color);
+  border: 1px solid var(--coll-border);
+}
+.coll-icon {
+  background-color: var(--coll-icon);
+  border: 1px solid var(--coll-border);
+}
+
+#org-event {
+  background-color: var(--org-color);
+  border: 1px solid var(--org-border);
+}
+.org-icon {
+  background-color: var(--org-icon);
+  border: 1px solid var(--org-border);
+}
+
+/* grid background */
 .main-cal-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr); /* 7 days */
@@ -480,11 +697,11 @@ header {
   width: 100%;
 }
 
-.grid-cell {
+.bg-grid-cell {
   background-color: var(--main-cal-body);
 }
 
-.grid-cell:nth-child(7n) {
+.bg-grid-cell:nth-child(7n) {
   border-right: none;
 }
 
@@ -510,30 +727,6 @@ header {
 .main-cal-grid > :nth-child(-n + 7)::before,
 .main-cal-grid > :nth-last-child(-n + 7)::before {
   content: none;
-}
-
-.main-cal-lec-event-container {
-  position: relative;
-
-  grid-column: 2;
-  grid-row: 2 / span 2;
-}
-
-.main-cal-lec-event {
-  background-color: red;
-
-  height: 100%;
-  width: 100%;
-  border-radius: 10px;
-}
-
-.main-cal-event-bg {
-  position: absolute;
-
-  background-color: purple;
-
-  height: 100%;
-  width: 100%;
 }
 
 /* mini cal & upcoming events */

@@ -142,14 +142,9 @@
                 <div id="main-month-year"></div>
               </div>
 
-              <!-- today's date and view-type btn -->
-              <div class="today-view-type-container">
+              <!-- today's date -->
+              <div class="today-view">
                 <div class="main-today" id="main-today"></div>
-
-                <div class="view-type-btn">
-                  <div class="view-type">Week</div>
-                  <img src="../images/icons/down-arrow-icon.svg" />
-                </div>
               </div>
             </div>
 
@@ -158,6 +153,7 @@
               <!-- header -->
               <div class="main-cal-content-header">
                 <div class="time-zone">GMT +8</div>
+
                 <div class="main-weekdays-days-container">
                   <div class="main-weekdays">
                     <div>SUN</div>
@@ -202,12 +198,160 @@
                     <div>7 PM</div>
                   </div>
 
-                  <div class="main-cal-grid" id="main-cal-grid">
-                    <div class="grid-cell" id="grid-cell"></div>
+                  <div class="main-cal-grid-container">
+                    <div class="main-cal-events-grid-container">
+                      <!-- column 2 -->
+                      <div class="event-1" id="async-event">
+                        <div class="async-icon" id="event-icon">
+                          <img src="../images/icons/async-icon.svg" />
+                        </div>
 
-                    <!-- hardcoded smh... ala nang time e -->
-                    <div class="main-cal-lec-event-container">
-                      <div class="main-cal-lec-event"></div>
+                        <div class="async-desc" id="event-desc">DCIT23</div>
+                      </div>
+
+                      <div class="event-2" id="lec-event">
+                        <div class="lec-icon" id="event-icon">
+                          <img src="../images/icons/lec-icon.svg" />
+                        </div>
+
+                        <div class="lec-desc" id="event-desc">ITEC50</div>
+                        <div id="event-time">11AM-1PM</div>
+                      </div>
+
+                      <div class="event-3" id="lec-event">
+                        <div class="lec-icon" id="event-icon">
+                          <img src="../images/icons/lec-icon.svg" />
+                        </div>
+
+                        <div class="lec-desc" id="event-desc">GNED14</div>
+                        <div id="event-time">1PM-3PM</div>
+                      </div>
+
+                      <div class="event-4" id="async-event">
+                        <div class="async-icon" id="event-icon">
+                          <img src="../images/icons/async-icon.svg" />
+                        </div>
+
+                        <div class="async-desc" id="event-desc">GNED03</div>
+                      </div>
+
+                      <!-- column 3 -->
+                      <div class="event-5" id="lec-event">
+                        <div class="lec-icon" id="event-icon">
+                          <img src="../images/icons/lec-icon.svg" />
+                        </div>
+
+                        <div class="lec-desc" id="event-desc">GNED12</div>
+                        <div id="event-time">7AM-9AM</div>
+                      </div>
+
+                      <div class="event-6" id="lec-event">
+                        <div class="lec-icon" id="event-icon">
+                          <img src="../images/icons/lec-icon.svg" />
+                        </div>
+
+                        <div class="lec-desc" id="event-desc">GNED03</div>
+                        <div id="event-time">9AM-10AM</div>
+                      </div>
+
+                      <div class="event-7" id="lab-event">
+                        <div class="lab-icon" id="event-icon">
+                          <img src="../images/icons/lab-icon.svg" />
+                        </div>
+
+                        <div class="lab-desc" id="event-desc">DCIT23</div>
+                        <div id="event-time">1PM-4PM</div>
+                      </div>
+
+                      <div class="event-8" id="lab-event">
+                        <div class="lab-icon" id="event-icon">
+                          <img src="../images/icons/lab-icon.svg" />
+                        </div>
+
+                        <div class="lab-desc" id="event-desc">ITEC50</div>
+                        <div id="event-time">4PM-7PM</div>
+                      </div>
+
+                      <!-- column 4 -->
+                      <div class="event-9" id="coll-event">
+                        <div class="coll-icon" id="event-icon">
+                          <img src="../images/icons/college-icon.svg" />
+                        </div>
+
+                        <div class="coll-desc" id="event-desc">
+                          COLL SAMPLE EVENT
+                        </div>
+                        <div id="event-time">7AM-3PM</div>
+                      </div>
+
+                      <div class="event-10" id="lec-event">
+                        <div class="lec-icon" id="event-icon">
+                          <img src="../images/icons/lec-icon.svg" />
+                        </div>
+
+                        <div class="lec-desc" id="event-desc">FITT4</div>
+                        <div id="event-time">7AM-9AM</div>
+                      </div>
+
+                      <div class="event-11" id="lec-event">
+                        <div class="lec-icon" id="event-icon">
+                          <img src="../images/icons/lec-icon.svg" />
+                        </div>
+
+                        <div class="lec-desc" id="event-desc">GNED06</div>
+                        <div id="event-time">9AM-10AM</div>
+                      </div>
+
+                      <div class="event-12" id="lab-event">
+                        <div class="lab-icon" id="event-icon">
+                          <img src="../images/icons/lab-icon.svg" />
+                        </div>
+
+                        <div class="lab-desc" id="event-desc">DCIT23</div>
+                        <div id="event-time">1PM-4PM</div>
+                      </div>
+
+                      <div class="event-13" id="async-event">
+                        <div class="async-icon" id="event-icon">
+                          <img src="../images/icons/async-icon.svg" />
+                        </div>
+
+                        <div class="async-desc" id="event-desc">GNED06</div>
+                      </div>
+
+                      <div class="event-14" id="async-event">
+                        <div class="async-icon" id="event-icon">
+                          <img src="../images/icons/async-icon.svg" />
+                        </div>
+
+                        <div class="async-desc" id="event-desc">GNED12</div>
+                      </div>
+
+                      <!-- column 5 -->
+                      <div class="event-15" id="org-event">
+                        <div class="org-icon" id="event-icon">
+                          <img src="../images/icons/organization-icon.svg" />
+                        </div>
+
+                        <div class="org-desc" id="event-desc">
+                          ORG SAMPLE EVENT
+                        </div>
+                        <div id="event-time">1PM-5PM</div>
+                      </div>
+
+                      <!-- column 7 -->
+                      <div class="event-16" id="lec-event">
+                        <div class="lec-icon" id="event-icon">
+                          <img src="../images/icons/lec-icon.svg" />
+                        </div>
+
+                        <div class="lec-desc" id="event-desc">NSTP2</div>
+                        <div id="event-time">7AM-4PM</div>
+                      </div>
+                    </div>
+
+                    <div class="main-cal-grid" id="main-cal-grid-container">
+                      <div class="bg-grid-cell" id="bg-grid-cell"></div>
                     </div>
                   </div>
                 </div>
@@ -297,6 +441,24 @@
                     <p>MAY 19</p>
                   </div>
                   <div class="event-name">University Games 2025</div>
+                </div>
+
+                <div class="up-events-holiday-container">
+                  <div class="up-events-container-header">
+                    <img src="../images/icons/clock-icon.svg" />
+                    <p>JUNE 6-7</p>
+                  </div>
+                  <div class="event-name">
+                    Eid al-Adha (Feast of the Sacrifice)
+                  </div>
+                </div>
+
+                <div class="up-events-holiday-container">
+                  <div class="up-events-container-header">
+                    <img src="../images/icons/clock-icon.svg" />
+                    <p>JUNE 12</p>
+                  </div>
+                  <div class="event-name">Independence Day</div>
                 </div>
 
                 <div class="up-events-important-container">
