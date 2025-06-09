@@ -31,12 +31,37 @@
   --text-hover: #d9d9d9;
 
   --main-cal-body: #d2d4c8;
-  --main-cal-border: #7e9c70;
 
-  --holiday-color: #7db4c8;
-  --college-color: #9dbf7b;
-  --organization-color: #c2b6ef;
-  --important-color: #f09090;
+  --main-cal-border-1: #f8fada;
+  --main-cal-border-2: #7e9c70;
+
+  --up-holiday-color: #7db4c8;
+  --up-college-color: #9dbf7b;
+  --up-organization-color: #c2b6ef;
+  --up-important-color: #f09090;
+
+  --up-holiday-border: none;
+  --up-college-border: none;
+  --up-organization-border: none;
+  --up-important-border: none;
+
+  --up-holiday-text: #133964;
+  --up-college-text: #0c3200;
+  --up-organization-text: #1f0e5f;
+  --up-important-text: #590202;
+
+  /* #133964 */
+  --up-holiday-filter: invert(15%) sepia(79%) saturate(1304%) hue-rotate(190deg)
+    brightness(90%) contrast(92%);
+  /* #0c3200 */
+  --up-college-filter: invert(15%) sepia(43%) saturate(1080%) hue-rotate(57deg)
+    brightness(101%) contrast(108%);
+  /* #1f0e5f */
+  --up-organization-filter: invert(4%) sepia(90%) saturate(6601%)
+    hue-rotate(257deg) brightness(100%) contrast(99%);
+  /* #590202 */
+  --up-important-filter: invert(10%) sepia(31%) saturate(6582%)
+    hue-rotate(355deg) brightness(98%) contrast(115%);
 
   --async-color: rgba(226, 213, 169, 0.8);
   --lec-color: rgba(222, 194, 104, 0.8);
@@ -103,49 +128,74 @@
   --cal-today: #195905;
   --cal-today-text: #9dbf7b;
   --cal-prev-month: #6c7171;
-  --text-hover: #d9d9d9;
+  --text-hover: #d1a827;
 
-  --main-cal-body: #d2d4c8;
-  --main-cal-border: #7e9c70;
+  --main-cal-body: #081413;
 
-  --holiday-color: #7db4c8;
-  --college-color: #9dbf7b;
-  --organization-color: #c2b6ef;
-  --important-color: #f09090;
+  --main-cal-border-1: #806c1f;
+  --main-cal-border-2: #195905;
 
-  --async-color: rgba(226, 213, 169, 0.8);
-  --lec-color: rgba(222, 194, 104, 0.8);
-  --lab-color: rgba(222, 147, 104, 0.8);
-  --coll-color: rgba(128, 156, 100, 0.8);
-  --org-color: rgba(154, 132, 235, 0.8);
+  --up-holiday-color: #141833;
+  --up-college-color: #0c3200;
+  --up-organization-color: #1e1933;
+  --up-important-color: #3c230b;
 
-  --async-border: #5e2c14;
-  --lec-border: #4a3a06;
-  --lab-border: #5c2505;
-  --coll-border: #0c3200;
-  --org-border: #1f0e5f;
+  --up-holiday-border: #668bbf;
+  --up-college-border: #80a164;
+  --up-organization-border: #816ec6;
+  --up-important-border: #c09579;
 
-  /* #5e2c14 */
-  --async-filter: invert(14%) sepia(96%) saturate(845%) hue-rotate(348deg)
-    brightness(97%) contrast(91%);
-  /* #4a3a06 */
-  --lec-filter: invert(21%) sepia(71%) saturate(506%) hue-rotate(8deg)
-    brightness(92%) contrast(99%);
-  /* #5c2505 */
-  --lab-filter: invert(14%) sepia(68%) saturate(1962%) hue-rotate(6deg)
+  --up-holiday-text: #668bbf;
+  --up-college-text: #80a164;
+  --up-organization-text: #816ec6;
+  --up-important-text: #c09579;
+
+  /* #668bbf */
+  --up-holiday-filter: invert(56%) sepia(17%) saturate(1165%) hue-rotate(176deg)
+    brightness(92%) contrast(79%);
+  /* #80a164 */
+  --up-college-filter: invert(59%) sepia(45%) saturate(294%) hue-rotate(49deg)
     brightness(92%) contrast(96%);
-  /* #0c3200 */
-  --coll-filter: invert(16%) sepia(9%) saturate(7098%) hue-rotate(64deg)
-    brightness(95%) contrast(105%);
-  /* #1f0e5f */
-  --org-filter: invert(10%) sepia(37%) saturate(7418%) hue-rotate(251deg)
-    brightness(71%) contrast(106%);
+  /* #816ec6 */
+  --up-organization-filter: invert(46%) sepia(16%) saturate(1344%)
+    hue-rotate(212deg) brightness(99%) contrast(99%);
+  /* #c09579 */
+  --up-important-filter: invert(57%) sepia(58%) saturate(217%)
+    hue-rotate(340deg) brightness(98%) contrast(92%);
 
-  --async-icon: #f8fada;
-  --lec-icon: #e2d5a9;
-  --lab-icon: #e1b195;
-  --coll-icon: #9dbf7b;
-  --org-icon: #c2b6ef;
+  --async-color: rgba(89, 49, 26, 0.6);
+  --lec-color: rgba(74, 58, 6, 0.6);
+  --lab-color: rgba(92, 37, 5, 0.6);
+  --coll-color: rgba(12, 50, 0, 0.6);
+  --org-color: rgba(56, 14, 95, 0.4);
+
+  --async-border: #c78850;
+  --lec-border: #bea655;
+  --lab-border: #c49479;
+  --coll-border: #9dbf7b;
+  --org-border: #826dc7;
+
+  /* #c78850 */
+  --async-filter: invert(63%) sepia(6%) saturate(3842%) hue-rotate(347deg)
+    brightness(92%) contrast(81%);
+  /* #bea655 */
+  --lec-filter: invert(68%) sepia(18%) saturate(1045%) hue-rotate(9deg)
+    brightness(95%) contrast(86%);
+  /* #c49479 */
+  --lab-filter: invert(67%) sepia(19%) saturate(645%) hue-rotate(338deg)
+    brightness(90%) contrast(91%);
+  /* #9dbf7b */
+  --coll-filter: invert(95%) sepia(8%) saturate(1857%) hue-rotate(32deg)
+    brightness(82%) contrast(78%);
+  /* #826dc7 */
+  --org-filter: invert(45%) sepia(19%) saturate(1416%) hue-rotate(213deg)
+    brightness(98%) contrast(85%);
+
+  --async-icon: rgba(89, 49, 26, 0.6);
+  --lec-icon: rgba(74, 58, 6, 0.6);
+  --lab-icon: rgba(92, 37, 5, 0.6);
+  --coll-icon: rgba(12, 50, 0, 0.6);
+  --org-icon: rgba(56, 14, 95, 0.4);
 }
 
 * {
@@ -276,6 +326,8 @@ header {
   height: 2rem;
 
   filter: var(--icon-filter-3);
+
+  transition: none;
 }
 
 #main-month-year {
@@ -356,7 +408,7 @@ header {
   border: 3px solid var(--btn-border-color-1);
   border-radius: 10px;
 
-  color: var(--text-color-1);
+  color: var(--text-color-2);
 
   text-align: center;
   line-height: 35px;
@@ -376,7 +428,6 @@ header {
 
   height: 100%;
   max-height: 761px;
-  width: 100vw;
 }
 
 /* main calendar container */
@@ -385,11 +436,11 @@ header {
   display: flex;
   flex-direction: column;
 
+  width: auto;
   min-width: 600px;
 
+  flex-grow: 1;
   gap: 20px;
-
-  transition: 1s ease;
 }
 
 /* main caledar content */
@@ -523,7 +574,7 @@ header {
 }
 
 .main-line {
-  border-left: 1px solid var(--border-color);
+  border-left: 1px solid var(--main-cal-border-1);
 
   width: 1px;
   height: 5px;
@@ -533,8 +584,8 @@ header {
 .main-cal-body-border {
   background-image: linear-gradient(
     to bottom,
-    var(--border-color),
-    var(--main-cal-border) 5%
+    var(--main-cal-border-1),
+    var(--main-cal-border-2) 5%
   );
 
   padding: 1px;
@@ -589,7 +640,7 @@ header {
   right: 0;
   width: 3px;
   height: 1px;
-  background-color: var(--main-cal-border);
+  background-color: var(--main-cal-border-2);
 }
 
 /* grid  */
@@ -1076,7 +1127,7 @@ header {
   right: 0;
   width: 100%;
   height: 1px;
-  border-top: 1px dashed var(--main-cal-border);
+  border-top: 1px dashed var(--main-cal-border-2);
 }
 
 .main-cal-grid > :nth-child(-n + 7)::before,
@@ -1085,16 +1136,24 @@ header {
 }
 
 /* mini cal & upcoming events */
-.extended-container,
-#extended-container {
+.extended-container {
   display: flex;
   flex-direction: column;
 
   height: 100%;
-  width: 320px;
-  min-width: 200px;
+  width: 200px;
+  min-width: 0;
 
   gap: 20px;
+
+  transition: width 0.1s ease-in, opacity 0.4s ease-in;
+}
+.extended-container.hidden {
+  width: 0;
+  opacity: 0;
+  visibility: hidden;
+
+  transition: width 0.1s ease-out, opacity 100ms ease-out;
 }
 
 /* mini calendar */
@@ -1140,6 +1199,8 @@ header {
   height: 1rem;
 
   filter: var(--icon-filter-1);
+
+  transition: none;
 }
 
 #mini-month-year {
@@ -1287,14 +1348,37 @@ header {
 }
 
 .up-events-holiday-container {
-  background-color: var(--holiday-color);
+  background-color: var(--up-holiday-color);
+  border: 1px solid var(--up-holiday-border);
+  color: var(--up-holiday-text);
 }
+.up-events-holiday-container img {
+  filter: var(--up-holiday-filter);
+}
+
 .up-events-college-container {
-  background-color: var(--college-color);
+  background-color: var(--up-college-color);
+  border: 1px solid var(--up-college-border);
+  color: var(--up-college-text);
 }
+.up-events-college-container img {
+  filter: var(--up-college-filter);
+}
+
 .up-events-org-container {
-  background-color: var(--organization-color);
+  background-color: var(--up-organization-color);
+  border: 1px solid var(--up-organization-border);
+  color: var(--up-organization-text);
 }
+.up-events-org-container img {
+  filter: var(--up-organization-filter);
+}
+
 .up-events-important-container {
-  background-color: var(--important-color);
+  background-color: var(--up-important-color);
+  border: 1px solid var(--up-important-border);
+  color: var(--up-important-text);
+}
+.up-events-important-container img {
+  filter: var(--up-important-filter);
 }
