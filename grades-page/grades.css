@@ -1,0 +1,738 @@
+/* base/light mode variables*/
+:root {
+  --bg-color: rgba(206, 206, 206, 1);
+  --sidebar-bg-color: rgba(25, 89, 5, 0.6);
+  --text-color: rgba(12, 50, 0, 1);
+  --secondary-text: rgba(25, 89, 5, 0.5);
+  --title-color: rgba(25, 89, 5, 1);
+  --sidebar-text-color: rgba(211, 252, 202, 1);
+  --glassContainer-color: rgba(217, 217, 217, 0.43);
+  --input-placeholder: rgba(12, 50, 0, 1);
+  --submitBtn-bg: rgb(25, 89, 5);
+
+  --container-border: #fffaf8;
+
+  --theme-icon-url: url("../images/light-mode-icon.svg");
+  --lightmode-icon-display: none;
+  --darkmode-icon-display: block;
+
+  --bg-img: url("../images/bg-lightmode.svg");
+}
+
+/* darkmode variables */
+.darkmode {
+  --bg-color: rgba(15, 28, 34, 1);
+  --sidebar-bg-color: rgba(9, 31, 2, 0.4);
+  --text-color: rgb(255, 255, 255);
+  --secondary-text: rgba(209, 168, 39, 0.6);
+  --title-color: rgba(209, 168, 39, 1);
+  --sidebar-text-color: rgba(255, 250, 248, 1);
+  --glassContainer-color: rgba(61, 61, 61, 0.43);
+  --input-placeholder: white;
+  --submitBtn-bg: rgb(0, 0, 0);
+
+  --container-border: rgba(25, 89, 5, 1);
+
+  --theme-icon-url: url("../images/dark-mode-icon.svg");
+  --lightmode-icon-display: none;
+  --darkmode-icon-display: none;
+  --bg-img: url("../images/bg-darkmode.svg");
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--bg-color);
+    background-size: cover;
+    background-position: center;
+    font-family: "Nunito", sans-serif;
+    background-image: var(--bg-img);
+}
+
+a {
+    text-decoration: none;
+}
+
+.flex-container {
+    display: flex;
+}
+
+svg {
+    fill: var(--text-color);
+}
+
+/* PROFILE CONTAINER */
+.main-container {
+    margin-left: 18%;
+    font-family: "Poppins";
+}
+
+.grades-section-1 {
+    display: flex;
+    margin-top: 1%;
+}
+
+.semester-container,
+.total-gwa-container {
+    border: 1px solid var(--container-border);
+    background: var(--glassContainer-color);
+    backdrop-filter: blur(21.5px);
+    padding: 2%;
+    width: 20%;
+    border-radius: 20px;
+}
+
+.grades-summary-container {
+    border: 1px solid var(--container-border);
+    background: var(--glassContainer-color);
+    backdrop-filter: blur(21.5px);
+    padding: 2%;
+    width: 38%;
+    border-radius: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.scroll-container {
+  width: 100%;
+  max-height: 120px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+  color: var(--text-color);
+
+
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.stats-sy-item p{
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.stats-sy-item {
+  padding: 0;
+  margin-bottom: 0;
+  width: 200px;
+}
+
+.stats-sy-item:first-child{
+  margin-top: 13%;
+}
+
+.stats-sy-item:last-child{
+  margin-top: -1%;
+  margin-bottom: 10%;
+}
+
+
+.grades-summary-container {
+    display: flex;
+}
+
+.circle {
+  margin: 0;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+}
+
+.circle h3{
+  font-size: 1rem;
+}
+
+#gpa {
+  border: 8px solid rgba(25, 89, 5, 1);
+  margin-left: 40%;
+}
+
+.stats-charts h4{
+  margin: 0;
+  margin-left: -2%;
+  font-size: 0.7rem;
+}
+
+#gpa-container{
+  width: 200px;
+}
+
+#gpa-number {
+  margin: 0;
+  font-size: 0.8rem;
+  width: 50px;
+  margin-left: 58%;
+  margin-top: 1%;
+  color: var(--text-color);
+}
+
+#units-number{
+  width: 100px;
+  margin: 0;
+  margin-left: -46%;
+  margin-top: 1%;
+  font-size: 0.8rem;
+  color: var(--text-color);
+}
+
+#units {
+  border: 8px solid rgb(225, 191, 1);
+  margin-left: -60%;
+}
+
+#units-container {
+  margin-left: 30%;
+}
+
+#gpa-sem,
+#unit-count {
+    margin: 0;
+    font-size: 0.7rem;
+    color: rgba(101, 101, 101, 1);
+}
+
+#gpa-sem {
+    margin-left: 52%;
+}
+
+#unit-count {
+    margin-left: -26%;
+}
+
+
+
+
+.total-gwa-container {
+    display: flex;
+    justify-content: center;
+}
+
+.total-gwa-div {
+    margin: 0 auto;
+}
+
+#total-gwa {
+    border: 8px solid rgb(46, 161, 11);
+}
+
+.total-gwa-div p{
+    margin: 0;
+    font-size: 0.75rem;
+}
+
+#gwa-title {
+    color: var(--text-color);
+    margin-top: 1%;
+    margin-left: 18%;
+}
+
+#gwa-year {
+    color: rgba(101, 101, 101, 1);
+    font-size: 0.7rem;
+    margin-left: 19%;
+}
+
+
+.grades-hr {
+    border: none;
+    height: 1.2px;
+    background-color: var(--text-color);
+    margin-top: 3%;
+    width: 94.5%;
+    margin-left: 0;
+    border-radius: 5px;
+}
+
+
+
+
+
+.grade-container {
+  height: 90vh;
+  overflow-y: auto;
+}
+
+.grade-container::-webkit-scrollbar {
+  display: none;
+}
+
+.grades-subject {
+    border: 1px solid var(--container-border);
+    background: var(--glassContainer-color);
+    backdrop-filter: blur(21.5px);
+    padding: 3%;
+    width: 88%;
+    border-radius: 20px;
+    margin-top: 1.5%;
+    display: flex;
+}
+
+.grades-subject:first-child {
+    margin-top: 3%;
+}
+
+.grades-subject:last-child {
+    margin-bottom: 7%;
+}
+
+
+
+
+.grades-subject-left {
+    margin-left: 2%;
+}
+
+.grades-subject-left p{
+    margin: 0;
+    margin-top: 3%;
+    color: rgba(25, 89, 5, 1);
+    font-size: 1.1rem;
+}
+
+.darkmode .grades-subject-left p {
+    color: var(--text-color);
+}
+
+.grades-subject-title {
+    margin: 0;
+    margin-bottom: 7%;
+    color: var(--text-color);
+    font-size: 1.3rem;
+}
+
+.darkmode .grades-subject-title{
+    color: var(--title-color);
+}
+
+
+
+.grades-subject-right {
+    position: absolute;
+    right: 8%;
+    text-align: right;
+}
+
+.grades-subject-gwa {
+    margin: 0;
+    margin-top: 15%;
+    margin-bottom: 7%;
+    color: var(--text-color);
+    font-size: 1.3rem;
+}
+
+.darkmode .grades-subject-gwa {
+    color: var(--title-color);
+}
+
+.grade-subject-units {
+    color: rgba(25, 89, 5, 1);
+    font-size: 1.1rem;
+}
+
+.darkmode .grade-subject-units {
+    color: var(--text-color);
+}
+
+
+@media (max-width: 1100px) {
+  .stats-sy-item p {
+    font-size: 1.1rem;
+  }
+
+  .stats-sy-item {
+    padding-top: 4%;
+    padding-bottom: 3%;
+    margin-bottom: -2%;
+  }
+
+  .scroll-container {
+    margin-left: -8%;
+  }
+
+  #gpa-container {
+    margin-left: -3%;
+  }
+
+  #units-container {
+    margin-left: 50%;
+  }
+
+  #gpa-number {
+    margin-left: 72%;
+  }
+
+  #gpa-sem {
+    margin-left: 63%;
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 916px) {
+  #gpa-container {
+    margin-left: -10%;
+  }
+
+  .scroll-container {
+    margin-left: -15%;
+    width: 140%;
+  }
+
+  .stats-sy-item p {
+    font-size: 1rem;
+  }
+
+  .grades-subject-title,
+  .grades-subject-gwa {
+    font-size: 1.1rem;
+  }
+
+  .grade-subject-units,
+  .grades-subject-left p {
+    font-size: 0.9rem;
+  }
+}
+
+
+@media (max-width: 788px) {
+  .circle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .scroll-container {
+    margin-left: -25%;
+    width: 140%;
+  }
+
+  .stats-sy-item p {
+    font-size: 0.9rem;
+  }
+
+  .stats-sy-item:last-child {
+    margin-bottom: 20%;
+  }
+
+
+  #gpa-number,
+  #units-number,
+  #gwa-title {
+    font-size: 0.7rem;
+  }
+
+
+  #gpa-container {
+    margin-left: -5%;
+  }
+
+  #gpa-number {
+    margin-left: 72%;
+  }
+
+  #gpa-sem {
+    margin-left: 60%;
+    width: 100%;
+  }
+
+  #units-number {
+    margin-left: -51%;
+  }
+
+  #unit-count {
+    margin-left: -35%;
+  }
+
+  #gwa-title {
+    margin-left: 13%;
+  }
+
+  #gwa-year {
+    margin-left: 13%;
+  }
+}
+
+
+
+@media (max-width: 675px) {
+  .main-container {
+    margin-left: 21%;
+  }
+
+
+  .circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .scroll-container {
+    margin-left: -45%;
+    width: 150%;
+    height: 90px;
+  }
+
+  .stats-sy-item p {
+    font-size: 0.8rem;
+  }
+
+  .stats-sy-item:last-child {
+    margin-bottom: 10%;
+  }
+
+
+  #gpa-number,
+  #units-number,
+  #gwa-title {
+    font-size: 0.6rem;
+  }
+
+  #gwa-year,
+  #unit-count,
+  #gpa-sem {
+    font-size: 0.5rem;
+  }
+
+  #gpa,
+  #units,
+  #total-gwa {
+    border-width: 6px;
+  }
+
+  .circle h3 {
+    font-size: 0.8rem;
+  }
+
+  #gpa-container {
+    margin-left: 0%;
+    margin-right: 8%;
+  }
+
+  #gpa-number {
+    margin-left: 68%;
+  }
+
+  #gpa-sem {
+    margin-left: 60%;
+    width: 100%;
+  }
+
+  #units-number {
+    margin-left: -60%;
+  }
+
+  #unit-count {
+    margin-left: -42%;
+  }
+
+  #gwa-title {
+    margin-left: 8%;
+  }
+
+  #gwa-year {
+    margin-left: 15%;
+  }
+
+
+  .grades-subject-title,
+  .grades-subject-gwa {
+    font-size: 1rem;
+  }
+
+  .grade-subject-units,
+  .grades-subject-left p {
+    font-size: 0.8rem;
+  }
+}
+
+
+@media (max-width: 601px) {
+  .main-container {
+    margin-left: 24.5%;
+  }
+
+
+  .scroll-container {
+    margin-left: -60%;
+    width: 180%;
+    height: 90px;
+    margin-top: -5%;
+  }
+
+  .stats-sy-item p {
+    font-size: 0.75rem;
+  }
+
+  .stats-sy-item:last-child {
+    margin-bottom: 10%;
+  }
+
+
+  #gpa-number,
+  #units-number,
+  #gwa-title {
+    font-size: 0.55rem;
+  }
+
+  #gwa-year,
+  #unit-count,
+  #gpa-sem {
+    font-size: 0.48rem;
+  }
+
+  #gpa,
+  #units,
+  #total-gwa {
+    border-width: 5px;
+  }
+
+  .circle h3 {
+    font-size: 0.7rem;
+  }
+
+  #gpa-container {
+    margin-left: -4%;
+  }
+
+
+  .grades-subject-title,
+  .grades-subject-gwa {
+    font-size: 0.9rem;
+  }
+
+  .grade-subject-units,
+  .grades-subject-left p {
+    font-size: 0.7rem;
+  }
+}
+
+
+@media (max-width: 526px) {
+  .scroll-container {
+    margin-left: -75%;
+    width: 180%;
+    height: 90px;
+    margin-top: -5%;
+  }
+
+  #gpa-container {
+    margin-left: -10%;
+    margin-right: 15%;
+  }
+
+  .grades-subject-title,
+  .grades-subject-gwa {
+    font-size: 0.8rem;
+  }
+
+  .grade-subject-units,
+  .grades-subject-left p {
+    font-size: 0.6rem;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .main-container {
+    margin-left: 26%;
+  }
+
+  .scroll-container {
+    margin-left: -90%;
+    width: 180%;
+    height: 70px;
+    margin-top: -5%;
+  }
+
+  .stats-sy-item p {
+    font-size: 0.56rem;
+  }
+
+  .stats-sy-item p:last-child {
+    margin-bottom: 2%;
+  }
+
+
+
+  .circle {
+    width: 45px;
+    height: 45px;
+  }
+
+  #gpa-number,
+  #units-number,
+  #gwa-title {
+    font-size: 0.45rem;
+  }
+
+  #gwa-year,
+  #unit-count,
+  #gpa-sem {
+    font-size: 0.35rem;
+  }
+
+  #gpa,
+  #units,
+  #total-gwa {
+    border-width: 4px;
+  }
+
+  .circle h3 {
+    font-size: 0.65rem;
+  }
+
+  #gpa-container {
+    margin-left: -10%;
+    margin-right: 22%;
+  }
+
+  #gpa-number {
+    margin-left: 71%;
+  }
+
+  #gpa-sem {
+    margin-left: 65%;
+    width: 100%;
+  }
+
+  #units-number {
+    margin-left: -57%;
+  }
+
+  #unit-count {
+    margin-left: -42%;
+  }
+
+  #gwa-title {
+    margin-left: 12%;
+  }
+
+  #gwa-year {
+    margin-left: 20%;
+  }
+
+
+  .grades-subject-title,
+  .grades-subject-gwa {
+    font-size: 0.7rem;
+  }
+
+  .grade-subject-units,
+  .grades-subject-left p {
+    font-size: 0.5rem;
+  }
+}
