@@ -123,340 +123,801 @@
       <!-- MAIN CONTENTS -->
       <main>
         <div class="container">
-          <!-- MAIN CALENDAR-->
-          <div class="main-cal-container">
+          <div class="content-header">
             <!-- header -->
-            <div class="main-cal-header">
-              <!--  prev-next btn and month-year -->
-              <div class="btns-month-year-container">
-                <div class="main-cal-buttons">
-                  <div id="main-prev" class="main-btn">
-                    <img src="../images/icons/left-arrow-icon.svg" />
-                  </div>
-
-                  <div id="main-next" class="main-btn">
-                    <img src="../images/icons/right-arrow-icon.svg" />
-                  </div>
+            <div class="btns-month-year-container">
+              <div class="main-cal-buttons">
+                <div id="main-prev" class="main-btn">
+                  <img src="../images/icons/left-arrow-icon.svg" />
                 </div>
 
-                <div id="main-month-year"></div>
-              </div>
-
-              <!-- today's date and view-type btn -->
-              <div class="today-view-type-container">
-                <div class="main-today" id="main-today"></div>
-
-                <div class="view-type-btn">
-                  <div class="view-type">Week</div>
-                  <img src="../images/icons/down-arrow-icon.svg" />
+                <div id="main-next" class="main-btn">
+                  <img src="../images/icons/right-arrow-icon.svg" />
                 </div>
               </div>
+
+              <div id="main-month-year"></div>
             </div>
 
-            <!-- content -->
-            <div class="main-cal-content">
-              <!-- header -->
-              <div class="main-cal-content-header">
-                <div class="time-zone">GMT +8</div>
-                <div class="main-weekdays-days-container">
-                  <div class="main-weekdays">
-                    <div>SUN</div>
-                    <div>MON</div>
-                    <div>TUE</div>
-                    <div>WED</div>
-                    <div>THU</div>
-                    <div>FRI</div>
-                    <div>SAT</div>
-                  </div>
-
-                  <div class="main-days" id="main-days"></div>
-
-                  <div class="main-header-lines">
-                    <div class="main-line"></div>
-                    <div class="main-line"></div>
-                    <div class="main-line"></div>
-                    <div class="main-line"></div>
-                    <div class="main-line"></div>
-                    <div class="main-line"></div>
-                  </div>
-                </div>
+            <div class="today-extend-container">
+              <!-- today's date and extend btn -->
+              <div class="today-view">
+                <div class="main-today" id="main-today"></div>
               </div>
 
-              <!-- body -->
-              <div class="main-cal-body-border">
-                <div class="main-cal-body">
-                  <!-- time -->
-                  <div class="main-cal-time">
-                    <div>7 AM</div>
-                    <div>8 AM</div>
-                    <div>9 AM</div>
-                    <div>10 AM</div>
-                    <div>11 AM</div>
-                    <div>12 NN</div>
-                    <div>1 PM</div>
-                    <div>2 PM</div>
-                    <div>3 PM</div>
-                    <div>4 PM</div>
-                    <div>5 PM</div>
-                    <div>6 PM</div>
-                    <div>7 PM</div>
-                  </div>
-
-                  <div class="main-cal-grid-container">
-                    <div class="main-cal-events-grid-container">
-                      <!-- column 2 -->
-                      <div class="event-1" id="async-event">
-                        <div class="async-icon" id="event-icon">
-                          <img src="../images/icons/async-icon.svg" />
-                        </div>
-
-                        <div class="async-desc" id="event-desc">DCIT23</div>
-                      </div>
-
-                      <div class="event-2" id="lec-event">
-                        <div class="lec-icon" id="event-icon">
-                          <img src="../images/icons/lec-icon.svg" />
-                        </div>
-
-                        <div class="lec-desc" id="event-desc">ITEC50</div>
-                        <div id="event-time">11AM-1PM</div>
-                      </div>
-
-                      <div class="event-3" id="lec-event">
-                        <div class="lec-icon" id="event-icon">
-                          <img src="../images/icons/lec-icon.svg" />
-                        </div>
-
-                        <div class="lec-desc" id="event-desc">GNED14</div>
-                        <div id="event-time">1PM-3PM</div>
-                      </div>
-
-                      <div class="event-4" id="async-event">
-                        <div class="async-icon" id="event-icon">
-                          <img src="../images/icons/async-icon.svg" />
-                        </div>
-
-                        <div class="async-desc" id="event-desc">GNED03</div>
-                      </div>
-
-                      <!-- column 3 -->
-                      <div class="event-5" id="lec-event">
-                        <div class="lec-icon" id="event-icon">
-                          <img src="../images/icons/lec-icon.svg" />
-                        </div>
-
-                        <div class="lec-desc" id="event-desc">GNED12</div>
-                        <div id="event-time">7AM-9AM</div>
-                      </div>
-
-                      <div class="event-6" id="lec-event">
-                        <div class="lec-icon" id="event-icon">
-                          <img src="../images/icons/lec-icon.svg" />
-                        </div>
-
-                        <div class="lec-desc" id="event-desc">GNED03</div>
-                        <div id="event-time">9AM-10AM</div>
-                      </div>
-
-                      <div class="event-7" id="lab-event">
-                        <div class="lab-icon" id="event-icon">
-                          <img src="../images/icons/lab-icon.svg" />
-                        </div>
-
-                        <div class="lab-desc" id="event-desc">DCIT23</div>
-                        <div id="event-time">1PM-4PM</div>
-                      </div>
-
-                      <div class="event-8" id="lab-event">
-                        <div class="lab-icon" id="event-icon">
-                          <img src="../images/icons/lab-icon.svg" />
-                        </div>
-
-                        <div class="lab-desc" id="event-desc">ITEC50</div>
-                        <div id="event-time">4PM-7PM</div>
-                      </div>
-
-                      <!-- column 4 -->
-                      <div class="event-9" id="coll-event">
-                        <div class="coll-icon" id="event-icon">
-                          <img src="../images/icons/college-icon.svg" />
-                        </div>
-
-                        <div class="coll-desc" id="event-desc">COLL EVENT</div>
-                        <div id="event-time">7AM-3PM</div>
-                      </div>
-
-                      <div class="event-10" id="lec-event">
-                        <div class="lec-icon" id="event-icon">
-                          <img src="../images/icons/lec-icon.svg" />
-                        </div>
-
-                        <div class="lec-desc" id="event-desc">FITT4</div>
-                        <div id="event-time">7AM-9AM</div>
-                      </div>
-
-                      <div class="event-11" id="lec-event">
-                        <div class="lec-icon" id="event-icon">
-                          <img src="../images/icons/lec-icon.svg" />
-                        </div>
-
-                        <div class="lec-desc" id="event-desc">GNED06</div>
-                        <div id="event-time">9AM-10AM</div>
-                      </div>
-
-                      <div class="event-12" id="lab-event">
-                        <div class="lab-icon" id="event-icon">
-                          <img src="../images/icons/lab-icon.svg" />
-                        </div>
-
-                        <div class="lab-desc" id="event-desc">DCIT23</div>
-                        <div id="event-time">1PM-4PM</div>
-                      </div>
-
-                      <div class="event-13" id="async-event">
-                        <div class="async-icon" id="event-icon">
-                          <img src="../images/icons/async-icon.svg" />
-                        </div>
-
-                        <div class="async-desc" id="event-desc">GNED06</div>
-                      </div>
-
-                      <div class="event-14" id="async-event">
-                        <div class="async-icon" id="event-icon">
-                          <img src="../images/icons/async-icon.svg" />
-                        </div>
-
-                        <div class="async-desc" id="event-desc">GNED12</div>
-                      </div>
-
-                      <!-- column 5 -->
-                      <div class="event-15" id="org-event">
-                        <div class="org-icon" id="event-icon">
-                          <img src="../images/icons/organization-icon.svg" />
-                        </div>
-
-                        <div class="org-desc" id="event-desc">ORG EVENT</div>
-                        <div id="event-time">1PM-5PM</div>
-                      </div>
-
-                      <!-- column 7 -->
-                      <div class="event-16" id="lec-event">
-                        <div class="lec-icon" id="event-icon">
-                          <img src="../images/icons/lec-icon.svg" />
-                        </div>
-
-                        <div class="lec-desc" id="event-desc">NSTP2</div>
-                        <div id="event-time">7AM-4PM</div>
-                      </div>
-                    </div>
-
-                    <div class="main-cal-grid" id="main-cal-grid-container">
-                      <div class="bg-grid-cell" id="bg-grid-cell"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <button class="extend-btn" id="extend-btn">
+                <img
+                  id="extend-icon-1"
+                  src="../images/icons/right-arrow-icon.svg"
+                />
+                <img
+                  id="extend-icon-2"
+                  src="../images/icons/left-arrow-icon.svg"
+                />
+              </button>
             </div>
           </div>
 
-          <!-- MINI CALENDAR & UPCOMING EVENTS -->
-          <div class="extended-container">
-            <!-- search btn and extend btn -->
-            <div class="extended-header">
-              <button class="search-btn">
-                <img src="../images/icons/search-icon.svg" />
-              </button>
+          <div class="content-body">
+            <!-- MAIN CALENDAR-->
+            <div class="main-cal-container" id="main-cal-container">
+              <!-- content -->
+              <div class="main-cal-content">
+                <!-- header -->
+                <div class="main-cal-content-header">
+                  <div class="time-zone">GMT +8</div>
 
-              <button class="extend-btn" id="extend-btn">
-                <img src="../images/icons/right-arrow-icon.svg" />
-              </button>
-            </div>
+                  <div class="main-weekdays-days-container">
+                    <div class="main-weekdays">
+                      <div>SUN</div>
+                      <div>MON</div>
+                      <div>TUE</div>
+                      <div>WED</div>
+                      <div>THU</div>
+                      <div>FRI</div>
+                      <div>SAT</div>
+                    </div>
 
-            <!-- MINI CALENDAR -->
-            <div class="mini-cal-container">
-              <!-- header -->
-              <div class="mini-cal-header">
-                <div id="mini-month-year"></div>
+                    <div class="main-days" id="main-days"></div>
 
-                <div class="mini-cal-buttons">
-                  <div id="mini-prev" class="mini-btn">
-                    <img src="../images/icons/left-arrow-icon.svg" />
+                    <div class="main-header-lines">
+                      <div class="main-line"></div>
+                      <div class="main-line"></div>
+                      <div class="main-line"></div>
+                      <div class="main-line"></div>
+                      <div class="main-line"></div>
+                      <div class="main-line"></div>
+                    </div>
                   </div>
+                </div>
 
-                  <div id="mini-next" class="mini-btn">
-                    <img src="../images/icons/right-arrow-icon.svg" />
+                <!-- body -->
+                <div class="main-cal-body-border">
+                  <div class="main-cal-body">
+                    <!-- time -->
+                    <div class="main-cal-time">
+                      <div>7 AM</div>
+                      <div>8 AM</div>
+                      <div>9 AM</div>
+                      <div>10 AM</div>
+                      <div>11 AM</div>
+                      <div>12 NN</div>
+                      <div>1 PM</div>
+                      <div>2 PM</div>
+                      <div>3 PM</div>
+                      <div>4 PM</div>
+                      <div>5 PM</div>
+                      <div>6 PM</div>
+                      <div>7 PM</div>
+                    </div>
+
+                    <div class="main-cal-grid-container">
+                      <div class="main-cal-events-grid-container">
+                        <!-- column 2 -->
+                        <!-- event 1 -->
+                        <div class="event-1" id="async-event">
+                          <div class="async-icon" id="event-icon">
+                            <img src="../images/icons/async-icon.svg" />
+                          </div>
+
+                          <div class="async-desc" id="event-desc">DCIT23</div>
+
+                          <!-- overlay 1 -->
+                          <div id="async-overlay" class="event-1-overlay">
+                            <div class="overlay-color-icon-container">
+                              <div
+                                id="async-color"
+                                class="event-color-container"
+                              ></div>
+
+                              <div
+                                id="async-overlay-icon"
+                                class="event-overlay-icon"
+                              >
+                                <img src="../images/icons/async-icon.svg" />
+                                <p>ASYNC</p>
+                              </div>
+                            </div>
+
+                            <div class="overlay-fullname-date-time-container">
+                              <div id="async-fullname" class="event-fullname">
+                                DCIT23: Computer Programming II
+                              </div>
+                              <div id="async-date-time" class="event-date-time">
+                                Monday, June 9 | 9:00AM - 10:00AM
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- event 2 -->
+                        <div class="event-2" id="lec-event">
+                          <div class="lec-icon" id="event-icon">
+                            <img src="../images/icons/lec-icon.svg" />
+                          </div>
+
+                          <div class="lec-desc" id="event-desc">ITEC50B</div>
+                          <div id="event-time">11AM-1PM</div>
+
+                          <!-- overlay 2 -->
+                          <div id="lec-overlay" class="event-2-overlay">
+                            <div class="overlay-color-icon-container">
+                              <div
+                                id="lec-color"
+                                class="event-color-container"
+                              ></div>
+
+                              <div
+                                id="lec-overlay-icon"
+                                class="event-overlay-icon"
+                              >
+                                <img src="../images/icons/lec-icon.svg" />
+                                <p>LEC</p>
+                              </div>
+                            </div>
+
+                            <div class="overlay-fullname-date-time-container">
+                              <div id="lec-fullname" class="event-fullname">
+                                ITEC50B: Web Systems and Technologies
+                              </div>
+                              <div id="lec-date-time" class="event-date-time">
+                                Monday, June 9 | 11:00AM - 1:00PM
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- event 3 -->
+                        <div class="event-3" id="lec-event">
+                          <div class="lec-icon" id="event-icon">
+                            <img src="../images/icons/lec-icon.svg" />
+                          </div>
+
+                          <div class="lec-desc" id="event-desc">GNED14</div>
+                          <div id="event-time">1PM-3PM</div>
+
+                          <!-- overlay 3 -->
+                          <div id="lec-overlay" class="event-3-overlay">
+                            <div class="overlay-color-icon-container">
+                              <div
+                                id="lec-color"
+                                class="event-color-container"
+                              ></div>
+
+                              <div
+                                id="lec-overlay-icon"
+                                class="event-overlay-icon"
+                              >
+                                <img src="../images/icons/lec-icon.svg" />
+                                <p>LEC</p>
+                              </div>
+                            </div>
+
+                            <div class="overlay-fullname-date-time-container">
+                              <div id="lec-fullname" class="event-fullname">
+                                GNED14: Panitikang Panlipunan / Sosyedad at
+                                Literatura
+                              </div>
+                              <div id="lec-date-time" class="event-date-time">
+                                Monday, June 9 | 1:00PM - 3:00PM
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- event 4 -->
+                        <div class="event-4" id="async-event">
+                          <div class="async-icon" id="event-icon">
+                            <img src="../images/icons/async-icon.svg" />
+                          </div>
+
+                          <div class="async-desc" id="event-desc">GNED03</div>
+
+                          <!-- overlay 4 -->
+                          <div id="async-overlay" class="event-4-overlay">
+                            <div class="overlay-color-icon-container">
+                              <div
+                                id="async-color"
+                                class="event-color-container"
+                              ></div>
+
+                              <div
+                                id="async-overlay-icon"
+                                class="event-overlay-icon"
+                              >
+                                <img src="../images/icons/async-icon.svg" />
+                                <p>ASYNC</p>
+                              </div>
+                            </div>
+
+                            <div class="overlay-fullname-date-time-container">
+                              <div id="async-fullname" class="event-fullname">
+                                GNED03: Mathematics in the Modern World
+                              </div>
+                              <div id="async-date-time" class="event-date-time">
+                                Monday, June 9 | 6:00PM - 7:00PM
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- column 3 -->
+                        <div class="event-5" id="lec-event">
+                          <div class="lec-icon" id="event-icon">
+                            <img src="../images/icons/lec-icon.svg" />
+                          </div>
+
+                          <div class="lec-desc" id="event-desc">GNED12</div>
+                          <div id="event-time">7AM-9AM</div>
+
+                          <!-- overlay 5 -->
+                          <div id="lec-overlay" class="event-5-overlay">
+                            <div class="overlay-color-icon-container">
+                              <div
+                                id="lec-color"
+                                class="event-color-container"
+                              ></div>
+
+                              <div
+                                id="lec-overlay-icon"
+                                class="event-overlay-icon"
+                              >
+                                <img src="../images/icons/lec-icon.svg" />
+                                <p>LEC</p>
+                              </div>
+                            </div>
+
+                            <div class="overlay-fullname-date-time-container">
+                              <div id="lec-fullname" class="event-fullname">
+                                GNED12: Dalumat ng / sa Filipino
+                              </div>
+                              <div id="lec-date-time" class="event-date-time">
+                                Tuesday, June 10 | 7:00AM - 9:00AM
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="event-6" id="lec-event">
+                          <div class="lec-icon" id="event-icon">
+                            <img src="../images/icons/lec-icon.svg" />
+                          </div>
+
+                          <div class="lec-desc" id="event-desc">GNED03</div>
+                          <div id="event-time">9AM-10AM</div>
+
+                          <!-- overlay 6 -->
+                          <div id="lec-overlay" class="event-6-overlay">
+                            <div class="overlay-color-icon-container">
+                              <div
+                                id="lec-color"
+                                class="event-color-container"
+                              ></div>
+
+                              <div
+                                id="lec-overlay-icon"
+                                class="event-overlay-icon"
+                              >
+                                <img src="../images/icons/lec-icon.svg" />
+                                <p>LEC</p>
+                              </div>
+                            </div>
+
+                            <div class="overlay-fullname-date-time-container">
+                              <div id="lec-fullname" class="event-fullname">
+                                GNED03: Mathematics in the Modern World
+                              </div>
+                              <div id="lec-date-time" class="event-date-time">
+                                Tuesday, June 10 | 9:00AM - 10:00AM
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="event-7" id="lab-event">
+                          <div class="lab-icon" id="event-icon">
+                            <img src="../images/icons/lab-icon.svg" />
+                          </div>
+
+                          <div class="lab-desc" id="event-desc">DCIT23</div>
+                          <div id="event-time">1PM-4PM</div>
+
+                          <!-- overlay 7 -->
+                          <div id="lab-overlay" class="event-7-overlay">
+                            <div class="overlay-color-icon-container">
+                              <div
+                                id="lab-color"
+                                class="event-color-container"
+                              ></div>
+
+                              <div
+                                id="lab-overlay-icon"
+                                class="event-overlay-icon"
+                              >
+                                <img src="../images/icons/lab-icon.svg" />
+                                <p>LAB</p>
+                              </div>
+                            </div>
+
+                            <div class="overlay-fullname-date-time-container">
+                              <div id="lab-fullname" class="event-fullname">
+                                DCIT23: Computer Programming II
+                              </div>
+                              <div id="lab-date-time" class="event-date-time">
+                                Tuesday, June 10 | 1:00PM - 4:00PM
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="event-8" id="lab-event">
+                          <div class="lab-icon" id="event-icon">
+                            <img src="../images/icons/lab-icon.svg" />
+                          </div>
+
+                          <div class="lab-desc" id="event-desc">ITEC50</div>
+                          <div id="event-time">4PM-7PM</div>
+
+                          <!-- overlay 8 -->
+                          <div id="lab-overlay" class="event-8-overlay">
+                            <div class="overlay-color-icon-container">
+                              <div
+                                id="lab-color"
+                                class="event-color-container"
+                              ></div>
+
+                              <div
+                                id="lab-overlay-icon"
+                                class="event-overlay-icon"
+                              >
+                                <img src="../images/icons/lab-icon.svg" />
+                                <p>LAB</p>
+                              </div>
+                            </div>
+
+                            <div class="overlay-fullname-date-time-container">
+                              <div id="lab-fullname" class="event-fullname">
+                                ITEC50: Web Systems and Technologies
+                              </div>
+                              <div id="lab-date-time" class="event-date-time">
+                                Tuesday, June 10 | 4:00PM - 7:00PM
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- column 4 -->
+                        <div class="event-9" id="coll-event">
+                          <div class="coll-icon" id="event-icon">
+                            <img src="../images/icons/college-icon.svg" />
+                          </div>
+
+                          <div class="coll-desc" id="event-desc">
+                            COLL SAMPLE EVENT
+                          </div>
+                          <div id="event-time">7AM-3PM</div>
+
+                          <!-- overlay 9 -->
+                          <div id="coll-overlay" class="event-9-overlay">
+                            <div class="overlay-color-icon-container">
+                              <div
+                                id="coll-color"
+                                class="event-color-container"
+                              ></div>
+
+                              <div
+                                id="coll-overlay-icon"
+                                class="event-overlay-icon"
+                              >
+                                <img src="../images/icons/college-icon.svg" />
+                                <p>COLLEGE</p>
+                              </div>
+                            </div>
+
+                            <div class="overlay-fullname-date-time-container">
+                              <div id="coll-fullname" class="event-fullname">
+                                College Sample Event
+                              </div>
+                              <div id="coll-date-time" class="event-date-time">
+                                Wednesday, June 11 | 7:00AM - 3:00PM
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="event-10" id="lec-event">
+                          <div class="lec-icon" id="event-icon">
+                            <img src="../images/icons/lec-icon.svg" />
+                          </div>
+
+                          <div class="lec-desc" id="event-desc">FITT4</div>
+                          <div id="event-time">7AM-9AM</div>
+
+                          <!-- overlay 10 -->
+                          <div id="lec-overlay" class="event-10-overlay">
+                            <div class="overlay-color-icon-container">
+                              <div
+                                id="lec-color"
+                                class="event-color-container"
+                              ></div>
+
+                              <div
+                                id="lec-overlay-icon"
+                                class="event-overlay-icon"
+                              >
+                                <img src="../images/icons/lec-icon.svg" />
+                                <p>LEC</p>
+                              </div>
+                            </div>
+
+                            <div class="overlay-fullname-date-time-container">
+                              <div id="lec-fullname" class="event-fullname">
+                                FITT4: Physical Activities Towards Health and
+                                Fitness
+                              </div>
+                              <div id="lec-date-time" class="event-date-time">
+                                Wednesday, June 11 | 7:00AM - 9:00AM
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="event-11" id="lec-event">
+                          <div class="lec-icon" id="event-icon">
+                            <img src="../images/icons/lec-icon.svg" />
+                          </div>
+
+                          <div class="lec-desc" id="event-desc">GNED06</div>
+                          <div id="event-time">9AM-10AM</div>
+
+                          <!-- overlay 11 -->
+                          <div id="lec-overlay" class="event-11-overlay">
+                            <div class="overlay-color-icon-container">
+                              <div
+                                id="lec-color"
+                                class="event-color-container"
+                              ></div>
+
+                              <div
+                                id="lec-overlay-icon"
+                                class="event-overlay-icon"
+                              >
+                                <img src="../images/icons/lec-icon.svg" />
+                                <p>LEC</p>
+                              </div>
+                            </div>
+
+                            <div class="overlay-fullname-date-time-container">
+                              <div id="lec-fullname" class="event-fullname">
+                                GNED06: Science, Technology and Society
+                              </div>
+                              <div id="lec-date-time" class="event-date-time">
+                                Wednesday, June 11 | 9:00AM - 11:00AM
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="event-12" id="lab-event">
+                          <div class="lab-icon" id="event-icon">
+                            <img src="../images/icons/lab-icon.svg" />
+                          </div>
+
+                          <div class="lab-desc" id="event-desc">DCIT23</div>
+                          <div id="event-time">1PM-4PM</div>
+
+                          <!-- overlay 12 -->
+                          <div id="lab-overlay" class="event-12-overlay">
+                            <div class="overlay-color-icon-container">
+                              <div
+                                id="lab-color"
+                                class="event-color-container"
+                              ></div>
+
+                              <div
+                                id="lab-overlay-icon"
+                                class="event-overlay-icon"
+                              >
+                                <img src="../images/icons/lab-icon.svg" />
+                                <p>LEC</p>
+                              </div>
+                            </div>
+
+                            <div class="overlay-fullname-date-time-container">
+                              <div id="lab-fullname" class="event-fullname">
+                                DCIT23: Computer Programming II
+                              </div>
+                              <div id="lab-date-time" class="event-date-time">
+                                Wednesday, June 11 | 1:00PM - 4:00PM
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="event-13" id="async-event">
+                          <div class="async-icon" id="event-icon">
+                            <img src="../images/icons/async-icon.svg" />
+                          </div>
+
+                          <div class="async-desc" id="event-desc">GNED06</div>
+
+                          <!-- overlay 13 -->
+                          <div id="async-overlay" class="event-13-overlay">
+                            <div class="overlay-color-icon-container">
+                              <div
+                                id="async-color"
+                                class="event-color-container"
+                              ></div>
+
+                              <div
+                                id="async-overlay-icon"
+                                class="event-overlay-icon"
+                              >
+                                <img src="../images/icons/async-icon.svg" />
+                                <p>ASYNC</p>
+                              </div>
+                            </div>
+
+                            <div class="overlay-fullname-date-time-container">
+                              <div id="async-fullname" class="event-fullname">
+                                GNED06: Science, Technology and Society
+                              </div>
+                              <div id="async-date-time" class="event-date-time">
+                                Wednesday, June 11 | 5:00PM - 6:00PM
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="event-14" id="async-event">
+                          <div class="async-icon" id="event-icon">
+                            <img src="../images/icons/async-icon.svg" />
+                          </div>
+
+                          <div class="async-desc" id="event-desc">GNED12</div>
+
+                          <!-- overlay 14 -->
+                          <div id="async-overlay" class="event-14-overlay">
+                            <div class="overlay-color-icon-container">
+                              <div
+                                id="async-color"
+                                class="event-color-container"
+                              ></div>
+
+                              <div
+                                id="async-overlay-icon"
+                                class="event-overlay-icon"
+                              >
+                                <img src="../images/icons/async-icon.svg" />
+                                <p>ASYNC</p>
+                              </div>
+                            </div>
+
+                            <div class="overlay-fullname-date-time-container">
+                              <div id="async-fullname" class="event-fullname">
+                                GNED12: Dalumat ng / sa Filipino
+                              </div>
+                              <div id="async-date-time" class="event-date-time">
+                                Wednesday, June 11 | 6:00PM - 7:00PM
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- column 5 -->
+                        <div class="event-15" id="org-event">
+                          <div class="org-icon" id="event-icon">
+                            <img src="../images/icons/organization-icon.svg" />
+                          </div>
+
+                          <div class="org-desc" id="event-desc">
+                            ORG SAMPLE EVENT
+                          </div>
+                          <div id="event-time">1PM-5PM</div>
+
+                          <!-- overlay 15 -->
+                          <div id="org-overlay" class="event-15-overlay">
+                            <div class="overlay-color-icon-container">
+                              <div
+                                id="org-color"
+                                class="event-color-container"
+                              ></div>
+
+                              <div
+                                id="org-overlay-icon"
+                                class="event-overlay-icon"
+                              >
+                                <img
+                                  src="../images/icons/organization-icon.svg"
+                                />
+                                <p>ORG</p>
+                              </div>
+                            </div>
+
+                            <div class="overlay-fullname-date-time-container">
+                              <div id="org-fullname" class="event-fullname">
+                                Organzation Sample Event
+                              </div>
+                              <div id="org-date-time" class="event-date-time">
+                                Thursday, June 12 | 1:00PM - 4:00PM
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- column 7 -->
+                        <div class="event-16" id="lec-event">
+                          <div class="lec-icon" id="event-icon">
+                            <img src="../images/icons/lec-icon.svg" />
+                          </div>
+
+                          <div class="lec-desc" id="event-desc">NSTP2</div>
+                          <div id="event-time">7AM-4PM</div>
+
+                          <!-- overlay 16 -->
+                          <div id="lec-overlay" class="event-16-overlay">
+                            <div class="overlay-color-icon-container">
+                              <div
+                                id="lec-color"
+                                class="event-color-container"
+                              ></div>
+
+                              <div
+                                id="lec-overlay-icon"
+                                class="event-overlay-icon"
+                              >
+                                <img src="../images/icons/lec-icon.svg" />
+                                <p>LEC</p>
+                              </div>
+                            </div>
+
+                            <div class="overlay-fullname-date-time-container">
+                              <div id="lec-fullname" class="event-fullname">
+                                NSTP2: National Service Training Program 2
+                              </div>
+                              <div id="lec-date-time" class="event-date-time">
+                                Saturyday, June 14 | 7:00AM - 4:00PM
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="main-cal-grid" id="main-cal-grid-container">
+                        <div class="bg-grid-cell" id="bg-grid-cell"></div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-
-              <!-- mini calendar content -->
-              <div class="mini-weekdays">
-                <div>S</div>
-                <div>M</div>
-                <div>T</div>
-                <div>W</div>
-                <div>TH</div>
-                <div>F</div>
-                <div>S</div>
-              </div>
-
-              <div class="mini-days" id="mini-days"></div>
             </div>
 
-            <!-- UPCOMING EVENTS -->
-            <div class="up-events-container">
-              <div class="up-events-header">Upcoming Events</div>
+            <!-- MINI CALENDAR & UPCOMING EVENTS -->
+            <div class="extended-container" id="extended-container">
+              <!-- MINI CALENDAR -->
+              <div class="mini-cal-container" id="mini-cal-container">
+                <!-- header -->
+                <div class="mini-cal-header">
+                  <div id="mini-month-year"></div>
 
-              <div class="up-events-body">
-                <!-- containers -->
-                <div class="up-events-holiday-container">
-                  <div class="up-events-container-header">
-                    <img src="../images/icons/clock-icon.svg" />
-                    <p>MAY 12</p>
-                  </div>
-                  <div class="event-name">
-                    National and Local Election Holiday
+                  <div class="mini-cal-buttons">
+                    <div id="mini-prev" class="mini-btn">
+                      <img src="../images/icons/left-arrow-icon.svg" />
+                    </div>
+
+                    <div id="mini-next" class="mini-btn">
+                      <img src="../images/icons/right-arrow-icon.svg" />
+                    </div>
                   </div>
                 </div>
 
-                <div class="up-events-college-container">
-                  <div class="up-events-container-header">
-                    <img src="../images/icons/clock-icon.svg" />
-                    <p>MAY 14 | 7:00AM - 3:00PM</p>
-                  </div>
-                  <div class="event-name">CEIT Revolution 2025</div>
+                <!-- mini calendar content -->
+                <div class="mini-weekdays">
+                  <div>S</div>
+                  <div>M</div>
+                  <div>T</div>
+                  <div>W</div>
+                  <div>TH</div>
+                  <div>F</div>
+                  <div>S</div>
                 </div>
 
-                <div class="up-events-org-container">
-                  <div class="up-events-container-header">
-                    <img src="../images/icons/clock-icon.svg" />
-                    <p>MAY 15 | 1:00PM - 5:00PM</p>
-                  </div>
-                  <div class="event-name">LIKHAIN: ArtJam 2025</div>
-                </div>
+                <div class="mini-days" id="mini-days"></div>
+              </div>
 
-                <div class="up-events-college-container">
-                  <div class="up-events-container-header">
-                    <img src="../images/icons/clock-icon.svg" />
-                    <p>MAY 19</p>
-                  </div>
-                  <div class="event-name">University Games 2025</div>
-                </div>
+              <!-- UPCOMING EVENTS -->
+              <div class="up-events-container" id="up-events-container">
+                <div class="up-events-header">Upcoming Events</div>
 
-                <div class="up-events-important-container">
-                  <div class="up-events-container-header">
-                    <img src="../images/icons/clock-icon.svg" />
-                    <p>JUNE 16 - 21</p>
+                <div class="up-events-body">
+                  <!-- containers -->
+                  <div class="up-events-holiday-container">
+                    <div class="up-events-container-header">
+                      <img src="../images/icons/clock-icon.svg" />
+                      <p>MAY 12</p>
+                    </div>
+                    <div class="event-name">
+                      National and Local Election Holiday
+                    </div>
                   </div>
-                  <div class="event-name">Final Examination</div>
-                </div>
 
-                <div class="up-events-important-container">
-                  <div class="up-events-container-header">
-                    <img src="../images/icons/clock-icon.svg" />
-                    <p>JUNE 23</p>
+                  <div class="up-events-college-container">
+                    <div class="up-events-container-header">
+                      <img src="../images/icons/clock-icon.svg" />
+                      <p>MAY 14 | 7:00AM - 3:00PM</p>
+                    </div>
+                    <div class="event-name">CEIT Revolution 2025</div>
                   </div>
-                  <div class="event-name">Start of Vacation</div>
+
+                  <div class="up-events-org-container">
+                    <div class="up-events-container-header">
+                      <img src="../images/icons/clock-icon.svg" />
+                      <p>MAY 15 | 1:00PM - 5:00PM</p>
+                    </div>
+                    <div class="event-name">LIKHAIN: ArtJam 2025</div>
+                  </div>
+
+                  <div class="up-events-college-container">
+                    <div class="up-events-container-header">
+                      <img src="../images/icons/clock-icon.svg" />
+                      <p>MAY 19</p>
+                    </div>
+                    <div class="event-name">University Games 2025</div>
+                  </div>
+
+                  <div class="up-events-holiday-container">
+                    <div class="up-events-container-header">
+                      <img src="../images/icons/clock-icon.svg" />
+                      <p>JUNE 6-7</p>
+                    </div>
+                    <div class="event-name">
+                      Eid al-Adha (Feast of the Sacrifice)
+                    </div>
+                  </div>
+
+                  <div class="up-events-holiday-container">
+                    <div class="up-events-container-header">
+                      <img src="../images/icons/clock-icon.svg" />
+                      <p>JUNE 12</p>
+                    </div>
+                    <div class="event-name">Independence Day</div>
+                  </div>
+
+                  <div class="up-events-important-container">
+                    <div class="up-events-container-header">
+                      <img src="../images/icons/clock-icon.svg" />
+                      <p>JUNE 16 - 21</p>
+                    </div>
+                    <div class="event-name">Final Examination</div>
+                  </div>
+
+                  <div class="up-events-important-container">
+                    <div class="up-events-container-header">
+                      <img src="../images/icons/clock-icon.svg" />
+                      <p>JUNE 23</p>
+                    </div>
+                    <div class="event-name">Start of Vacation</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -468,6 +929,7 @@
     <script src="../darkmode.js"></script>
     <script src="../calendar-page/mini-calendar.js"></script>
     <script src="../calendar-page/main-calendar.js"></script>
+    <script src="../calendar-page/calendar.js"></script>
     <script src="../header.js "></script>
   </body>
 </html>
