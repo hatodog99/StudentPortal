@@ -1,0 +1,1301 @@
+/* base/light mode variables*/
+:root {
+  --bg-color: rgba(206, 206, 206, 1);
+  --sidebar-bg-color: rgba(25, 89, 5, 0.6);
+  --text-color: rgba(12, 50, 0, 1);
+  --secondary-text: rgba(25, 89, 5, 0.5);
+  --title-color: rgba(25, 89, 5, 1);
+  --sidebar-text-color: rgba(211, 252, 202, 1);
+  --glassContainer-color: rgba(217, 217, 217, 0.43);
+  --input-placeholder: rgba(12, 50, 0, 1);
+  --submitBtn-bg: rgb(25, 89, 5);
+
+  --container-border: #fffaf8;
+
+  --theme-icon-url: url("../images/light-mode-icon.svg");
+  --lightmode-icon-display: none;
+  --darkmode-icon-display: block;
+
+  --bg-img: url("../images/bg-lightmode.svg");
+}
+
+/* darkmode variables */
+.darkmode {
+  --bg-color: rgba(15, 28, 34, 1);
+  --sidebar-bg-color: rgba(9, 31, 2, 0.4);
+  --text-color: rgb(255, 255, 255);
+  --secondary-text: rgba(209, 168, 39, 0.6);
+  --title-color: rgba(209, 168, 39, 1);
+  --sidebar-text-color: rgba(255, 250, 248, 1);
+  --glassContainer-color: rgba(61, 61, 61, 0.43);
+  --input-placeholder: white;
+  --submitBtn-bg: rgb(0, 0, 0);
+
+  --container-border: rgba(25, 89, 5, 1);
+
+  --theme-icon-url: url("../images/dark-mode-icon.svg");
+  --lightmode-icon-display: none;
+  --darkmode-icon-display: none;
+  --bg-img: url("../images/bg-darkmode.svg");
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--bg-color);
+    background-size: cover;
+    background-position: center;
+    font-family: "Nunito", sans-serif;
+    background-image: var(--bg-img);
+}
+
+a {
+    text-decoration: none;
+}
+
+.flex-container {
+    display: flex;
+}
+
+svg {
+    fill: var(--text-color);
+}
+
+/* PROFILE CONTAINER */
+.main-container {
+    margin-left: 18%;
+    font-family: "Poppins";
+}
+
+.enrollment-section-1 {
+    display: flex;
+}
+
+.enrollment-profile-container,
+.enrollment-semester-container {
+    border: 1px solid var(--container-border);
+    background: var(--glassContainer-color);
+    backdrop-filter: blur(21.5px);
+    padding: 2%;
+    width: 41.7%;
+    border-radius: 20px;
+}
+
+.enrollment-semester-container {
+    margin-left: 2%;
+}
+
+.enrollment-profile-container h3,
+.enrollment-profile-container p{
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.enrollment-profile-container h3{
+    color: var(--text-color);
+    font-size: 1.2rem;
+}
+
+.enrollment-profile-container p{
+    color: rgba(25, 89, 5, 1);
+}
+
+.darkmode .enrollment-profile-container p{
+    color: var(--text-color);
+}
+
+#enrollment-profile-sn {
+    margin-bottom: 4%;
+}
+
+.enrollment-profile-btn {
+    margin-top: 8%;
+    font-size: 1.1rem;
+    padding: 0.8% 3% 0.8%;
+    margin-right: 3%;
+    border-radius: 8px;
+    border: none;
+}
+
+#btn-regular {
+    background-color: rgba(209, 168, 39, 1);
+    color: rgba(12, 50, 0, 1);
+}
+
+#btn-enrolled {
+    background-color: rgba(25, 89, 5, 1);
+    color: rgba(211, 252, 202, 1);
+}
+
+
+
+
+.enrollment-semester-head {
+    display: flex;
+}
+
+.enrollment-semester-head h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.darkmode .enrollment-semester-head h3{
+    color: var(--title-color);
+}
+
+.semester-head-h3 {
+    width: 70%;
+}
+
+.enrollment-semester-controls{
+    background: rgba(25, 89, 5, 0.4);
+    border: 1px solid var(--container-border);
+    border-radius: 20px;
+    padding: 2% 5% 2%;
+    display: flex;
+    gap: 50%;
+    width: 15%;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+}
+
+.nav-btn {
+  background: none;
+  color: var(--text-color);
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 3px 7px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.nav-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+.enrollment-semester-container hr{
+    border: none;
+    height: 1px;
+    background-color: var(--text-color);
+    margin-top: 1%;
+}
+
+
+.enrollment-semester-content h3,
+.enrollment-semester-content p{
+    margin: 0;
+    margin-top: 1%;
+    color: rgba(25, 89, 5, 1);
+}
+
+.darkmode .enrollment-semester-content h3,
+.darkmode .enrollment-semester-content p{
+    color: var(--text-color);
+}
+
+.enrollment-semester-content p:last-child{
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: 7%;
+    margin-left: 60%;
+    cursor: pointer;
+}
+
+.enrollment-semester-content svg {
+    width: 6.3%;
+    fill: rgba(25, 89, 5, 1);
+}
+
+.darkmode .enrollment-semester-content svg{
+    fill: var(--text-color);
+}
+
+
+
+.enrollment-divider {
+    border: none;
+    height: 1.1px;
+    background-color: var(--text-color);
+    margin-top: 2%;
+    width: 93.5%;
+    margin-left: 0;
+    border-radius: 10px;
+}
+
+.enrollment-section-2 {
+    margin-top: 2%;
+    display: flex;
+    width: 93.5%;
+}
+
+.direct-enroll-container,
+.enroll-courses-container,
+.shift-program-container {
+    border: 1px solid var(--container-border);
+    background: var(--glassContainer-color);
+    backdrop-filter: blur(21.5px);
+    padding: 2%;
+    width: 30%;
+    margin-right: 2%;
+    border-radius: 20px;
+}
+
+.shift-program-container {
+    margin-right: 0;
+}
+
+.enrollment-titles {
+    margin: 0;
+    color: var(--text-color);
+}
+
+.darkmode .enrollment-titles {
+    color: var(--title-color);
+}
+
+.enrollment-description {
+    margin: 0;
+    margin-top: 10%;
+    margin-bottom: 20%;
+    font-size: 0.9rem;
+    color: rgba(25, 89, 5, 1);
+}
+
+.darkmode .enrollment-description {
+    color: var(--text-color);
+}
+
+.enrollment-section-2 svg {
+    width: 8%;
+    position: absolute;
+    bottom: 13%;
+    right: 10%;
+    fill: rgba(25, 89, 5, 1);
+    cursor: pointer;
+}
+
+.darkmode .enrollment-section-2 svg{
+    fill: var(--text-color);
+}
+
+
+
+
+.semester-container {
+    height: 90vh;
+    overflow-y: auto;
+    display: none;
+}
+
+.semester-container::-webkit-scrollbar {
+    display: none;
+}
+
+.semester-subject {
+    border: 1px solid var(--container-border);
+    background: var(--glassContainer-color);
+    backdrop-filter: blur(21.5px);
+    padding: 2%;
+    width: 88%;
+    border-radius: 20px;
+    margin-top: 1.5%;
+}
+
+.subject-title {
+    margin: 0;
+    color: var(--text-color);
+}
+
+.darkmode .subject-title {
+    color: var(--title-color);
+}
+
+.semester-subject-table table {
+    width: 100%;
+}
+
+.semester-subject-table td {
+    padding-top: 1%;
+    color: rgba(25, 89, 5, 1);
+}
+
+.darkmode .semester-subject-table td {
+    color: var(--text-color);
+}
+
+.semester-subjects-container .semester-subject:last-child {
+    margin-bottom: 8%;
+}
+
+
+
+.directEnroll-container {
+    height: 90vh;
+    overflow-y: auto;
+}
+
+#directEnroll-div {
+    display: none;
+}
+
+.directEnroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.course-enroll-container {
+    border: 1px solid var(--container-border);
+    background: var(--glassContainer-color);
+    backdrop-filter: blur(21.5px);
+    padding: 2%;
+    width: 88%;
+    border-radius: 20px;
+    margin-top: 1.5%;
+    margin-bottom: 4%;
+}
+
+.course-enroll-head{
+    display: flex;
+}
+
+.course-enroll-head h3 {
+    margin: 0;
+    color: var(--text-color);
+}
+
+.darkmode .course-enroll-head h3 {
+    color: var(--title-color);
+}
+
+.course-enroll-head p{
+    margin: 0;
+    color: rgba(12, 50, 0, 1);
+    font-size: 1.2rem;
+    position: absolute;
+    right: 2.5%;
+}
+
+.darkmode .course-enroll-head p{
+    color: var(--text-color);
+}
+
+.course-enroll-container hr {
+    border: none;
+    height: 1px;
+    background-color: var(--text-color);
+}
+
+.course-enroll-bottom {
+    display: flex;
+}
+
+.course-enroll-bottom p{
+    margin: 0;
+    margin-top: 1%;
+    color: var(--title-color);
+}
+
+.darkmode .course-enroll-bottom p {
+    color: var(--title-color);
+}
+
+#enroll-btn {
+    font-size: 1.2rem;
+    padding: 1% 3% 1%;
+    position: absolute;
+    right: 2.5%;
+    bottom: 8%;
+    border-radius: 18px;
+    color: var(--text-color);
+    background-color: rgba(25, 89, 5, 0.4);
+    border: 1px solid var(--title-color);
+    cursor: pointer;
+}
+
+#enroll-btn:hover {
+    transform: scale(1.04);
+}
+
+.darkmode #enroll-btn {
+    background-color: rgba(209, 168, 39, 0.4);
+}
+
+.course-subject-table table {
+    width: 165%;
+}
+
+.course-subject-table td {
+    padding-top: 0.5%;
+    color: rgba(25, 89, 5, 1);
+}
+
+.darkmode .course-subject-table td {
+    color: var(--text-color);
+}
+
+.enroll-course-container {
+    height: 90vh;
+    overflow-y: auto;
+}
+
+#enroll-course-div {
+    display: none;
+}
+
+.enroll-course-container::-webkit-scrollbar {
+    display: none;
+}
+
+
+.choose-units-container {
+    border: 1px solid var(--container-border);
+    background: var(--glassContainer-color);
+    backdrop-filter: blur(21.5px);
+    padding: 2%;
+    width: 88%;
+    border-radius: 20px;
+    margin-top: -2.5%;
+    margin-bottom: 4%;
+    height: 8%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+
+.choose-units-container p{
+    color: rgba(25, 89, 5, 0.4);
+}
+
+
+#search {
+    background-color: var(--glassContainer-color);
+    font-size: 1rem;
+    padding: 1% 0.5% 1%;
+    border-radius: 10px;
+    border: 1px solid var(--container-border);
+    color: var(--text-color);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23195905'%3E%3Cpath d='M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 5% center;
+    background-size: 7%;
+    padding-left: 4%; 
+}
+
+.darkmode #search {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 -960 960 960' width='24px' fill='%23ffffff'%3E%3Cpath d='M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z'/%3E%3C/svg%3E");
+}
+
+#search:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid var(--container-border);
+}
+
+
+
+
+#program-shift-div {
+    display: none;
+}
+
+.shift-program-body {
+    border: 1px solid var(--container-border);
+    background: var(--glassContainer-color);
+    backdrop-filter: blur(21.5px);
+    padding: 2%;
+    width: 89%;
+    border-radius: 20px;
+}
+
+.shift-program-body input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.shift-program-top {
+    display: flex;
+}
+
+.input-firstname,
+.input-middlename,
+.input-lastname {
+    display: flex;
+    flex-direction: column;
+    margin-right: 18%;
+}
+
+
+.input-firstname input,
+.input-middlename input,
+.input-lastname input{
+    padding: 4% 15% 4%;
+    font-size: 1rem;
+    width: 170%;
+    color: var(--text-color);
+    background-color: rgba(25, 89, 5, 0.4);
+    border: 1px solid var(--container-border);
+    border-radius: 20px;
+    margin-bottom: 3%;
+}
+
+.shift-program-body input::placeholder {
+    padding-left: 0%;
+    color: rgba(255, 250, 248, 0.4);
+}
+
+.shift-program-top label {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin-bottom: 2%;
+}
+
+.shift-program-sn {
+    display: flex;
+    flex-direction: column;
+    margin-right: 18%;
+    margin-top: 2%;
+}
+
+.shift-program-sn input {
+    padding: 0.8% 2% 0.8%;
+    font-size: 1rem;
+    width: 20%;
+    color: var(--text-color);
+    background-color: rgba(25, 89, 5, 0.4);
+    border: 1px solid var(--container-border);
+    border-radius: 20px;
+    margin-bottom: 1%;
+}
+
+.shift-program-sn input::placeholder {
+    padding-left: 5%;
+    color: rgba(255, 250, 248, 0.4);
+}
+
+.shift-program-sn label {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.5%;
+}
+
+
+.shift-program-course {
+    display: flex;
+}
+
+.input-college,
+.input-department,
+.input-program{
+    display: flex;
+    flex-direction: column;
+    margin-right: 18%;
+    margin-top: 2%;
+}
+
+.shift-program-course input {
+    padding: 4% 15% 4%;
+    font-size: 1rem;
+    width: 170%;
+    color: var(--text-color);
+    background-color: rgba(25, 89, 5, 0.4);
+    border: 1px solid var(--container-border);
+    border-radius: 20px;
+    margin-bottom: 3%;
+}
+
+.shift-program-course label {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.5%;
+}
+
+
+.shif-program-feedback {
+    display: flex;
+    flex-direction: column;
+    margin-right: 18%;
+    margin-top: 2%;
+}
+
+.shif-program-feedback textarea {
+    padding: 2% 3% 2%;
+    font-size: 1rem;
+    width: 85%;
+    color: var(--text-color);
+    background-color: rgba(25, 89, 5, 0.4);
+    border: 1px solid var(--container-border);
+    border-radius: 20px;
+    margin-bottom: 3%;
+}
+
+.shif-program-feedback textarea::placeholder {
+    color: rgba(255, 250, 248, 0.4);;
+}
+
+.shif-program-feedback textarea:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.shif-program-feedback label {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin-bottom: 0.5%;
+}
+
+#submit-shift-btn{
+    font-size: 1.3rem;
+    padding: 1% 4% 1%;
+    position: absolute;
+    right: 3%;
+    bottom: 3%;
+    border-radius: 18px;
+    color: var(--text-color);
+    background-color: rgba(25, 89, 5, 0.4);
+    border: 1px solid var(--title-color);
+    cursor: pointer;
+}
+
+#submit-shift-btn:hover {
+    transform: scale(1.04);
+}
+
+.darkmode #submit-shift-btn {
+    background-color: rgba(209, 168, 39, 0.4);;
+}
+
+
+
+
+@media (max-width: 1147px) {
+    .enrollment-semester-content p:last-child {
+        margin-left: 50%;
+    }
+
+
+
+    .shift-program-top label,
+    .shift-program-sn label,
+    .shift-program-course label,
+    .shif-program-feedback label {
+        font-size: 1rem;
+    }
+
+
+    .input-firstname input, 
+    .input-middlename input, 
+    .input-lastname input,
+    .shift-program-sn input,
+    .shift-program-course input{
+        font-size: 0.9rem;
+    }
+
+    #submit-shift-btn {
+        font-size: 1rem;
+        bottom: 5%;
+    }
+}
+
+
+@media (max-width: 1073px) {
+    .enrollment-profile-container h3,
+    .enrollment-profile-container p {
+        font-size: 1rem;
+    }
+
+    .enrollment-semester-controls {
+        gap: 20%;
+    }
+}
+
+
+@media (max-width: 974px) {
+    .enrollment-profile-container h3,
+    .enrollment-profile-container p {
+        font-size: 0.95rem;
+    }
+
+    .enrollment-semester-content h3,
+    .enrollment-semester-content p {
+        font-size: 0.95rem;
+    }
+
+    .enrollment-semester-head h3 {
+        font-size: 1.2rem;
+    }
+
+    .enrollment-semester-content p:last-child {
+        font-size: 0.95rem;
+        margin-left: 40%;
+    }
+
+    .enrollment-profile-btn {
+        font-size: 1rem;
+    }
+}
+
+
+@media (max-width: 956px) {
+    .shift-program-top label,
+    .shift-program-sn label,
+    .shift-program-course label,
+    .shif-program-feedback label {
+        font-size: 0.9rem;
+    }
+
+
+    .input-firstname input, 
+    .input-middlename input, 
+    .input-lastname input,
+    .shift-program-sn input,
+    .shift-program-course input,
+    .shif-program-feedback textarea {
+        font-size: 0.8rem;
+    }
+
+    #submit-shift-btn {
+        font-size: 0.9rem;
+        bottom: 5%;
+    }
+}
+
+
+@media (max-width: 880px) {
+    .header h1{
+        font-size: 1.3rem;
+        margin-top: 2.5%;
+    }
+
+    .subject-title {
+        font-size: 1rem;
+    }
+
+    .semester-subject-table td {
+        font-size: 0.8rem;
+    }
+
+
+    .course-subject-table td {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (max-width: 863px) {
+    .shift-program-top label,
+    .shift-program-sn label,
+    .shift-program-course label,
+    .shif-program-feedback label {
+        font-size: 0.8rem;
+    }
+
+
+    .input-firstname input, 
+    .input-middlename input, 
+    .input-lastname input,
+    .shift-program-sn input,
+    .shift-program-course input,
+    .shif-program-feedback textarea {
+        font-size: 0.7rem;
+    }
+
+    #submit-shift-btn {
+        font-size: 0.8rem;
+        bottom: 5%;
+    }
+}
+
+
+@media (max-width: 776px) {
+    .enrollment-profile-container h3,
+    .enrollment-profile-container p {
+        font-size: 0.75rem;
+    }
+
+    .enrollment-semester-content h3,
+    .enrollment-semester-content p {
+        font-size: 0.75rem;
+    }
+
+    .enrollment-semester-head h3 {
+        font-size: 1rem;
+    }
+
+    .enrollment-semester-content p:last-child {
+        font-size: 0.75rem;
+        margin-left: 40%;
+    }
+
+    .enrollment-profile-btn {
+        font-size: 0.8rem;
+    }
+
+    .nav-btn {
+        font-size: 0.7rem;
+    }
+
+    .enrollment-semester-controls {
+        gap: 10%;
+    }
+
+
+
+    .enrollment-titles {
+        font-size: 1rem;
+    }
+
+    .enrollment-description {
+        font-size: 0.75rem;
+    }
+
+
+
+
+
+    .course-enroll-head p,
+    .course-enroll-head h3 {
+        font-size: 1.1rem;
+    }
+
+    .course-enroll-bottom p {
+        font-size: 0.9rem;
+    }
+
+    #enroll-btn {
+        font-size: 1rem;
+    }
+
+    .subject-title {
+        font-size: 1rem;
+    }
+
+    .course-subject-table td {
+        font-size: 0.8rem;
+    }
+}
+
+
+@media (max-width: 770px) {
+    .header h1{
+        font-size: 1.15rem;
+        margin-top: 2.8%;
+    }
+
+    .subject-title {
+        font-size: 0.9rem;
+    }
+
+    .semester-subject-table td {
+        font-size: 0.8rem;
+    }
+
+
+
+    #search {
+        font-size: 0.8rem;
+    }
+
+    #search::placeholder {
+        font-size: 0.8rem;
+    }
+
+
+
+    .shift-program-top label,
+    .shift-program-sn label,
+    .shift-program-course label,
+    .shif-program-feedback label {
+        font-size: 0.7rem;
+    }
+
+
+    .input-firstname input, 
+    .input-middlename input, 
+    .input-lastname input,
+    .shift-program-sn input,
+    .shift-program-course input,
+    .shif-program-feedback textarea {
+        font-size: 0.6rem;
+    }
+
+    #submit-shift-btn {
+        font-size: 0.6rem;
+        bottom: 5%;
+    }
+}
+
+
+
+@media (max-width: 707px) {
+    .main-container {
+        margin-left: 21%;
+    }
+
+    .header h1{
+        font-size: 1.1rem;
+        margin-top: 2.5%;
+        width: 60%;
+    }
+
+    .subject-title {
+        font-size: 0.85rem;
+    }
+
+    .semester-subject-table td {
+        font-size: 0.7rem;
+    }
+
+
+
+    .course-enroll-head p,
+    .course-enroll-head h3 {
+        font-size: 1rem;
+    }
+
+    .course-enroll-bottom p {
+        font-size: 0.8rem;
+    }
+
+    #enroll-btn {
+        font-size: 0.9rem;
+    }
+
+    .subject-title {
+        font-size: 0.9rem;
+    }
+
+    .course-subject-table td {
+        font-size: 0.7rem;
+    }
+
+
+    #search {
+        font-size: 0.7rem;
+    }
+
+    #search::placeholder {
+        font-size: 0.7rem;
+    }
+}
+
+
+
+@media (max-width: 685px) {
+    .shift-program-top label,
+    .shift-program-sn label,
+    .shift-program-course label,
+    .shif-program-feedback label {
+        font-size: 0.65rem;
+    }
+
+
+    .input-firstname input, 
+    .input-middlename input, 
+    .input-lastname input,
+    .shift-program-sn input,
+    .shift-program-course input,
+    .shif-program-feedback textarea {
+        font-size: 0.6rem;
+    }
+
+    #submit-shift-btn {
+        font-size: 0.6rem;
+        bottom: 5%;
+    }
+}
+
+
+@media (max-width: 638px) {
+    .shift-program-top label,
+    .shift-program-sn label,
+    .shift-program-course label,
+    .shif-program-feedback label {
+        font-size: 0.6rem;
+    }
+}
+
+
+@media (max-width: 634px) {
+    .header h1{
+        font-size: 1rem;
+        margin-top: 2.5%;
+        width: 70%;
+    }
+
+    .subject-title {
+        font-size: 0.85rem;
+    }
+
+    .semester-subject-table td {
+        font-size: 0.65rem;
+    }
+}
+
+
+
+@media (max-width: 625px) {
+    .enrollment-profile-btn {
+        font-size: 0.7rem;
+    }
+
+    .nav-btn {
+        font-size: 0.6rem;
+    }
+
+    .enrollment-semester-controls {
+        gap: 0%;
+    }
+
+    .enrollment-semester-controls {
+        padding: 2% 3% 2%;
+    }
+
+    .enrollment-semester-head h3 {
+        font-size: 0.8rem;
+    }
+
+    .enrollment-semester-content p:last-child {
+        font-size: 0.65rem;
+        margin-left: 35%;
+    }
+
+    .enrollment-profile-container p {
+        font-size: 0.6rem;
+    }
+
+    .enrollment-titles {
+        font-size: 0.85rem;
+    }
+
+    .enrollment-description {
+        font-size: 0.65rem;
+    }
+}
+
+
+@media (max-width: 601px) {
+    .main-container{
+        margin-left: 25%;
+    }
+
+    .nav-btn {
+        padding-left: 14%;
+    }
+
+    .header h1{
+        font-size: 0.9rem;
+        margin-top: 4%;
+        width: 50%;
+        margin-bottom: 5%;
+    }
+
+    .subject-title {
+        font-size: 0.75rem;
+    }
+
+    .semester-subject-table td {
+        font-size: 0.6rem;
+    }
+
+
+    .course-enroll-head p,
+    .course-enroll-head h3 {
+        font-size: 0.85rem;
+    }
+
+    .course-enroll-bottom p {
+        font-size: 0.7rem;
+    }
+
+    #enroll-btn {
+        font-size: 0.7rem;
+    }
+
+    .subject-title {
+        font-size: 0.8rem;
+    }
+
+    .course-subject-table td {
+        font-size: 0.6rem;
+    }
+
+
+
+
+    .shift-program-top,
+    .shift-program-sn {
+        display: block;
+        margin-left: 2%;
+        margin-top: 2%;
+    }
+
+    .shift-program-course,
+    .shif-program-feedback {
+        margin-left: 2%;
+    }
+
+    .shift-program-top label,
+    .shift-program-sn label,
+    .shift-program-course label,
+    .shif-program-feedback label {
+        font-size: 0.9rem;
+    }
+
+
+    .input-firstname input, 
+    .input-middlename input, 
+    .input-lastname input,
+    .shift-program-sn input,
+    .shif-program-feedback textarea {
+        font-size: 0.8rem;
+        width: 80%;
+        padding: 2% 3% 2%;
+    }
+
+    .shift-program-course input {
+        font-size: 0.7rem;
+        width: 80%;
+        padding: 4% 20% 4%;
+    }
+
+    .input-college, 
+    .input-department, 
+    .input-program {
+        margin-right: 10%;
+    }
+
+    #submit-shift-btn {
+        font-size: 0.8rem;
+        bottom: 3%;
+        right: 6%;
+    }
+
+}
+
+
+@media (max-width: 561px) {
+    .header h1{
+        font-size: 1rem;
+        margin-top: 4%;
+        width: 50%;
+    }
+
+    .subject-title {
+        font-size: 0.7rem;
+    }
+
+    .semester-subject-table td {
+        font-size: 0.55rem;
+    }
+
+
+    .course-enroll-head p,
+    .course-enroll-head h3 {
+        font-size: 0.8rem;
+    }
+
+    .course-enroll-bottom p {
+        font-size: 0.7rem;
+    }
+
+    #enroll-btn {
+        font-size: 0.7rem;
+    }
+
+    .subject-title {
+        font-size: 0.7rem;
+    }
+
+    .course-subject-table td {
+        font-size: 0.55rem;
+    }
+
+
+
+    #search {
+        font-size: 0.6rem;
+        padding-left: 5%;
+    }
+
+    #search::placeholder {
+        font-size: 0.6rem;
+    }
+}
+
+
+@media (max-width: 531px) {
+    .enrollment-semester-content p:last-child {
+        margin-left: 30%;
+    }
+
+    .enrollment-profile-container h3,
+    .enrollment-semester-head h3 {
+        font-size: 0.7rem;
+    }
+
+    .enrollment-profile-container p {
+        font-size: 0.5rem;
+    }
+
+    .enrollment-semester-content h3,
+    .enrollment-semester-content p,
+    .enrollment-semester-content p:last-child {
+        font-size: 0.55rem;
+    }
+
+    .enrollment-titles {
+        font-size: 0.7rem;
+    }
+
+    .enrollment-description {
+        font-size: 0.55rem;
+    }
+}
+
+
+@media (max-width: 515px) {
+    .header h1{
+        font-size: 0.9rem;
+        margin-top: 4%;
+        width: 60%;
+    }
+
+    .subject-title {
+        font-size: 0.7rem;
+    }
+
+    .semester-subject-table td {
+        font-size: 0.55rem;
+    }
+
+
+    .course-enroll-head p,
+    .course-enroll-head h3 {
+        font-size: 0.7rem;
+    }
+
+    .course-enroll-bottom p {
+        font-size: 0.7rem;
+    }
+
+    #enroll-btn {
+        font-size: 0.6rem;
+    }
+
+    .subject-title {
+        font-size: 0.7rem;
+    }
+
+    .course-subject-table td {
+        font-size: 0.55rem;
+    }
+
+    .course-subject-table table {
+        width: 150%;
+    }
+}

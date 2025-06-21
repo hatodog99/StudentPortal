@@ -1,26 +1,3 @@
-@font-face {
-  font-family: "Poppins";
-  src: url(fonts/Poppins/Poppins-Regular.ttf) format("truetype");
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url(fonts/Poppins/Poppins-Bold.ttf) format("truetype");
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "Nunito";
-  src: url(fonts/Nunito/static/Nunito-Regular.ttf) format("truetype");
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Nunito";
-  src: url(fonts/Nunito/static/Nunito-Bold.ttf) format("truetype");
-  font-weight: bold;
-}
 
 /*base/light mode variables*/
 :root {
@@ -33,10 +10,17 @@
   --glassContainer-color: rgba(217, 217, 217, 0.43);
   --input-placeholder: rgba(12, 50, 0, 1);
   --submitBtn-bg: rgb(25, 89, 5);
+  --sidebar-secondary-color: #195905;
+
+  --sidebar-hover-color: rgba(25, 89, 5, 0.6);
+  --sidebar-logout-color: rgba(25, 89, 5, 0.3);
+
+  --sidebar-border: rgba(25, 89, 5, 1);
+
   --theme-icon-url: url("images/light-mode-icon.svg");
   --lightmode-icon-display: none;
   --darkmode-icon-display: block;
-  --bg-img: url("images/bg-lightmode.svg");
+  --bg-img: url("../images/bg-lightmode.svg");
 }
 
 /* darkmode variables */
@@ -50,10 +34,17 @@
   --glassContainer-color: rgba(61, 61, 61, 0.43);
   --input-placeholder: white;
   --submitBtn-bg: rgb(0, 0, 0);
+  --sidebar-secondary-color: #195905;
+
+  --sidebar-hover-color: rgba(25, 89, 5, 0.6);
+  --sidebar-logout-color: rgba(9, 31, 2, 0.7);
+
+  --sidebar-border: rgba(25, 89, 5, 1);
+
   --theme-icon-url: url("images/dark-mode-icon.svg");
   --lightmode-icon-display: block;
   --darkmode-icon-display: none;
-  --bg-img: url("images/bg-darkmode.svg");
+  --bg-img: url("../images/bg-darkmode.svg");
 }
 
 * {
@@ -70,26 +61,42 @@ body {
     font-family: "Nunito", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 
 /* SIDEBAR */ 
 .sidebar {
   position: fixed;
   top: 0;
   left: 0;
-  width: 12%;
+  width: 12.3%;
   height: 100%;
   background-color: var(--sidebar-bg-color);
   color: var(--sidebar-text-color);
   padding: 20px;
-  border-right: 1px solid var(--border);
+  border-right: 1px solid var(--sidebar-border);
+  font-family: "Poppins", sans-serif;
+}
+
+.cvsu-logo p {
+  text-align: center;
+  font-weight: bold;
+
+  font-size: 0.8rem;
+
+  color: var(--sidebar-text-color);
+  margin-bottom: 14%;
+  margin-top: 5%;
 }
 
 .sidebar img{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
-    margin-bottom: 15%;
+    width: 48%;
+    margin-top: -3%;
 }
 
 .features {
@@ -99,67 +106,234 @@ body {
 
 .features-option {
   display: flex;
-  margin-bottom: -5%;
-  margin-left: 5%;
+  margin-top: 8%;
+  margin-bottom: 8%;
+  margin-left: -1%;
   transition: 0.2s ease;
   cursor: pointer;
+  color: var(--sidebar-text-color);
+  height: 5vh;
+  border-radius: 14px;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 8%;
 }
 
-.features-option:hover{
-  transform: scale(1.06);
+.features-option:hover {
+  background-image: linear-gradient(
+    to right,
+    var(--sidebar-hover-color) 50%,
+    rgba(0, 0, 0, 0)
+  );
 }
 
-.features-option img{
+.features-option svg{
   width: 10%;
   margin: 0;
   margin-right: 5%;
+  fill: var(--sidebar-text-color);
+  stroke: var(--sidebar-text-color);
 }
 
-#dashboard-div{
-  background: linear-gradient(to right, rgba(217, 217, 217, 1), rgba(217, 217, 217, 0));
+#eLearningIcon {
+  width: 11.5%;
+  margin-left: -1%;
+  margin-right: 5%;
+}
+
+/*#grade-option div svg {
+  width: 14%;
+  margin-left: -2%;
+  margin-right: 4%;
+}*/
+
+
+#selected-page{
+  background: linear-gradient(to right, rgba(217, 217, 217, 1), rgba(217, 217, 217, 1), rgba(217, 217, 217, 0));
   color: rgba(12, 50, 0, 1);
   font-weight: 600;
   padding: none;
   padding-left: 7%;
   padding-right: 1%;
   border: none;
-  border-radius: 25px;
-  margin-left: 0;
+  margin-left: 1%;
 }
 
-#dadhboardIcon {
-  width: 10%;
-  margin-left: -0.4%;
-  margin-right: 4.5%;
-  color: var(--sidebar-text-color);
+#selected-page svg {
+  fill: rgba(12, 50, 0, 1);
+  stroke:rgba(12, 50, 0, 1);
 }
 
-.features hr{
-  border: none;
-  height: 1px;
-  background-color: rgba(25, 89, 5, 1);
+
+#enrollment-icon svg path{
+  fill: rgba(0, 0, 0, 0);
 }
 
-#eLearningIcon {
-  width: 18%;
-  margin-left: -3%;
-}
 
-#eLearning-option {
-  margin-bottom: 150%;
-}
 
 #logout-option {
-  position: fixed;
-  bottom: 12%;
-  width: 20%;
-  margin-left: 2.3%;
+  display: flex;
+  align-items: center;
+
+  position: absolute;
+  bottom: 5%;
+
+  width: 63%;
+
+  padding: 0.5% 0.5% 0.5% 0.5%;
+  margin: 1rem 1rem 1rem 0.75rem;
+
+
+  font-size: 0.9rem;
+  font-weight: bold;
   text-decoration: none;
+
   color: var(--sidebar-text-color);
+  background-color: rgba(25, 89, 5, 0.3);
+
+  border: 1px solid var(--sidebar-logout-color);
+  border-radius: 15px;
+
+  transition: background 0.3s ease;
 }
 
-#logout-option img {
-  width: 6%;
-  margin-right: 5%;
+#logout-option img{
+  width: 0.9rem;
+  margin-right: 2%;
+  margin-left: 24%;
+  margin-top: 0%;
+}
+
+.logout:hover {
+  background-color: var(--sidebar-hover-color);
+}
+
+
+
+.sidebar hr {
+  border: none;
+  height: 1px;
+  background-color: var(--sidebar-border);
+  margin: 1rem 0;
+  opacity: 0.6;
+}
+
+
+
+
+@media (max-width: 1175px) {
+  #logout-option img{
+    margin-left: 15%;
+  }
+}
+
+
+@media (max-width: 961px) {
+  #logout-option {
+    padding-left: 0;
+    font-size: 0.8rem;
+  }
+
+  #logout-option img {
+    margin-left: 12%;
+  }
+
+  .features {
+    font-size: 0.8rem;
+  }
+}
+
+
+@media (max-width: 875px) {
+  #logout-option {
+    margin-left: 2%;
+  }
+}
+
+
+@media (max-width:770px) {
+  .features-option,
+  #logout-option {
+    font-size: 0.7rem;
+  }
+
+  #logout-option img {
+    width: 13%;
+  }
+}
+
+
+@media (max-width:700px) {
+  #selected-page {
+    font-size: 0.65rem;
+  }
+
+  #logout-option {
+    margin-left: 0;
+  }
+
+  .cvsu-logo p {
+    font-size: 0.6rem;
+  }
+
+  .features-option svg {
+    width: 15%;
+  }
+
+  #eLearning-option img {
+    width: 15%;
+  }
+
+  #logout-option {
+    font-size: 0.6rem;
+  }
+}
+
+
+@media (max-width: 647px) {
+  .features-option {
+    font-size: 0.67rem;
+  }
+}
+
+
+@media (max-width: 601px) {
+  .sidebar {
+    width: 15%;
+  }
+
+  .features-option {
+    font-size: 0.65rem;
+  }
+
+  #logout-option {
+    width: 5rem;
+    font-size: 0.7rem;
+    padding-left: 5%;
+    margin-left: 0;
+  }
+
+  #logoutIcon {
+    width: 13%;
+  }
+}
+
+
+
+@media (max-width: 501px) {
+  #selected-page {
+    font-size: 0.6rem;
+  }
+}
+
+
+@media (max-width: 495px) {
+  .features-option {
+    font-size: 0.6rem;
+  }
+
+  #logout-option {
+    margin-left: -8%;
+  }
 }
 
